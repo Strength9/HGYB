@@ -12,33 +12,43 @@ Tags: naked, bare, quick
 
 */
 @font-face {
+  font-family: "Gabriela";
+  src: url("assets/fonts/Gabriela-Regular.woff2") format("woff2"), url("assets/fonts/Gabriela-Regular.woff") format("woff"), url("assets/fonts/Gabriela-Regular.svg#Gabriela-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std Book";
+  src: url("assets/fonts/ITCAvantGardeStd-Bk.woff2") format("woff2"), url("assets/fonts/ITCAvantGardeStd-Bk.woff") format("woff"), url("assets/fonts/ITCAvantGardeStd-Bk.svg#ITCAvantGardeStd-Bk") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "Arial";
-  src: url("assets/fonts/Arial-Black.eot");
-  src: url("assets/fonts/Arial-Black.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Arial-Black.woff2") format("woff2"), url("assets/fonts/Arial-Black.woff") format("woff"), url("assets/fonts/Arial-Black.ttf") format("truetype"), url("assets/fonts/Arial-Black.svg#Arial-Black") format("svg");
+  src: url("assets/fonts/Arial-Black.woff2") format("woff2"), url("assets/fonts/Arial-Black.woff") format("woff"), url("assets/fonts/Arial-Black.svg#Arial-Black") format("svg");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Disintegration";
-  src: url("assets/fonts/Disintegration.eot");
-  src: url("assets/fonts/Disintegration.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Disintegration.woff2") format("woff2"), url("assets/fonts/Disintegration.woff") format("woff"), url("assets/fonts/Disintegration.ttf") format("truetype"), url("assets/fonts/Disintegration.svg#Disintegration") format("svg");
+  src: url("assets/fonts/Disintegration.woff2") format("woff2"), url("assets/fonts/Disintegration.woff") format("woff"), url("assets/fonts/Disintegration.svg#Disintegration") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Gabriela";
-  src: url("assets/fonts/Gabriela-Regular.eot");
-  src: url("assets/fonts/Gabriela-Regular.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Gabriela-Regular.woff2") format("woff2"), url("assets/fonts/Gabriela-Regular.woff") format("woff"), url("assets/fonts/Gabriela-Regular.ttf") format("truetype"), url("assets/fonts/Gabriela-Regular.svg#Gabriela-Regular") format("svg");
+  font-family: "ITC Avant Garde Gothic Std Demi";
+  src: url("assets/fonts/ITCAvantGardeStd-Demi.woff2") format("woff2"), url("assets/fonts/ITCAvantGardeStd-Demi.woff") format("woff"), url("assets/fonts/ITCAvantGardeStd-Demi.svg#ITCAvantGardeStd-Demi") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "ITC Avant Garde Std Md";
-  src: url("assets/fonts/ITCAvantGardeStd-Bold.eot");
-  src: url("assets/fonts/ITCAvantGardeStd-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/ITCAvantGardeStd-Bold.woff2") format("woff2"), url("assets/fonts/ITCAvantGardeStd-Bold.woff") format("woff"), url("assets/fonts/ITCAvantGardeStd-Bold.ttf") format("truetype"), url("assets/fonts/ITCAvantGardeStd-Bold.svg#ITCAvantGardeStd-Bold") format("svg");
+  font-family: "ITC Avant Garde Gothic Std";
+  src: url("assets/fonts/ITCAvantGardeStd-Bold.woff2") format("woff2"), url("assets/fonts/ITCAvantGardeStd-Bold.woff") format("woff"), url("assets/fonts/ITCAvantGardeStd-Bold.svg#ITCAvantGardeStd-Bold") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -126,8 +136,8 @@ body {
   padding: 0 0 0;
   overflow-x: hidden;
   color: rgb(68, 68, 68);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 200;
+  font-family: "ITC Avant Garde Gothic Std Book";
+  font-weight: normal;
   font-style: normal;
   font-size: 15px;
   line-height: 18px;
@@ -139,8 +149,9 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: clarendon-urw, serif;
-  font-weight: 300;
+  font-family: "ITC Avant Garde Gothic Std Book";
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1 {
