@@ -1,5 +1,5 @@
 <header>
-	
+	<?php $headerlogo = s9_imagefield($fieldname='logos', $id = 'options', $classname = '');?>
 	<nav class="navigation-menu">
 		
 	  	<label class="menuopen" aria-label="Open navigation menu" for="menu-toggle">

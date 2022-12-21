@@ -4,6 +4,9 @@ define( 'xray_VERSION', 1.0 ); // Define the version so we can easily replace it
 
 $SiteName = 'HGYB';
 $settingslink = 'site-settings';
+
+
+require_once(dirname(__FILE__) . '/assets/acf_functions.php');
 /*-----------------------------------------------------------------------------------*/
 /* Remove the auto p tag removal
 /*-----------------------------------------------------------------------------------*/
