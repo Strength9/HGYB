@@ -472,7 +472,7 @@ footer .maincontent ul li {
   font-family: "ITC Avant Garde Gothic Std Book";
   font-weight: normal;
   font-style: normal;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.2;
   margin-bottom: 15px;
   text-align: center;
@@ -484,11 +484,11 @@ footer .maincontent ul li.title {
   margin-top: 27px;
   padding-bottom: 4px;
   position: relative;
+  font-size: 15px;
 }
 footer .maincontent ul li.title span {
   text-align: center;
   display: inline-block;
-  background-color: red;
 }
 footer .maincontent ul li.title span:after {
   width: 100%;
@@ -500,7 +500,7 @@ footer .maincontent ul li.title span:after {
 }
 @media only screen and (min-width: 800px) {
   footer .maincontent {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1.3fr 0.7fr 0.7fr 1.3fr;
     grid-template-rows: 1fr;
     grid-template-areas: "bussdetails menu1 menu2 contactdetails";
     gap: 0px 20px;
@@ -512,21 +512,27 @@ footer .maincontent ul li.title span:after {
     width: 130%;
   }
 }
+@media only screen and (min-width: 1100px) {
+  footer .maincontent {
+    grid-template-columns: 1.4fr 0.8fr 0.9fr 0.9fr;
+    gap: 0px 40px;
+  }
+}
 footer .maincontent .bussdetails {
   grid-area: bussdetails;
-  background-color: orange;
+}
+footer .maincontent .bussdetails img {
+  width: 90%;
+  height: auto;
 }
 footer .maincontent .menu1 {
   grid-area: menu1;
-  background-color: green;
 }
 footer .maincontent .menu2 {
   grid-area: menu2;
-  background-color: orange;
 }
 footer .maincontent .contactdetails {
   grid-area: contactdetails;
-  background-color: green;
 }
 footer .copyrightstrip {
   background-color: #06072E;
