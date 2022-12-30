@@ -40,12 +40,13 @@ function s9_imagefield($fieldname, $postid = '',  $className = '') {
 };
 
 // Return Link
-function s9_linkfield($fieldname, $postid = '', $tag = '', $className = '') {
-	$sttag = $edtag = $class = '';
+function s9_linkfield($fieldname, $postid = '', $tag = '', $className = '', $contclassname = '') {
+	$sttag = $edtag = $class = $contclass = '';
 	
+	if ($contclassname != '') {$contclass =' class= "'.$contclassname.'"'; };
 	if ($className != '') { $class =' class= "'.$className.'"'; }
 	
-	if ($tag != '') { $sttag = '<'.$tag.$class.'>'; $edtag = '</'.$tag.'>'; }
+	if ($tag != '') { $sttag = '<'.$tag.$contclass.'>'; $edtag = '</'.$tag.'>'; }
 	
 
 	$link = get_field($fieldname, $postid);

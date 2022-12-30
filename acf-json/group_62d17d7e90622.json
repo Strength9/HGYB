@@ -418,7 +418,7 @@
             "label": "Show Button",
             "name": "header_ctoa_show_button",
             "aria-label": "",
-            "type": "true_false",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -427,11 +427,17 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
             "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_63ad8e91de0df",
@@ -468,5 +474,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672318746
+    "modified": 1672419087
 }

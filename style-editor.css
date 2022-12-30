@@ -164,7 +164,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0 0 0;
+  padding: 90px 0 0;
   overflow-x: hidden;
   color: rgb(68, 68, 68);
   font-family: "ITC Avant Garde Gothic Std Book";
@@ -173,7 +173,6 @@ body {
   font-size: 15px;
   line-height: 18px;
   position: relative;
-  background-color: rgb(246, 242, 235);
 }
 
 h1,
@@ -242,6 +241,7 @@ p {
 /* Mobile Version */
 header {
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   background-color: green;
@@ -254,32 +254,93 @@ header.fixed {
   background-color: blue;
 }
 header .navigation-menu {
-  display: block;
+  margin: auto;
+  box-sizing: border-box;
   position: relative;
   min-height: 80px;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 15px;
   /* Mobile Version */
   /* Desktop Version */
 }
-header .navigation-menu .main-navigation {
-  padding-left: 0px;
-  display: inline-block;
-}
-header .navigation-menu .main-navigation div.logo {
+header .navigation-menu div.logo {
+  display: flex;
+  margin-right: auto;
   width: 200px;
   height: 60px;
-  position: absolute;
-  left: 10px;
-  top: 10px;
 }
-header .navigation-menu .main-navigation div.logo a {
+header .navigation-menu div.logo a {
   display: block;
   width: 100%;
   height: 100%;
   background-color: pink;
   color: #FFF;
 }
-header .navigation-menu .main-navigation li {
+header .navigation-menu label.menuaction {
+  background-color: orange;
+  width: 30px;
+  height: 33px;
+  margin-top: -4px;
+}
+header .navigation-menu label.menuaction .hamburger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+header .navigation-menu label.menuaction .hamburger > div {
+  transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 2px;
+  width: 30px;
+  background: #fff;
+  margin: 5px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+header .navigation-menu label.menuaction .hamburger:hover, header .navigation-menu label.menuaction .hamburger:focus {
+  outline: none;
+  cursor: pointer;
+}
+header .navigation-menu label.menuaction .hamburger:hover .line:nth-child(1), header .navigation-menu label.menuaction .hamburger:focus .line:nth-child(1) {
+  transform: rotate(45deg) translateY(7px) translateX(7px);
+}
+header .navigation-menu label.menuaction .hamburger:hover .line:nth-child(2), header .navigation-menu label.menuaction .hamburger:focus .line:nth-child(2) {
+  visibility: hidden;
+}
+header .navigation-menu label.menuaction .hamburger:hover .line:nth-child(3), header .navigation-menu label.menuaction .hamburger:focus .line:nth-child(3) {
+  transform: rotate(-45deg) translateY(-9px) translateX(10px);
+}
+header .navigation-menu div.calltoaction {
+  margin-right: 32px;
   display: none;
+}
+header .navigation-menu div.calltoaction a.navctoa {
+  height: 33px;
+  color: #FFF;
+  background-color: #0A426A;
+  padding: 15px 20px 11px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 6px;
+}
+header .navigation-menu .main-navigation {
+  padding-left: 0px;
+  display: none;
+}
+header .navigation-menu .main-navigation li {
   list-style-type: none;
   margin: 0px auto;
   text-align: center;
@@ -293,39 +354,6 @@ header .navigation-menu .main-navigation li a {
 header .navigation-menu .main-navigation li a:hover {
   color: yellow;
   transition: 0.3s ease;
-}
-header .navigation-menu .hamburger {
-  position: absolute;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-header .navigation-menu .hamburger > div {
-  transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  height: 2px;
-  width: 30px;
-  background: #fff;
-  margin: 5px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-header .navigation-menu .hamburger:hover, header .navigation-menu .hamburger:focus {
-  outline: none;
-}
-header .navigation-menu .hamburger:hover .line:nth-child(1), header .navigation-menu .hamburger:focus .line:nth-child(1) {
-  transform: rotate(45deg) translate(14px, 6px);
-}
-header .navigation-menu .hamburger:hover .line:nth-child(2), header .navigation-menu .hamburger:focus .line:nth-child(2) {
-  visibility: hidden;
-}
-header .navigation-menu .hamburger:hover .line:nth-child(3), header .navigation-menu .hamburger:focus .line:nth-child(3) {
-  transform: rotate(-45deg) translate(12px, -3px);
 }
 header .navigation-menu #menu-toggle {
   display: none;
@@ -401,55 +429,87 @@ header .navigation-menu #menu-toggle:checked + .main-navigation li > ul li {
   margin: 0 auto;
   padding: 0;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 500px) {
   header .navigation-menu {
-    display: flex;
-    align-items: center;
+    padding: 0 32px;
   }
-  header .navigation-menu .menuopen {
+  header .navigation-menu div.calltoaction {
+    margin-right: 32px;
+    display: block;
+  }
+}
+@media screen and (min-width: 1000px) {
+  header .navigation-menu {
+    gap: 30px;
+  }
+  header .navigation-menu div.logo {
+    margin: 0 auto 0 0;
+    order: 1;
+  }
+  header .navigation-menu label.menuaction {
     display: none;
   }
   header .navigation-menu .main-navigation {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: auto 0 auto auto;
-    padding: 0;
+    margin: 0;
+    order: 2;
+    gap: 15px;
   }
-  header .navigation-menu .main-navigation li {
+  header .navigation-menu .main-navigation > li {
+    text-transform: uppercase;
     position: relative;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  header .navigation-menu .main-navigation > li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+  }
+  header .navigation-menu .main-navigation > li ul {
     display: block;
-  }
-  header .navigation-menu .main-navigation li a {
-    padding: 5px 8px;
-  }
-  header .navigation-menu .main-navigation li ul {
-    display: none;
-    position: absolute;
     top: 100%;
-    background-color: orange;
+    left: 0;
+    z-index: 5000;
+    position: absolute;
+    background-color: green;
     margin: 0;
-    padding: 10px;
+    padding: 10px 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-out;
   }
-  header .navigation-menu .main-navigation li ul li {
-    white-space: nowrap;
-    display: block;
-    padding: 5px;
+  header .navigation-menu .main-navigation > li ul li {
     margin: 0;
+    padding: 7px 7px;
     white-space: nowrap;
-    display: block;
-    padding: 0px !important;
+    text-align: left;
   }
-  header .navigation-menu .main-navigation li ul li a {
-    display: block;
-    margin: 0 !important;
-    padding: 5px !important;
+  header .navigation-menu div.calltoaction {
+    margin: 0;
+    order: 3;
   }
-  header .navigation-menu .main-navigation li:hover ul {
-    display: block;
+}
+@media screen and (min-width: 1150px) {
+  header .navigation-menu {
+    gap: 90px;
   }
-  header .navigation-menu label {
-    display: none;
+}
+@media screen and (min-width: 1200px) {
+  header .navigation-menu {
+    gap: 120px;
+  }
+}
+@media screen and (min-width: 1360px) {
+  header .navigation-menu {
+    gap: 160px;
+    padding: 0;
   }
 }
 
