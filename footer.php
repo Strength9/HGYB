@@ -4,9 +4,9 @@
 $footerlogo = s9_imagefield($fieldname='logo_footer', $id = 'options', $classname = '');
 
 
-$sitecontactemail = s9_emaillink($fieldname = 'email_address', $postid = 'options', $titletext ='Email the team', $extratext = 'e: ',$className = '',$emptyText = '');
+$foot_sitecontactemail = s9_emaillink($fieldname = 'email_address', $postid = 'options', $titletext ='Email the team', $extratext = 'e: ',$className = '',$emptyText = '');
 
-$sitecontactphone = s9_emaillink($fieldname = 'telephone_number', $postid = 'options', $titletext ='Email the team', $extratext = 't: ',$className = '',$emptyText = '');
+$foot_sitecontactphone = s9_emaillink($fieldname = 'telephone_number', $postid = 'options', $titletext ='Email the team', $extratext = 't: ',$className = '',$emptyText = '');
 ?>
 
 
@@ -41,8 +41,8 @@ $sitecontactphone = s9_emaillink($fieldname = 'telephone_number', $postid = 'opt
 		  		<div class="contactdetails">
 			  		<ul>
 				  		<li class="title"><span>Contact Info</span></li>
-				  		<li><?php echo $sitecontactemail;?></li>
-				  		<li><?php echo $sitecontactphone;?></li>
+				  		<li><?php echo $foot_sitecontactemail;?></li>
+				  		<li><?php echo $foot_sitecontactphone;?></li>
 			  		</ul>
 		  		</div>
 

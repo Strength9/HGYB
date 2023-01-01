@@ -1,0 +1,70 @@
+.servicestable {
+	
+	.icon_gridlist {
+	  max-width: 100%;
+	  column-gap: 40px;
+	  column-count: 1;
+	  
+	 
+	  .icon_arealist {
+		margin-bottom: 40px; // Needs to match the
+		break-inside: avoid; // Prevents div being put into two columns
+		display: grid;
+		grid-template-columns: 1fr 0.4fr;
+		grid-template-rows: 1fr;
+		gap: 0px 0px;
+		grid-auto-flow: row;
+		grid-template-areas: "areatext iconarea";
+		
+	
+		.areatext {
+		  align-self: start;
+		  grid-area: areatext;
+	
+		  ul {
+			padding-left: 0.8em; // Reset the list icons to align:left;
+	
+			li {
+			  margin: 10px 0px; // Line spacing
+			  
+			}
+		  }
+		  
+		  color:$hgyb_main;
+		}
+		.iconarea {
+		  justify-self: center;
+		  align-self: start;
+		  grid-area: iconarea;
+	
+		  img {
+			width: 100%;
+			height: auto;
+		  }
+		}
+	  }
+	  
+	  @media only screen and (min-width:600px) {
+			column-count: 2;
+			column-gap: 40px;
+			.icon_arealist {
+				margin-bottom: 40px; 
+			}
+		}
+	  @media only screen and (min-width:1200px) {
+		  column-count: 3;
+		  column-gap: 20px;
+		  .icon_arealist {
+			  margin-bottom: 20px; 
+		  }
+	  }
+	  @media only screen and (min-width:1400px) {
+		
+			column-gap: 60px;
+			.icon_arealist {
+				margin-bottom: 60px; 
+			}
+		}
+	}
+
+}

@@ -1,0 +1,87 @@
+.iconcards_grid {
+	h1 {
+		color:$hgyb_main;
+	}
+	.icongrid{
+  	
+  	  display: grid;
+	  grid-gap: 40px 10px;
+	  grid-template-columns: repeat(1, 1fr);
+  	
+  	@media only screen and (min-width:670px) {
+	  	grid-template-columns: repeat(2, 1fr);
+  	}
+  	@media only screen and (min-width:800px) {
+		
+		}
+		@media only screen and (min-width:1280px) {
+			grid-template-columns: repeat(3, 420px);
+		}
+  	
+  	
+	 article.hgyb_box {
+	   border: 4px solid $hgyb_accent;
+	   border-radius: 30px;
+	   box-sizing: border-box;
+	   padding: 20px 20px 90px;
+	   text-align: center;
+	   position: relative;
+	   span {
+		 background-color: #FFF;
+		 display: block;
+		 height: 4px;
+		 position: absolute;
+		 top: -4px; // Brings into line with top border thickness
+		 left: 50%;
+		 transform: translateX(-50%);
+		 z-index: 1;
+	   }
+	   img {
+		 position: relative;
+		 z-index: 2;
+		 height: 140px;
+		 width: auto;
+		 margin: -54px auto 0;
+	   }
+	   h2 {
+		 color: $hgyb_main;
+		 margin: 15px auto;
+		 &:after {
+			 display:none !important;
+		 }
+	   }
+	   p {
+		 color: $hgyb_main;
+		 margin: 0 auto 10px;
+	   }
+	   .button {
+		 color: $hgyb_main;
+		 text-align: center;
+		 margin: 0 auto 0;
+		 position: absolute;
+		 bottom: 20px;
+		 border: 1px solid $hgyb_accent;
+		 border-radius: 13px;
+		 padding: 15px 50px;
+		 left: 50%;
+		 transform: translateX(-50%);
+		 text-decoration: none;
+		 transition: all 0.3s;
+		 overflow: hidden;
+		 z-index: 1;
+	 
+		 &:hover {
+		   background-color: darken($hgyb_accent, 15%);
+		   bottom: 28px;
+		   color: $hgyb_main;
+		   &:before {
+			 width: 100%;
+		   }
+		 }
+	   }
+	 }
+	  
+	  
+ 	}
+}
+

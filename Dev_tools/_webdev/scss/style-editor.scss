@@ -15,9 +15,16 @@ body.logged-in .wrap.woocomerce .mainform {margin-top: 145px;}
     @import '_design_styles/animated';     
     @import '_page_structure/header';      
     @import '_page_structure/footer';  
-   @import '_customs_partials/paritals'; // Global Designs
+   @import '_customs_partials/paritals'; 
    
+    @import '_customs_partials/quotations';
+    @import '_customs_partials/iconcards';
+     @import '_customs_partials/servicestable';
+     @import '_customs_partials/headerblock';
+  @import '_customs_partials/hexcalltoaction';
     
+    
+     
 .fade-in {
   opacity: 0;
   transform: translateY(100px);

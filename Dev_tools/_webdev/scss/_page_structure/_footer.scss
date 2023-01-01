@@ -3,6 +3,8 @@ footer {
 	background-color:$hgyb_main;
 	border-top:30px solid $hgyb_accent;
 	.maincontent {
+		padding-top:0;
+		padding-bottom:0;
 			max-width:$contentwidth;
 			margin:60px auto;
 			display: grid; 

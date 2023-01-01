@@ -6,7 +6,20 @@
 	
 /* Links */
 
-
+section {
+	
+	
+	padding: 80px 15px;
+	
+	@media screen and (min-width: 500px ) {	
+		padding:120px 32px;
+	  }
+	  @media screen and (min-width: 1360px ) {	
+		//gap:110px;
+		padding:140px 0;
+	  }
+	
+}
 
 
 
@@ -42,7 +55,6 @@
 		flex-wrap: nowrap;
 		justify-content: space-between;
 		align-content: stretch;
-		align-items: center;
 		background-position: center center;
 		background-size: contain;
 		background-repeat:no-repeat;

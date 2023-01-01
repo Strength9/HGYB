@@ -254,7 +254,7 @@ function example_block_category( $categories, $post ) {
 			$categories,
 			array(
 				array(
-					'slug' => 's9blocks',
+					'slug' => 'HGYB',
 					'title' => 'Strength 9',
 				),
 			/*	array(
@@ -294,6 +294,8 @@ function remove_posts_menu()
 {
 	remove_menu_page('edit.php');
 }
+
+
 
 /**
 	 * Font Awesome Kit Setup
