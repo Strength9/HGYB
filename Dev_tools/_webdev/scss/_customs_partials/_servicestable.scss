@@ -1,5 +1,17 @@
 .servicestable {
 	
+	
+	h1 {
+		text-align: center;
+		color:$hgyb_main;
+		font-size:72px;
+		
+		
+		@include largeMaintitle;
+		
+		
+	}
+	
 	.icon_gridlist {
 	  max-width: 100%;
 	  column-gap: 40px;
@@ -21,12 +33,18 @@
 		  align-self: start;
 		  grid-area: areatext;
 	
+		h3 {
+			font-family: 'ITC Avant Garde Gothic Std Book';
+			font-size:22px;
+			
+			
+		}
 		  ul {
 			padding-left: 0.8em; // Reset the list icons to align:left;
 	
 			li {
 			  margin: 10px 0px; // Line spacing
-			  
+			  font-family: 'ITC Avant Garde Gothic Std Book';
 			}
 		  }
 		  
@@ -39,6 +57,7 @@
 	
 		  img {
 			width: 100%;
+			max-width: 100px;
 			height: auto;
 		  }
 		}

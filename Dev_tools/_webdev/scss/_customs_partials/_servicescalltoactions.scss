@@ -1,9 +1,45 @@
 .servicesctoa {
-	background-color:$hgyb_black;
+	background-color:$hgyb_main;
 	
 	.wcp-column {
 		background-color:$hgyb_main;
 		
+		p {
+			text-align:center;
+			color:#FFF;
+			font-family: 'Gabriela';
+			font-weight: normal;
+			font-style: normal;
+			line-height:1.4;
+			font-size:16px;
+			max-width:800px;
+			margin:auto auto 40px;
+			word-break: break-word;
+			
+			a {
+				color:#FFF;
+				text-decoration:none;
+				
+				
+				&:hover, &:focus {
+					color:$hgyb_accent;
+				}
+			}
+			
+			@media only screen and (min-width:400px) {
+				font-size:18px;
+				word-break: normal;
+			}
+			@media only screen and (min-width:600px) {
+				font-size:22px;
+			}
+			@media only screen and (min-width:700px) {
+				font-size:24px;
+			}
+			@media only screen and (min-width:1000px) {
+				font-size:26px;
+			}
+		}
 		.wpforms-container {
 			width:100%;
 			form {
@@ -13,26 +49,43 @@
 					width:100%;
 					
 					display: grid;
-					grid-template-columns: repeat(4, 1fr);
-					grid-template-rows: 1fr;
+					grid-template-columns: repeat(1, 1fr);
+					grid-template-rows: repeat(4, 1fr);
 					gap: 0px 20px;
 					grid-auto-flow: row;
-					grid-template-areas: "how yname yemail yel";
+					grid-template-areas: "how" "yname" "yemail" "yel";
 					
+					@media only screen and (min-width:500px) {
+						grid-template-columns: repeat(2, 1fr);
+						grid-template-rows: repeat(3, 1fr);
+						gap: 0px 20px;
+						grid-template-areas: "how how" "yname yname" "yemail yel";
+					}
+					@media only screen and (min-width:700px) {
+						grid-template-columns: repeat(2, 1fr);
+						grid-template-rows: repeat(2, 1fr);
+						gap: 0px 20px;
+						grid-template-areas: "how yname" "yemail yel";
+					}
+					@media only screen and (min-width:900px) {
+						grid-template-columns: repeat(4, 1fr);
+						grid-template-rows: 1fr;
+						gap: 0px 20px;
+						grid-template-areas: "how  yname yemail yel";
+					}
 					
 					#wpforms-90-field_5-container { grid-area: how; }
-					
 					#wpforms-90-field_3-container { grid-area: yname; }
-					
 					#wpforms-90-field_1-container { grid-area: yemail; }
-					
 					#wpforms-90-field_4-container { grid-area: yel; }
 
 					input[type="text"], input[type="email"] {
 						border:0;
 						background-color: transparent;
-						color: $hgyb_accent;;
+						color: $hgyb_accent !important;
 						border-bottom:1px solid #FFF;
+						
+						
 					}
 					
 					::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -48,27 +101,30 @@
 					  color: #FFF;
 					}
 					
+					.wpforms-error {
+						color:rgb(241, 36, 36);
+						padding:10px 5px;
+					}
+					
 					// Select Field
 					.choices__inner {
+						
 						background: none;
 						border:0px;
 						background-color:$hgyb_main !important;
 						border-bottom:1px solid #FFF;
 					}
-					.choices__list--dropdown {
-						border:0px;
-					}
-					.choices{
-					  font-size: 16px;
-					  color: #FFF;
+					.choices, .choices__placeholder{
+					 
 					  opacity:1;
 					}
-					.choices__placeholder {
-					  font-size: 16px;
-					  color: #FFF;
-					  opacity:1;
-					}
+					 
 					.choices__list--dropdown .choices__item--selectable, .choices__list--dropdown .choices__item--selectable.is-highlighted {
+						background-color: $hgyb_main !important;
+						border-color:$hgyb_main !important;
+					}
+					
+					.choices__list--dropdown {
 						background-color: $hgyb_main !important;
 						border-color:$hgyb_main !important;
 					}
@@ -76,6 +132,40 @@
 						display:none;
 					}
 					
+					
+					input[type="text"], input[type="email"], .choices__placeholder, .choices, .choices__item {
+						font-family: 'ITC Avant Garde Gothic Std Book';
+						  font-weight: normal;
+						  font-style: normal;
+						  font-size:16px;
+						  color: #FFF;
+						  
+						  @media only screen and (min-width:1200px) {
+							  font-size:19px;
+						  }
+					}
+					
+					
+					
+					
+				}
+				
+				.wpforms-submit-container {
+					text-align:center;
+					position:relative;
+					height:90px;
+					
+					
+					button {
+						font-family: 'ITC Avant Garde Gothic Std Book';
+					
+						font-weight: normal;
+						font-style: normal;
+						@include hygb_button(transparent,$hgyb_accent,#FFF,$hgyb_accent,$hgyb_accent, $hgyb_main);
+						font-size:18px;
+						height:45px;
+						width:210px;
+					}
 				}
 			
 			}

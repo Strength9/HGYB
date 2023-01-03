@@ -3,7 +3,7 @@
 		color:#FFF;
 	}
 .quotation{
-  
+  margin-top:60px;
   display:grid;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   grid-gap:60px 30px;
@@ -18,47 +18,7 @@
 		gap:120px;
 	}
   
- 	/* article {
-	text-align:center;
-	color:#FFF;
-	.quotemark {
-		height: 33px;
-		border-bottom:2px solid $hgyb_accent;
-		margin-bottom:30px;
-		
-		.quoteimg {
-			margin:auto;
-			height: 33px;
-			width:58px;
-			background: $hgyb_black url("/wp-content/themes/HGYB/assets/img/svg/qt-top.svg") no-repeat center center;
-		}
-	}
-	.quotemarkbottom {
-		height: 33px;
-		border-top:2px solid $hgyb_accent;
-		margin-top:30px;
-		margin-bottom:20px;
-				
-		
-		.quoteimg {
-			margin:-2px auto 0;
-			height: 33px;
-			width:58px;
-			background: $hgyb_black url("/wp-content/themes/HGYB/assets/img/svg/qt-bottom.svg") no-repeat center center;
-		}
-	}
-	  h3 {
-		margin: 0;
-	  }
-	  p {
-		margin: 0;
-
-		&.qtby {
-		  margin: 0;
-		}
-	  }
-
-  } */
+ 	
 	 
 
 	   article {
@@ -87,7 +47,7 @@
 			   display: block;
 			 }
 			 &.top {
-			   margin: 0px auto 0px;
+			   margin: 0px auto 30px;
 	 
 			   &:before {
 				 top: -32px;
@@ -96,7 +56,7 @@
 			   }
 			 }
 			 &.bottom {
-			   margin: 0px auto 33px;
+			   margin: 30px auto 53px;
 	 
 			   &:before {
 				 top: -1px;
@@ -115,6 +75,8 @@
 	 
 			 &.qtby {
 			   margin: 0;
+			   font-size:15px;
+			   color:$hgyb_accent;
 			 }
 		   }
 

@@ -18,7 +18,9 @@ include('______partials_global.php');
 /* --------------------------------------------------------------------------- */
 echo '<section '.$anchor.' class="'.$blockclass .'">
 	<div class="wcp-columns">
-		 <div class="wcp-column full">'.do_shortcode( '[wpforms id="90"]' ).'</div>
+		 <div class="wcp-column full">
+		 <p>To speak to one of our advisors about any of our services, just submit your contact details and we’ll be in touch shortly. You can also email us at <a href="info@helpgrowyourbusiness.co.uk" title="Get in touch">info@helpgrowyourbusiness.co.uk</a>.</p>
+		 '.do_shortcode( '[wpforms id="90"]' ).'</div>
 	</div>
 </section>';
 ?>

@@ -21,6 +21,7 @@ echo '<section '.$anchor.' class="'.$blockclass .'" '.$styleoutput .'>
 		 <div class="wcp-column full">
 		
 		<h1>What People Say</h1>
+		<p>We offer a range of services to help you to build your business.</p>
 	<div class="icongrid">	
 		<article class="hgyb_box">
 		<span class="imgblocker" style="width:105px"></span>

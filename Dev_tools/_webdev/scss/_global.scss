@@ -23,3 +23,63 @@ $slickarrowcolor: red;
 $hgyb_main : #0A426A;
 $hgyb_accent :#EEC233;
 $hgyb_black :#414042 ;
+
+
+
+@mixin hygb_button($bg : $hgyb_black, $brder : $hgyb_black, $txt : #FFF, $bghv : $hgyb_black, $brderhv : $hgyb_black, $txthv : #FFF, ) {
+	 color: $txt;
+	 text-align: center;
+	 margin: 20px auto 0;
+	 position: absolute;
+	 bottom: 0px;
+	 border: 1px solid $brder;
+	 border-radius: 10px;
+	 padding: 10px 55px 6px;
+	 left: 50%;
+	 transform: translateX(-50%);
+	 text-decoration: none;
+	 transition: all 0.3s;
+	 overflow: hidden;
+	 z-index: 1;
+	 background-color:$bg ;
+	 text-transform:uppercase;
+ 
+	 &:hover {
+	   background-color: $brderhv;
+	   border: 1px solid $bghv;
+	   bottom: 10px;
+	   color: $txthv;
+	   &:before {
+		 width: 100%;
+	   }
+	 }
+   };
+
+
+@mixin largeMaintitle {
+	
+	
+	font-family: 'ITC Avant Garde Gothic Std Book';
+	
+	margin-top:0;
+	$ftsize : 30px;
+	font-size:$ftsize;
+	margin-bottom:calc($ftsize*2.5);
+	
+	@media only screen and (min-width:600px) {
+		$ftsize : 40px;
+		font-size:$ftsize;
+		margin-bottom:calc($ftsize*2.5);
+	}
+	
+	@media only screen and (min-width:900px) {
+		$ftsize : 50px;
+		font-size:$ftsize;
+		margin-bottom:calc($ftsize*2.5);
+	}
+	@media only screen and (min-width:1300px) {
+		$ftsize : 60px;
+		font-size:$ftsize;
+		margin-bottom:calc($ftsize*2.5);
+	}
+}

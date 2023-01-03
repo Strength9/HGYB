@@ -1,5 +1,5 @@
 <?php
-/*
+/* 
 Block Name: Services Table
 Block Description: Services Table
 Post Types: post, page, custom-type
@@ -20,7 +20,7 @@ echo '<section '.$anchor.' class="'.$blockclass .'">
 	<div class="wcp-columns">
 	 	<div class="wcp-column full">
 		 
-		 <h1>Services Grid</h1>
+		 <h1 class="noline">Services Grid</h1>
 		 	<div class="icon_gridlist">
 			   <div class="icon_arealist">
 				 <div class="areatext">
