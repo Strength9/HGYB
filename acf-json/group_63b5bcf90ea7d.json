@@ -1,13 +1,13 @@
 {
-    "key": "group_63b083ed8ff73",
-    "title": "Partial - Background Colour",
+    "key": "group_63b5bcf90ea7d",
+    "title": "Partial - Text Whsiwhig",
     "fields": [
         {
-            "key": "field_63b083edbea36",
-            "label": "Background Colour",
-            "name": "background_colour",
+            "key": "field_63b5bcf9fa194",
+            "label": "Text Detail",
+            "name": "text_detail",
             "aria-label": "",
-            "type": "select",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,29 +16,14 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "hgybwhite": "Default (White)",
-                "hgybblack": "HGYB Black",
-                "hgybblue": "HGYB Blue",
-                "hgybaccent": "HGYB Yellow"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "default_value": "Text Goes Here",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/block-quotation-lists"
-            }
-        ],
         [
             {
                 "param": "block",
@@ -50,11 +35,18 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-custom-blocking-start"
+                "value": "acf\/block-create-full-text"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-create-text-and-image"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 30,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -63,5 +55,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672852565
+    "modified": 1672854898
 }

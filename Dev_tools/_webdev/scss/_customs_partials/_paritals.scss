@@ -8,16 +8,36 @@
 
 section {
 	
+	&.hgybblack {
+		background-color: $hgyb_black;
+	}
+	&.hgybaccent{
+		background-color: $hgyb_accent;
+	}
+	&.hgybblue{
+		background-color: $hgyb_main;
+	}
 	
-	padding: 80px 15px;
-	
-	@media screen and (min-width: 500px ) {	
-		padding:120px 32px;
-	  }
-	  @media screen and (min-width: 1360px ) {	
-		//gap:110px;
-		padding:140px 0;
-	  }
+	&.standard {
+		padding: 80px 15px;
+		
+	  	@media screen and (min-width: 500px ) {	
+			padding:120px 32px;
+	  	}
+	  	@media screen and (min-width: 1360px ) {	
+			padding:140px 0;
+	  	}
+	}
+	&.npmid {
+		padding: 0px 15px;
+		
+		@media screen and (min-width: 500px ) {	
+			padding:0px 32px;
+		}
+		@media screen and (min-width: 1360px ) {	
+			padding:0px 0;
+		}
+	}
 	
 }
 

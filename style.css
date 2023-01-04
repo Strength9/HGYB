@@ -143,6 +143,22 @@ body {
   line-height: 18px;
   position: relative;
 }
+@media only screen and (min-width: 600px) {
+  body {
+    background: url("/wp-content/themes/HGYB/assets/img/left.png") left center repeat-y, url("/wp-content/themes/HGYB/assets/img/right.png") right center repeat-y;
+    background-size: 50px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  body {
+    background-size: 70px;
+  }
+}
+@media only screen and (min-width: 1570px) {
+  body {
+    background-size: 120px;
+  }
+}
 
 h1,
 h2,
@@ -178,6 +194,7 @@ h1,
 h2,
 h3 {
   overflow: hidden;
+  color: #0A426A;
 }
 h1:after,
 h2:after,
@@ -202,6 +219,44 @@ p {
   line-height: 1.7;
   margin-bottom: 25px;
   font-weight: 200;
+  color: #414042;
+}
+p strong {
+  font-family: "ITC Avant Garde Gothic Std Demi";
+}
+p a {
+  color: #EEC233;
+  text-decoration: none;
+}
+p a:hover {
+  color: #0A426A;
+}
+
+ul li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-weight: 200;
+  color: #414042;
+}
+ul li a {
+  color: #EEC233;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: #0A426A;
+}
+
+blockquote {
+  background-color: #0A426A;
+  color: #FFF;
+  padding: 50px;
+  width: 80%;
+  margin: auto auto 25px;
+}
+blockquote p {
+  color: #FFF;
+  margin-bottom: 0;
 }
 
 .fade-in {
@@ -679,6 +734,7 @@ footer .maincontent ul a:hover {
   color: #EEC233;
 }
 footer .maincontent ul li {
+  color: #FFF;
   font-family: "ITC Avant Garde Gothic Std Book";
   font-weight: normal;
   font-style: normal;
@@ -809,17 +865,39 @@ footer .copyrightstrip div p {
 }
 
 /* Links */
-section {
+section.hgybblack {
+  background-color: #414042;
+}
+section.hgybaccent {
+  background-color: #EEC233;
+}
+section.hgybblue {
+  background-color: #0A426A;
+}
+section.standard {
   padding: 80px 15px;
 }
 @media screen and (min-width: 500px) {
-  section {
+  section.standard {
     padding: 120px 32px;
   }
 }
 @media screen and (min-width: 1360px) {
-  section {
+  section.standard {
     padding: 140px 0;
+  }
+}
+section.npmid {
+  padding: 0px 15px;
+}
+@media screen and (min-width: 500px) {
+  section.npmid {
+    padding: 0px 32px;
+  }
+}
+@media screen and (min-width: 1360px) {
+  section.npmid {
+    padding: 0px 0;
   }
 }
 
@@ -1070,6 +1148,7 @@ section {
 }
 .quotes_grid .quotation article p {
   margin: 0;
+  color: #FFF;
 }
 .quotes_grid .quotation article p.qtby {
   margin: 0;
@@ -1269,20 +1348,193 @@ section {
   padding-top: 110px;
   padding-bottom: 100px;
   background-color: #817f83;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .headerintro_inner h1 {
+  text-align: center;
+  font-size: 30px;
   margin: 0;
   padding: 0;
-  line-height: 1.2;
+  line-height: 1.1;
   text-transform: uppercase;
   color: #FFF;
+  letter-spacing: 2px;
 }
 .headerintro_inner h1 span {
   color: #EEC233;
   display: block;
+  font-family: "ITC Avant Garde Gothic Std Demi";
 }
 .headerintro_inner h1:after {
   display: none !important;
+}
+@media only screen and (min-width: 600px) {
+  .headerintro_inner h1 {
+    text-align: left;
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .headerintro_inner h1 {
+    font-size: 50px;
+  }
+}
+
+.headerblock {
+  padding-top: 110px;
+  padding-bottom: 100px;
+  background-color: #817f83;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.headerblock h1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 2px;
+}
+.headerblock h1 span {
+  color: #EEC233;
+  display: block;
+  font-family: "ITC Avant Garde Gothic Std Demi";
+}
+.headerblock h1:after {
+  display: none !important;
+}
+.headerblock .hr {
+  display: block;
+  width: 160px;
+  height: 1px;
+  border: 0;
+  border-bottom: 1px solid #EEC233;
+  margin: auto;
+}
+.headerblock p {
+  text-align: center;
+  color: #FFF;
+  font-family: "ITC Avant Garde Gothic Std Book";
+  font-size: 16px;
+  line-height: 1.3;
+  max-width: 550px;
+  margin: 20px 0;
+}
+.headerblock p.strapline {
+  margin: 10px 0;
+  font-family: "Gabriela" !important;
+  line-height: 1.4;
+  font-size: 22px;
+}
+.headerblock .linkbox {
+  position: relative;
+  height: 60px;
+  text-align: center;
+  width: 100%;
+}
+.headerblock .linkbox a {
+  color: #EEC233;
+  text-align: center;
+  margin: 20px auto 0;
+  position: absolute;
+  bottom: 0px;
+  border: 1px solid #EEC233;
+  border-radius: 10px;
+  padding: 10px 55px 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  transition: all 0.3s;
+  overflow: hidden;
+  z-index: 1;
+  background-color: transparent;
+  text-transform: uppercase;
+  margin: auto;
+  left: 0;
+  right: 0;
+  transform: translateX(0%);
+}
+.headerblock .linkbox a:hover {
+  background-color: #EEC233;
+  border: 1px solid #EEC233;
+  bottom: 10px;
+  color: #0A426A;
+}
+.headerblock .linkbox a:hover:before {
+  width: 100%;
+}
+@media only screen and (min-width: 600px) {
+  .headerblock h1 {
+    text-align: left;
+    font-size: 50px;
+  }
+  .headerblock p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  .headerblock p.strapline {
+    line-height: 1.4;
+    font-size: 30px;
+  }
+  .headerblock .hr {
+    margin-left: 0;
+  }
+  .headerblock .linkbox {
+    position: relative;
+    height: 60px;
+    text-align: center;
+    width: 100%;
+  }
+  .headerblock .linkbox a {
+    color: #EEC233;
+    text-align: center;
+    margin: 20px auto 0;
+    position: absolute;
+    bottom: 0px;
+    border: 1px solid #EEC233;
+    border-radius: 10px;
+    padding: 10px 55px 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    transition: all 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    background-color: transparent;
+    text-transform: uppercase;
+    margin: auto;
+    left: 0;
+    right: auto;
+    transform: translateX(0%);
+  }
+  .headerblock .linkbox a:hover {
+    background-color: #EEC233;
+    border: 1px solid #EEC233;
+    bottom: 10px;
+    color: #0A426A;
+  }
+  .headerblock .linkbox a:hover:before {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .headerblock h1 {
+    font-size: 50px;
+  }
+  .headerblock p {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  .headerblock p.strapline {
+    line-height: 1.4;
+    font-size: 30px;
+  }
 }
 
 .hexcalltoaction p {
@@ -1422,6 +1674,7 @@ section {
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container textarea {
   border: 1px solid #EEC233;
   background-color: transparent;
+  color: #FFF !important;
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label {
   color: #FFF;
@@ -1470,7 +1723,7 @@ section {
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder {
   text-transform: uppercase;
 }
-.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=email], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__item, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label {
+.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=email], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__item, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container textarea {
   font-family: "ITC Avant Garde Gothic Std Book";
   font-weight: normal;
   font-style: normal;
@@ -1478,7 +1731,7 @@ section {
   color: #FFF;
 }
 @media only screen and (min-width: 1200px) {
-  .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=email], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__item, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label {
+  .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=email], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__item, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container textarea {
     font-size: 19px;
   }
 }
@@ -1522,6 +1775,23 @@ section {
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-submit-container button:hover:before {
   width: 100%;
+}
+.modal-wrapper.open .modal .wpforms-confirmation-container-full {
+  background-color: transparent;
+  border: 0;
+  margin: 50px 0;
+  padding: 0;
+  color: #FFF;
+}
+.modal-wrapper.open .modal .wpforms-confirmation-container-full h2 {
+  font-family: "ITC Avant Garde Gothic Std Book";
+}
+.modal-wrapper.open .modal .wpforms-confirmation-container-full h2:after {
+  display: none;
+}
+.modal-wrapper.open .modal .wpforms-confirmation-container-full p {
+  font-family: "Gabriela";
+  color: #FFF;
 }
 .modal-wrapper .head {
   margin: 0 0 0 auto;
@@ -1763,4 +2033,119 @@ section {
 }
 .servicesctoa .wcp-column .wpforms-container form .wpforms-submit-container button:hover:before {
   width: 100%;
+}
+
+.textblock.hgybblack {
+  background-color: #414042;
+}
+.textblock.hgybaccent h1:after, .textblock.hgybaccent h2:after, .textblock.hgybaccent h3:after {
+  border-top: 1px solid #FFF;
+}
+.textblock.hgybaccent p strong, .textblock.hgybaccent li strong {
+  color: #0A426A;
+}
+.textblock.hgybaccent p a, .textblock.hgybaccent li a {
+  color: #414042;
+  text-decoration: underline;
+}
+.textblock.hgybaccent p a:hover, .textblock.hgybaccent li a:hover {
+  color: #0A426A;
+}
+.textblock.hgybaccent blockquote {
+  background: #0A426A;
+}
+.textblock.hgybaccent blockquote p {
+  color: #EEC233;
+}
+.textblock.hgybblue h1, .textblock.hgybblue h2, .textblock.hgybblue h3 {
+  color: #FFF;
+}
+.textblock.hgybblue h1:after, .textblock.hgybblue h2:after, .textblock.hgybblue h3:after {
+  border-top: 1px solid #EEC233;
+}
+.textblock.hgybblue p, .textblock.hgybblue li {
+  color: #FFF;
+}
+.textblock.hgybblue p strong, .textblock.hgybblue li strong {
+  color: #EEC233;
+}
+.textblock.hgybblue p a, .textblock.hgybblue li a {
+  color: #EEC233;
+}
+.textblock.hgybblue p a:hover, .textblock.hgybblue li a:hover {
+  color: #FFF;
+}
+.textblock.hgybblue blockquote {
+  background: #EEC233;
+}
+.textblock.hgybblue blockquote p {
+  color: #0A426A;
+}
+
+.custom_block.hgybblack h1, .custom_block.hgybblack h2, .custom_block.hgybblack h3 {
+  color: #FFF;
+}
+.custom_block.hgybblack h1:after, .custom_block.hgybblack h2:after, .custom_block.hgybblack h3:after {
+  border-top: 1px solid #EEC233;
+}
+.custom_block.hgybblack p, .custom_block.hgybblack li {
+  color: #FFF;
+}
+.custom_block.hgybblack p strong, .custom_block.hgybblack li strong {
+  color: #FFF;
+}
+.custom_block.hgybblack p a, .custom_block.hgybblack li a {
+  color: #EEC233;
+}
+.custom_block.hgybblack p a:hover, .custom_block.hgybblack li a:hover {
+  color: #FFF;
+}
+.custom_block.hgybblack blockquote {
+  background: #0A426A;
+}
+.custom_block.hgybblack blockquote p {
+  color: #EEC233;
+}
+.custom_block.hgybaccent h1:after, .custom_block.hgybaccent h2:after, .custom_block.hgybaccent h3:after {
+  border-top: 1px solid #FFF;
+}
+.custom_block.hgybaccent p strong, .custom_block.hgybaccent li strong {
+  color: #0A426A;
+}
+.custom_block.hgybaccent p a, .custom_block.hgybaccent li a {
+  color: #414042;
+  text-decoration: underline;
+}
+.custom_block.hgybaccent p a:hover, .custom_block.hgybaccent li a:hover {
+  color: #0A426A;
+}
+.custom_block.hgybaccent blockquote {
+  background: #0A426A;
+}
+.custom_block.hgybaccent blockquote p {
+  color: #EEC233;
+}
+.custom_block.hgybblue h1, .custom_block.hgybblue h2, .custom_block.hgybblue h3 {
+  color: #FFF;
+}
+.custom_block.hgybblue h1:after, .custom_block.hgybblue h2:after, .custom_block.hgybblue h3:after {
+  border-top: 1px solid #EEC233;
+}
+.custom_block.hgybblue p, .custom_block.hgybblue li {
+  color: #FFF;
+}
+.custom_block.hgybblue p strong, .custom_block.hgybblue li strong {
+  color: #EEC233;
+}
+.custom_block.hgybblue p a, .custom_block.hgybblue li a {
+  color: #EEC233;
+}
+.custom_block.hgybblue p a:hover, .custom_block.hgybblue li a:hover {
+  color: #FFF;
+}
+.custom_block.hgybblue blockquote {
+  background: #EEC233;
+}
+.custom_block.hgybblue blockquote p {
+  color: #0A426A;
 }

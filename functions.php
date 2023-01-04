@@ -255,12 +255,12 @@ function example_block_category( $categories, $post ) {
 			array(
 				array(
 					'slug' => 'HGYB',
-					'title' => 'Strength 9',
+					'title' => 'Help Grow Your Business',
 				),
-			/*	array(
-					'slug' => 'wcpauto',
-					'title' => 'Wellington AutoFill',
-				), */
+				array(
+					'slug' => 'HGYB_BYO',
+					'title' => 'Help Grow Your Business Build a section',
+				), 
 			)
 		);
 	}

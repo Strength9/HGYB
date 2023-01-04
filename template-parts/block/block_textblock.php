@@ -1,31 +1,28 @@
 <?php
 /*
-Block Name: Services Call to Action
-Block Description: Services Call to Action
+Block Name: Text Block
+Block Description: Text Block
 Post Types: post, page, custom-type
 Block SVG: block_template.svg
 Block Category: HGYB
 */
-$sectionclass = 'servicesctoa';
+$sectionclass = 'textblock';
 /* --------------------------------------------------------------------------- */
 if( !empty( $block['data']['_is_preview'] ) ) {
-		echo' <img src="'.get_stylesheet_directory_uri().'/template-parts/previews/servicescalltoaction.png" alt="Title Field">';
+		echo' <img src="'.get_stylesheet_directory_uri().'/template-parts/previews/block_template.png" alt="Title Field">';
 		return;
 } 
 /* --------------------------------------------------------------------------- */
 include('______partials_global.php');
-
+ 
+s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '');
 /* --------------------------------------------------------------------------- */
 echo '<section '.$anchor.' class="'.$blockclass .'">
 	<div class="wcp-columns">
 		 <div class="wcp-column full">
-		 <p>To speak to one of our advisors about any of our services, just submit your contact details and we’ll be in touch shortly. You can also email us at <a href="info@helpgrowyourbusiness.co.uk" title="Get in touch">info@helpgrowyourbusiness.co.uk</a>.</p>
-		 '.do_shortcode( '[wpforms id="90"]' ).'</div>
+		 '.s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '').'
+		 
+		 </div>
 	</div>
 </section>';
 ?>
-
-
-
-
-

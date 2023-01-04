@@ -126,6 +126,7 @@
 				textarea {
 					border:1px solid $hgyb_accent;
 					background-color:transparent;
+				color: #FFF !important;
 				}
 				
 				.wpforms-field-label {
@@ -185,7 +186,7 @@
 					text-transform:uppercase;
 				}
 				
-				input[type="text"], input[type="email"], .choices__placeholder, .choices, .choices__item, .wpforms-field-label {
+				input[type="text"], input[type="email"], .choices__placeholder, .choices, .choices__item, .wpforms-field-label, textarea {
 					font-family: 'ITC Avant Garde Gothic Std Book';
 					  font-weight: normal;
 					  font-style: normal;
@@ -225,7 +226,23 @@
 		
 		}
 	}
-	
+	.wpforms-confirmation-container-full {
+		background-color:transparent;
+		border:0;
+		margin:50px 0;
+		padding:0;
+		color:#FFF;
+		h2 {
+			font-family: 'ITC Avant Garde Gothic Std Book';
+			&:after {
+				display:none;
+			}
+		}
+		p {
+			font-family: 'Gabriela';
+			color:#FFF;
+		}
+	} 
 	
 	// ------------------------------- //
 	

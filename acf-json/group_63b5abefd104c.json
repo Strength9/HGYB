@@ -1,11 +1,11 @@
 {
-    "key": "group_63b083ed8ff73",
-    "title": "Partial - Background Colour",
+    "key": "group_63b5abefd104c",
+    "title": "Partial - Section Spacing",
     "fields": [
         {
-            "key": "field_63b083edbea36",
-            "label": "Background Colour",
-            "name": "background_colour",
+            "key": "field_63b5abf0cc4db",
+            "label": "Section Spacing",
+            "name": "section_spacing",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -17,10 +17,8 @@
                 "id": ""
             },
             "choices": {
-                "hgybwhite": "Default (White)",
-                "hgybblack": "HGYB Black",
-                "hgybblue": "HGYB Blue",
-                "hgybaccent": "HGYB Yellow"
+                "standard": "Standard",
+                "npmid": "No Padding Top and Bottom"
             },
             "default_value": false,
             "return_format": "value",
@@ -36,13 +34,6 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-quotation-lists"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
                 "value": "acf\/block-text-block"
             }
         ],
@@ -54,7 +45,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": -10,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -63,5 +54,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672852565
+    "modified": 1672852524
 }

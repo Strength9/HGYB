@@ -24,7 +24,7 @@ body.logged-in .wrap.woocomerce .mainform {margin-top: 145px;}
      @import '_customs_partials/headerblock';
   @import '_customs_partials/hexcalltoaction';
     @import '_customs_partials/servicescalltoactions';
-
+ @import '_customs_partials/textblock';
     
      
 .fade-in {
@@ -38,3 +38,8 @@ body.logged-in .wrap.woocomerce .mainform {margin-top: 145px;}
 #tinymce {
   padding-top:0 !important;
 }
+
+.acf-block-preview{
+    border-top: 1px solid red;
+    border-bottom:1px solid green;
+  }

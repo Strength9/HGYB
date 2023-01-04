@@ -88,6 +88,18 @@ body {
     line-height:18px;
     position:relative;
     
+    
+    @media only screen and (min-width:600px) {
+      background:url("/wp-content/themes/HGYB/assets/img/left.png") left center repeat-y, url("/wp-content/themes/HGYB/assets/img/right.png") right center repeat-y;
+      background-size: 50px;
+    }
+    
+    @media only screen and (min-width:800px) {
+        background-size: 70px;
+    }
+    @media only screen and (min-width:1570px) {
+        background-size: 120px;
+    }
 }  
 
 h1,
@@ -123,6 +135,7 @@ h1,
 h2,
 h3 {
   overflow: hidden;
+  color:$hgyb_main;
   &:after {
     content: "";
     display: inline-block;
@@ -151,9 +164,55 @@ font-size: 16px;
 line-height: 1.7;
 margin-bottom: 25px;
 font-weight: 200;
+color:$hgyb_black;
+
+ strong {
+   font-family: 'ITC Avant Garde Gothic Std Demi';
+ }
+ 
+ a {
+   color:$hgyb_accent;
+   text-decoration:none;
+   
+   &:hover {
+     color:$hgyb_main;
+   }
+ }
 }
 
+ul {
+  li {
+    
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-weight: 200;
+    color:$hgyb_black;
+    
+    a {
+       color:$hgyb_accent;
+       text-decoration:none;
+       
+       &:hover {
+         color:$hgyb_main;
+       }
+     }
+    
+  }
+}
 
+blockquote {
+  background-color:$hgyb_main;
+  color:#FFF;
+  padding:50px;
+  width:80%;
+  margin:auto auto 25px;;
+  
+  p {
+    color:#FFF;
+    margin-bottom:0;
+  }
+}
 
 
 .fade-in {
