@@ -247,7 +247,66 @@ function xray_customblocks() {
 		  ),
 		));
 	  }
-	}
+}
+
+add_action('acf/init', 'xray_customCreateblocks');
+function xray_customCreateblocks() {
+	  // Get an array of theme PHP templates
+	  $theme = wp_get_theme();
+	  $files = $theme->get_files('php', 2, false);
+	
+	  // Iterate over and ignore non-block templates
+	  foreach ($files as $filename => $filepath) {
+		if (preg_match('#^template-parts/(createparts|container)s?/#', $filename, $matches) !== 1) {
+		  continue;
+		}
+		// Read the PHP comment meta data for the block
+		$meta = get_file_data($filepath, array(
+		  'name'        => 'Block Name',
+		  'description' => 'Block Description',
+		  'post_types'  => 'Post Types',
+		  'mode'        => 'Block Mode',
+		  'svg' 		=> 'Block SVG',
+		  'category' 	=> 'Block Category'
+		));
+		// Skip template if a name is not provided
+		if (empty($meta['name'])) {
+		  continue;
+		}
+		// Convert the post types to an array (or use defaults)
+		$post_types = array_filter(
+		  array_map('trim', explode(',', $meta['post_types']))
+		);
+		if (empty($post_types)) {
+		  $post_types = array('page', 'post');
+		}
+		// Register the ACF block using the meta data
+		acf_register_block_type(array(
+		  'name'              => "{$matches[1]}_" . sanitize_title($meta['name']),
+		  'title'             => $meta['name'],
+		  'description'       => $meta['description'],
+		  'post_types'        => $post_types,
+		  'render_template'   => $filepath,
+		  'category'          => $meta['category'], 
+		  'icon'            => file_get_contents(get_template_directory().'/template-parts/svg-icons/'.$meta['svg'] ),
+		  'supports'		=> [
+					  'mode'				=> true,
+					  'align'				=> false,
+					  'anchor'			=> true,
+					  'customClassName'	=> true,
+					'jsx' => true,
+		  ],
+		  'example'  => array(
+			  'attributes' => array(
+				  'mode' => 'preview',
+				  'data' => ['_is_preview' => true],
+			  )
+		  ),
+		));
+	  }
+}
+
+
 
 function example_block_category( $categories, $post ) {
 		return array_merge(
@@ -293,6 +352,12 @@ add_action('admin_menu', 'remove_posts_menu');
 function remove_posts_menu() 
 {
 	remove_menu_page('edit.php');
+}
+
+function blockedit_message($bemessage){
+	if (strpos($_SERVER['PHP_SELF'],'wp-admin')) {
+		echo '<div class="displaymarkdown">'.$bemessage.'</div>';
+	};
 }
 
 

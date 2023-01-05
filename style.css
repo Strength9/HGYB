@@ -11,6 +11,17 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: naked, bare, quick
 
 */
+.displaymarkdown {
+  width: 100%;
+  font-weight: bold;
+  padding: 10px 10px;
+  border-top: 2px dashed black;
+  border-bottom: 2px dashed black;
+  text-align: center;
+  background-color: gainsboro;
+  margin: 5px auto;
+}
+
 @font-face {
   font-family: "Gabriela";
   src: url("assets/fonts/Gabriela-Regular.woff2") format("woff2"), url("assets/fonts/Gabriela-Regular.woff") format("woff"), url("assets/fonts/Gabriela-Regular.svg#Gabriela-Regular") format("svg");

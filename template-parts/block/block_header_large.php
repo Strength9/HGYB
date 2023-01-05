@@ -12,7 +12,7 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 		echo' <img src="'.get_stylesheet_directory_uri().'/template-parts/previews/HeroHeader.png" alt="Title Field">';
 		return;
 } 
-include('______partials_global.php');
+include(dirname(__DIR__).'/______partials_global.php');
  
 echo '<section '.$anchor.' class="'.$blockclass .'" '.$styleoutput.'>
 	<div class="wcp-columns">

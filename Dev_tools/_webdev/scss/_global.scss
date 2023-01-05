@@ -24,7 +24,16 @@ $hgyb_main : #0A426A;
 $hgyb_accent :#EEC233;
 $hgyb_black :#414042 ;
 
-
+.displaymarkdown {
+	width:100%;
+	font-weight:bold;
+	padding:10px 10px;
+	border-top: 2px dashed black;
+	border-bottom: 2px dashed black;
+	text-align:center;
+	background-color: gainsboro;
+	margin:5px auto;
+}
 
 @mixin hygb_button($bg : $hgyb_black, $brder : $hgyb_black, $txt : #FFF, $bghv : $hgyb_black, $brderhv : $hgyb_black, $txthv : #FFF, ) {
 	 color: $txt;

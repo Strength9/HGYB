@@ -13,7 +13,7 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 		return;
 } 
 /* --------------------------------------------------------------------------- */
-include('______partials_global.php');
+include(dirname(__DIR__).'/______partials_global.php');
  
 s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '');
 /* --------------------------------------------------------------------------- */
