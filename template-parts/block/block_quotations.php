@@ -13,46 +13,40 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 		return;
 } 
 /* --------------------------------------------------------------------------- */
-include(dirname(__DIR__).'/______partials_global.php');
+include(dirname(__DIR__).'/partials/______partials_global.php');
+
+$quotecards = '';
+
+if( have_rows('quote_cards') ):
+	while( have_rows('quote_cards') ) : the_row();
+		$text = ! empty( get_sub_field('quote_text') ) ? '<p>'.get_sub_field('quote_text').'</p>' : '';
+		$textby = ! empty( get_sub_field('quote_by') ) ? get_sub_field('quote_by') : '';
+		$textcomp = ! empty( get_sub_field('quote_company') ) ? '<span>'.get_sub_field('quote_company').'</span>' : '';
+		
+
+		$quotecards .= '		<article class="quotesblock">
+			  <div class="quotemark"></div>
+			  <hr class="top">
+			  '.$text.'
+			  <hr class="bottom" />
+			  <p class="qtby">'.$textby.' '.$textcomp.'</p>
+		  </article>';
+
+	// End loop.
+	endwhile;
+
+endif;
+
+
+
 
 /* --------------------------------------------------------------------------- */
 echo '<section '.$anchor.' class="'.$blockclass .'" '.$styleoutput .'>
 	<div class="wcp-columns">
 	 	<div class="wcp-column full">
-		
-		<h1>What People Say</h1>
-	<div class="quotation">	
-		<article>
-			
-			  <div class="quotemark"></div>
-			  <hr class="top">
-			  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo nulla odio culpa minus. Eius tempore nulla animi esse possimus deserunt, veritatis, officia hic, accusamus vero cupiditate ratione id! Eos, illum. </p>
-			  <hr class="bottom" />
-			  <p class="qtby">Quote By <span>Quote Company</span></p>
-		
-		  </article>
-		<article>
-			
-			  <div class="quotemark"></div>
-			  <hr class="top">
-			  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo nulla odio culpa minus. Eius tempore nulla animi esse possimus deserunt, veritatis, officia hic, accusamus vero cupiditate ratione id! Eos, illum. </p>
-			  <hr class="bottom" />
-			  <p class="qtby">Quote By <span>Quote Company</span></p>
-	
-		  </article>
-			  <article>
-				 
-					<div class="quotemark"></div>
-					<hr class="top">
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo nulla odio culpa minus. Eius tempore nulla animi esse possimus deserunt, veritatis, officia hic, accusamus vero cupiditate ratione id! Eos, illum. </p>
-					<hr class="bottom" />
-					<p class="qtby">Quote By <span>Quote Company</span></p>
-				 
-				</article>
-			  
-	 		</div>
+		 	'.s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '').'
+			<div class="quotation_'.s9_textfield('number_of_columns', $postid = '', $tag = '', $className = '',$emptyText = 3).'">	'.$quotecards.'</div>
 		 </div>
-	 	
 	</div>
 </section>';
 ?>

@@ -12,75 +12,19 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 		echo' <img src="'.get_stylesheet_directory_uri().'/template-parts/previews/block_template.png" alt="Title Field">';
 		return;
 } 
-/* --------------------------------------------------------------------------- */
-include(dirname(__DIR__).'/______partials_global.php');
 
-/* --------------------------------------------------------------------------- */
+include(dirname(__DIR__).'/partials/______partials_global.php');
+include(dirname(__DIR__).'/partials/_iconcardgrid.php');
+ 
+
+
+
+
 echo '<section '.$anchor.' class="'.$blockclass .'" '.$styleoutput .'>
-	<div class="wcp-columns">
-		 <div class="wcp-column full">
-		
-		<h1>What People Say</h1>
-		<p>We offer a range of services to help you to build your business.</p>
-	<div class="icongrid">	
-		<article class="hgyb_box">
-		<span class="imgblocker" style="width:105px"></span>
-		  <img src="/wp-content/themes/HGYB/assets/img/svg/rocket.svg" alt="" />
-		  
-		  <h2>Business Setup</h2>
-		  <p>Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success. Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success.</p>
-		
-		  <a href="#" class="button">Read More</a>
-		</article>
-		
-		<article class="hgyb_box">
-		  <img src="/wp-content/themes/HGYB/assets/img/svg/rocket.svg" alt="" />
-		  <span class="imgblocker" style="width:105px"></span>
-		  <h2>Business Setup</h2>
-		  <p>Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success. Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success.</p>
-		
-		  <a href="#" class="button">Read More</a>
-		</article>
-		
-		<article class="hgyb_box">
-		  <img src="/wp-content/themes/HGYB/assets/img/svg/rocket.svg" alt="" />
-		  <span class="imgblocker" style="width:105px"></span>
-		  <h2>Business Setup</h2>
-		  <p>Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success. Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success.</p>
-		
-		  <a href="#" class="button">Read More</a>
-		</article>
-		
-		<article class="hgyb_box">
-		  <img src="/wp-content/themes/HGYB/assets/img/svg/rocket.svg" alt="" />
-		  <span class="imgblocker" style="width:105px"></span>
-		  <h2>Business Setup</h2>
-		  <p>Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success. Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success.</p>
-		
-		  <a href="#" class="button">Read More</a>
-		</article>
-		
-		<article class="hgyb_box">
-		  <img src="/wp-content/themes/HGYB/assets/img/svg/rocket.svg" alt="" />
-		  <span class="imgblocker" style="width:105px"></span>
-		  <h2>Business Setup</h2>
-		  <p>Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success. Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success.</p>
-		
-		  <a href="#" class="button">Read More</a>
-		</article>
-		
-		<article class="hgyb_box">
-		  <img src="/wp-content/themes/HGYB/assets/img/svg/rocket.svg" alt="" />
-		  <span class="imgblocker" style="width:105px"></span>
-		  <h2>Business Setup</h2>
-		  <p>Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success. Sales Growth Assistance throughout the business setup process to create the financial and business structure to help lead you to success.</p>
-		
-		  <a href="#" class="button">Read More</a>
-		</article>
-			  
-			 </div>
-		 </div>
-		 
-	</div>
+			<div class="wcp-columns">
+		 		<div class="wcp-column full">
+		 			'.s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '').$icongridoutput.'
+		 		</div> 
+			</div>
 </section>';
 ?>

@@ -258,6 +258,21 @@ ul li a:hover {
   color: #0A426A;
 }
 
+ol li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-weight: 200;
+  color: #414042;
+}
+ol li a {
+  color: #EEC233;
+  text-decoration: none;
+}
+ol li a:hover {
+  color: #0A426A;
+}
+
 blockquote {
   background-color: #0A426A;
   color: #FFF;
@@ -938,10 +953,10 @@ section.npmid {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-content: stretch;
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
+  justify-content: flex-start;
 }
 .wcp-columns .wcp-column.t_l {
   justify-content: flex-start;
@@ -1017,6 +1032,66 @@ section.npmid {
 }
 .wcp-columns .wcp-column.full {
   grid-column: 1/span 2;
+}
+
+.textimage {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(minmax(0px, auto), 2);
+  gap: 30px 30px;
+  grid-auto-flow: auto;
+  grid-template-areas: "textside imageside";
+}
+@media only screen and (min-width: 800px) {
+  .textimage {
+    grid-template-columns: 1fr 1.3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "textside imageside";
+    gap: 0px 80px;
+  }
+}
+.textimage .textside {
+  grid-area: textside;
+}
+.textimage .imageside {
+  grid-area: imageside;
+}
+
+.imagetext {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(minmax(0px, auto), 2);
+  gap: 30px 30px;
+  grid-auto-flow: auto;
+  grid-template-areas: "textside imageside";
+}
+@media only screen and (min-width: 800px) {
+  .imagetext {
+    grid-template-columns: 1fr 1.3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "imageside textside";
+    gap: 0px 80px;
+  }
+}
+.imagetext .textside {
+  grid-area: textside;
+}
+.imagetext .imageside {
+  grid-area: imageside;
+}
+
+.video-container {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .select-hidden {
@@ -1095,28 +1170,53 @@ section.npmid {
 .quotes_grid h1 {
   color: #FFF;
 }
-.quotes_grid .quotation {
-  margin-top: 60px;
+.quotes_grid .quotation_3 {
+  margin: 50px auto 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 60px 30px;
+  background-color: green;
+  grid-template-columns: repeat(1, 1fr);
 }
-@media only screen and (min-width: 1000px) {
-  .quotes_grid .quotation {
-    gap: 50px;
+@media only screen and (min-width: 670px) {
+  .quotes_grid .quotation_3 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media only screen and (min-width: 1100px) {
-  .quotes_grid .quotation {
-    gap: 90px;
+@media only screen and (min-width: 1280px) {
+  .quotes_grid .quotation_3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .quotes_grid .quotation {
-    gap: 120px;
+  .quotes_grid .quotation_3 {
+    grid-template-columns: repeat(3, 420px);
   }
 }
-.quotes_grid .quotation article {
+.quotes_grid .quotation_2 {
+  margin: 50px auto auto;
+  display: grid;
+  grid-gap: 80px 10px;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media only screen and (min-width: 670px) {
+  .quotes_grid .quotation_2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 60px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .quotes_grid .quotation_2 {
+    grid-template-columns: repeat(2, 420px);
+    grid-gap: 40px 120px;
+  }
+}
+.quotes_grid .quotation_1 {
+  margin: 50px auto auto;
+  display: grid;
+  grid-gap: 40px 10px;
+  grid-template-columns: repeat(1, minmax(0, 420px));
+}
+.quotes_grid article.quotesblock {
   box-sizing: border-box;
   background-color: #414042;
   color: #fff;
@@ -1125,12 +1225,12 @@ section.npmid {
   position: relative;
   margin: auto;
 }
-.quotes_grid .quotation article hr {
+.quotes_grid article.quotesblock hr {
   border-color: #EEC233;
   position: relative;
   overflow: visible;
 }
-.quotes_grid .quotation article hr:before {
+.quotes_grid article.quotesblock hr:before {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -1140,58 +1240,88 @@ section.npmid {
   height: 33px;
   display: block;
 }
-.quotes_grid .quotation article hr.top {
+.quotes_grid article.quotesblock hr.top {
   margin: 0px auto 30px;
 }
-.quotes_grid .quotation article hr.top:before {
+.quotes_grid article.quotesblock hr.top:before {
   top: -32px;
   background: #414042 url("https://assets.codepen.io/320472/qt-top.svg") no-repeat center center;
 }
-.quotes_grid .quotation article hr.bottom {
+.quotes_grid article.quotesblock hr.bottom {
   margin: 30px auto 53px;
 }
-.quotes_grid .quotation article hr.bottom:before {
+.quotes_grid article.quotesblock hr.bottom:before {
   top: -1px;
   background: #414042 url("https://assets.codepen.io/320472/qt-bottom.svg") no-repeat center center;
 }
-.quotes_grid .quotation article h3 {
+.quotes_grid article.quotesblock h3 {
   margin: 0;
 }
-.quotes_grid .quotation article p {
+.quotes_grid article.quotesblock p {
   margin: 0;
   color: #FFF;
 }
-.quotes_grid .quotation article p.qtby {
+.quotes_grid article.quotesblock p.qtby {
   margin: 0;
   font-size: 15px;
   color: #EEC233;
 }
 
-.iconcards_grid h1 {
-  color: #0A426A;
-}
-.iconcards_grid .icongrid {
-  margin-top: 50px;
+.icongrid_3 {
   display: grid;
-  grid-gap: 40px 10px;
+  grid-gap: 60px 10px;
   grid-template-columns: repeat(1, 1fr);
+  margin: 50px auto 0;
 }
 @media only screen and (min-width: 670px) {
-  .iconcards_grid .icongrid {
-    grid-template-columns: repeat(2, 1fr);
+  .icongrid_3 {
+    grid-template-columns: repeat(2, minmax(50px, 410px));
+    grid-gap: 80px 20px;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .iconcards_grid .icongrid {
-    grid-template-columns: repeat(3, 1fr);
+  .icongrid_3 {
+    grid-template-columns: repeat(3, minmax(50px, 410px));
+    grid-gap: 100px 20px;
   }
 }
-@media only screen and (min-width: 1400px) {
-  .iconcards_grid .icongrid {
-    grid-template-columns: repeat(3, 420px);
+
+.icongrid_2 {
+  margin: 50px auto auto;
+  display: grid;
+  grid-gap: 60px 10px;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media only screen and (min-width: 670px) {
+  .icongrid_2 {
+    grid-template-columns: repeat(2, minmax(50px, 680px));
+    grid-gap: 80px 20px;
   }
 }
-.iconcards_grid .icongrid article.hgyb_box {
+@media only screen and (min-width: 1280px) {
+  .icongrid_2 {
+    grid-gap: 100px 20px;
+  }
+}
+
+.icongrid_1 {
+  margin: 50px auto auto;
+  display: grid;
+  grid-gap: 40px 10px;
+  grid-template-columns: repeat(1, minmax(0, 420px));
+}
+@media only screen and (min-width: 670px) {
+  .icongrid_1 {
+    grid-gap: 80px 20px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .icongrid_1 {
+    grid-gap: 100px 20px;
+  }
+}
+
+article.hgyb_iconcardbox {
   border: 4px solid #EEC233;
   border-radius: 30px;
   box-sizing: border-box;
@@ -1199,7 +1329,7 @@ section.npmid {
   text-align: center;
   position: relative;
 }
-.iconcards_grid .icongrid article.hgyb_box span {
+article.hgyb_iconcardbox span {
   background-color: #FFF;
   display: block;
   height: 4px;
@@ -1209,26 +1339,26 @@ section.npmid {
   transform: translateX(-50%);
   z-index: 1;
 }
-.iconcards_grid .icongrid article.hgyb_box img {
+article.hgyb_iconcardbox img {
   position: relative;
   z-index: 2;
   height: 140px;
   width: auto;
   margin: -54px auto 0;
 }
-.iconcards_grid .icongrid article.hgyb_box h2 {
+article.hgyb_iconcardbox h2 {
   color: #414042;
   font-family: "ITC Avant Garde Gothic Std Demi";
   margin: 25px auto 15px;
 }
-.iconcards_grid .icongrid article.hgyb_box h2:after {
+article.hgyb_iconcardbox h2:after {
   display: none !important;
 }
-.iconcards_grid .icongrid article.hgyb_box p {
+article.hgyb_iconcardbox p {
   color: #0A426A;
   margin: 0 auto 10px;
 }
-.iconcards_grid .icongrid article.hgyb_box .button {
+article.hgyb_iconcardbox .button {
   color: #0A426A;
   text-align: center;
   margin: 20px auto 0;
@@ -1247,16 +1377,16 @@ section.npmid {
   text-transform: uppercase;
   bottom: 30px;
 }
-.iconcards_grid .icongrid article.hgyb_box .button:hover {
+article.hgyb_iconcardbox .button:hover {
   background-color: #EEC233;
   border: 1px solid #EEC233;
   bottom: 10px;
   color: #0A426A;
 }
-.iconcards_grid .icongrid article.hgyb_box .button:hover:before {
+article.hgyb_iconcardbox .button:hover:before {
   width: 100%;
 }
-.iconcards_grid .icongrid article.hgyb_box .button:hover {
+article.hgyb_iconcardbox .button:hover {
   bottom: 38px;
 }
 
@@ -2046,117 +2176,56 @@ section.npmid {
   width: 100%;
 }
 
-.textblock.hgybblack {
+.textblock.hgybblack, .custom_block.hgybblack {
   background-color: #414042;
 }
-.textblock.hgybaccent h1:after, .textblock.hgybaccent h2:after, .textblock.hgybaccent h3:after {
+.textblock.hgybaccent h1:after, .textblock.hgybaccent h2:after, .textblock.hgybaccent h3:after, .custom_block.hgybaccent h1:after, .custom_block.hgybaccent h2:after, .custom_block.hgybaccent h3:after {
   border-top: 1px solid #FFF;
 }
-.textblock.hgybaccent p strong, .textblock.hgybaccent li strong {
+.textblock.hgybaccent p strong, .textblock.hgybaccent li strong, .custom_block.hgybaccent p strong, .custom_block.hgybaccent li strong {
   color: #0A426A;
 }
-.textblock.hgybaccent p a, .textblock.hgybaccent li a {
+.textblock.hgybaccent p a, .textblock.hgybaccent li a, .custom_block.hgybaccent p a, .custom_block.hgybaccent li a {
   color: #414042;
   text-decoration: underline;
 }
-.textblock.hgybaccent p a:hover, .textblock.hgybaccent li a:hover {
+.textblock.hgybaccent p a:hover, .textblock.hgybaccent li a:hover, .custom_block.hgybaccent p a:hover, .custom_block.hgybaccent li a:hover {
   color: #0A426A;
 }
-.textblock.hgybaccent blockquote {
+.textblock.hgybaccent blockquote, .custom_block.hgybaccent blockquote {
   background: #0A426A;
 }
-.textblock.hgybaccent blockquote p {
+.textblock.hgybaccent blockquote p, .custom_block.hgybaccent blockquote p {
   color: #EEC233;
 }
-.textblock.hgybblue h1, .textblock.hgybblue h2, .textblock.hgybblue h3 {
+.textblock.hgybblue h1, .textblock.hgybblue h2, .textblock.hgybblue h3, .custom_block.hgybblue h1, .custom_block.hgybblue h2, .custom_block.hgybblue h3 {
   color: #FFF;
 }
-.textblock.hgybblue h1:after, .textblock.hgybblue h2:after, .textblock.hgybblue h3:after {
+.textblock.hgybblue h1:after, .textblock.hgybblue h2:after, .textblock.hgybblue h3:after, .custom_block.hgybblue h1:after, .custom_block.hgybblue h2:after, .custom_block.hgybblue h3:after {
   border-top: 1px solid #EEC233;
 }
-.textblock.hgybblue p, .textblock.hgybblue li {
+.textblock.hgybblue p, .textblock.hgybblue li, .custom_block.hgybblue p, .custom_block.hgybblue li {
   color: #FFF;
 }
-.textblock.hgybblue p strong, .textblock.hgybblue li strong {
+.textblock.hgybblue p strong, .textblock.hgybblue li strong, .custom_block.hgybblue p strong, .custom_block.hgybblue li strong {
   color: #EEC233;
 }
-.textblock.hgybblue p a, .textblock.hgybblue li a {
+.textblock.hgybblue p a, .textblock.hgybblue li a, .custom_block.hgybblue p a, .custom_block.hgybblue li a {
   color: #EEC233;
 }
-.textblock.hgybblue p a:hover, .textblock.hgybblue li a:hover {
+.textblock.hgybblue p a:hover, .textblock.hgybblue li a:hover, .custom_block.hgybblue p a:hover, .custom_block.hgybblue li a:hover {
   color: #FFF;
 }
-.textblock.hgybblue blockquote {
+.textblock.hgybblue blockquote, .custom_block.hgybblue blockquote {
   background: #EEC233;
 }
-.textblock.hgybblue blockquote p {
+.textblock.hgybblue blockquote p, .custom_block.hgybblue blockquote p {
   color: #0A426A;
 }
 
-.custom_block.hgybblack h1, .custom_block.hgybblack h2, .custom_block.hgybblack h3 {
-  color: #FFF;
+.custom_block .wcp-columns {
+  margin-top: 40px;
 }
-.custom_block.hgybblack h1:after, .custom_block.hgybblack h2:after, .custom_block.hgybblack h3:after {
-  border-top: 1px solid #EEC233;
-}
-.custom_block.hgybblack p, .custom_block.hgybblack li {
-  color: #FFF;
-}
-.custom_block.hgybblack p strong, .custom_block.hgybblack li strong {
-  color: #FFF;
-}
-.custom_block.hgybblack p a, .custom_block.hgybblack li a {
-  color: #EEC233;
-}
-.custom_block.hgybblack p a:hover, .custom_block.hgybblack li a:hover {
-  color: #FFF;
-}
-.custom_block.hgybblack blockquote {
-  background: #0A426A;
-}
-.custom_block.hgybblack blockquote p {
-  color: #EEC233;
-}
-.custom_block.hgybaccent h1:after, .custom_block.hgybaccent h2:after, .custom_block.hgybaccent h3:after {
-  border-top: 1px solid #FFF;
-}
-.custom_block.hgybaccent p strong, .custom_block.hgybaccent li strong {
-  color: #0A426A;
-}
-.custom_block.hgybaccent p a, .custom_block.hgybaccent li a {
-  color: #414042;
-  text-decoration: underline;
-}
-.custom_block.hgybaccent p a:hover, .custom_block.hgybaccent li a:hover {
-  color: #0A426A;
-}
-.custom_block.hgybaccent blockquote {
-  background: #0A426A;
-}
-.custom_block.hgybaccent blockquote p {
-  color: #EEC233;
-}
-.custom_block.hgybblue h1, .custom_block.hgybblue h2, .custom_block.hgybblue h3 {
-  color: #FFF;
-}
-.custom_block.hgybblue h1:after, .custom_block.hgybblue h2:after, .custom_block.hgybblue h3:after {
-  border-top: 1px solid #EEC233;
-}
-.custom_block.hgybblue p, .custom_block.hgybblue li {
-  color: #FFF;
-}
-.custom_block.hgybblue p strong, .custom_block.hgybblue li strong {
-  color: #EEC233;
-}
-.custom_block.hgybblue p a, .custom_block.hgybblue li a {
-  color: #EEC233;
-}
-.custom_block.hgybblue p a:hover, .custom_block.hgybblue li a:hover {
-  color: #FFF;
-}
-.custom_block.hgybblue blockquote {
-  background: #EEC233;
-}
-.custom_block.hgybblue blockquote p {
-  color: #0A426A;
+.custom_block .wcp-columns:first-child {
+  margin-top: 0px;
 }

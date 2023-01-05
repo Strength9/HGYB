@@ -74,10 +74,12 @@ section {
 		flex-direction: column;
 		flex-wrap: nowrap;
 		justify-content: space-between;
-		align-content: stretch;
+		
 		background-position: center center;
 		background-size: contain;
 		background-repeat:no-repeat;
+		justify-content: flex-start;
+		
 		
 		&.t_l {	
 			justify-content: flex-start;
@@ -163,5 +165,58 @@ section {
 
 			
 	}
+}
+
+.textimage {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(minmax(0px,auto),2);
+  gap: 30px 30px; 
+  grid-auto-flow: auto;
+  grid-template-areas: "textside imageside";
+
+	@media only screen and (min-width:800px) {
+		grid-template-columns: 1fr 1.3fr; 
+		grid-template-rows: 1fr; 
+		grid-template-areas: "textside imageside";
+		gap: 0px 80px; 
+	}
+	
+	.textside { grid-area: textside;  }
+	.imageside { grid-area: imageside; }
+
+}
+
+.imagetext {  
+	display: grid;
+  	grid-template-columns: 1fr;
+  	grid-template-rows: repeat(minmax(0px,auto),2);
+  	gap: 30px 30px; 
+  	grid-auto-flow: auto;
+  	grid-template-areas: "textside imageside";
+
+	@media only screen and (min-width:800px) {
+		grid-template-columns: 1fr  1.3fr; 
+		grid-template-rows: 1fr; 
+		grid-template-areas: "imageside textside";
+		gap: 0px 80px; 
+	}
+
+	.textside { grid-area: textside; }
+	.imageside { grid-area: imageside; }
+
+}
+.video-container {
+	width: 100%;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 }
 

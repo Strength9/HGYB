@@ -35,14 +35,28 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-create-full-text"
+                "value": "acf\/createparts-cb-text-and-image"
             }
         ],
         [
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-create-text-and-image"
+                "value": "acf\/createparts-cb-full-text"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-icon-cards"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-quotation-lists"
             }
         ]
     ],
@@ -55,5 +69,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672854898
+    "modified": 1672938023
 }

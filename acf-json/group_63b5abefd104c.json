@@ -41,7 +41,35 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-custom-blocking-start"
+                "value": "acf\/createparts-section-start"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-icon-cards"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-hex-call-to-action"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-services-call-to-action"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-quotation-lists"
             }
         ]
     ],
@@ -54,5 +82,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672852524
+    "modified": 1672935144
 }

@@ -1,11 +1,11 @@
 {
-    "key": "group_63b083ed8ff73",
-    "title": "Partial - Background Colour",
+    "key": "group_63b6d12ab22ca",
+    "title": "Partial - Column Alignment",
     "fields": [
         {
-            "key": "field_63b083edbea36",
-            "label": "Background Colour",
-            "name": "background_colour",
+            "key": "field_63b6d12aa22da",
+            "label": "Column Alignment",
+            "name": "column_alignment",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -17,10 +17,8 @@
                 "id": ""
             },
             "choices": {
-                "hgybwhite": "Default (White)",
-                "hgybblack": "HGYB Black",
-                "hgybblue": "HGYB Blue",
-                "hgybaccent": "HGYB Yellow"
+                "textimage": "Text - Image",
+                "imagetext": "Image - Text"
             },
             "default_value": false,
             "return_format": "value",
@@ -36,25 +34,18 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-quotation-lists"
+                "value": "acf\/createparts-cb-text-and-image"
             }
         ],
         [
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-text-block"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/createparts-section-start"
+                "value": "acf\/block-text-and-image-block"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 15,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -63,5 +54,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672925346
+    "modified": 1672934196
 }

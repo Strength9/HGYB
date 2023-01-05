@@ -1,13 +1,13 @@
 {
-    "key": "group_63b083750674b",
-    "title": "Block - Quotations",
+    "key": "group_63b7022ceff1d",
+    "title": "Partial - Iframe Block",
     "fields": [
         {
-            "key": "field_63b0837517152",
-            "label": "",
-            "name": "",
+            "key": "field_63b7022dcc868",
+            "label": "Iframe Code",
+            "name": "iframe_code",
             "aria-label": "",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -18,21 +18,21 @@
             },
             "default_value": "",
             "maxlength": "",
+            "rows": "",
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": ""
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "post"
+                "value": "acf\/createparts-cb-iframe"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 45,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -41,5 +41,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672512383
+    "modified": 1672938103
 }

@@ -1,7 +1,7 @@
 <?php
 /*
-Block Name: CB Text and Image
-Block Description:  Text and Image
+Block Name: CB Icon Card Grid
+Block Description: Icon Card Grid
 Post Types: post, page, custom-type
 Block SVG: block_template.svg
 Block Category: HGYB_BYO
@@ -13,8 +13,7 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 		return;
 } 
 
- include(dirname(__DIR__).'/partials/_textandimage.php');
-$columnalign = s9_textfield('column_alignment', $postid = '', $tag = '', $className = '',$emptyText = 'textside');
+include(dirname(__DIR__).'/partials/_iconcardgrid.php');
 
-echo $textandimageoutput;
+echo '<div class="wcp-columns"><div class="wcp-column full">'.s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '').$icongridoutput.'</div> </div>';
 ?>

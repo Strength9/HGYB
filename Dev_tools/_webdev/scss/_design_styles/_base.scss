@@ -200,7 +200,26 @@ ul {
     
   }
 }
-
+ol {
+  li {
+    
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-weight: 200;
+    color:$hgyb_black;
+    
+    a {
+       color:$hgyb_accent;
+       text-decoration:none;
+       
+       &:hover {
+         color:$hgyb_main;
+       }
+     }
+    
+  }
+}
 blockquote {
   background-color:$hgyb_main;
   color:#FFF;
