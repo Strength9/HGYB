@@ -335,4 +335,17 @@
 			}
 		}
 	}
+	
+	.contacttitle {
+		color: $hgyb_main;
+		font-family: 'ITC Avant Garde Gothic Std Demi';
+		font-size: 25px;
+		  margin: 40px 0 10px;
+		 
+		
+		  @media screen and (min-width: 768px) {
+		   font-size: 30px;
+		  }
+		  
+	}
 }

@@ -2587,6 +2587,17 @@ article.hgyb_iconcardbox .button:hover {
     font-size: 18px;
   }
 }
+.contactform .contacttitle {
+  color: #0A426A;
+  font-family: "ITC Avant Garde Gothic Std Demi";
+  font-size: 25px;
+  margin: 40px 0 10px;
+}
+@media screen and (min-width: 768px) {
+  .contactform .contacttitle {
+    font-size: 30px;
+  }
+}
 
 .fade-in {
   opacity: 0;
