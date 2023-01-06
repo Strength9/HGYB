@@ -14,8 +14,8 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 } 
 
 
-echo '<div class="wcp-columns full">
- <div class="wcp-column ">
+echo '<div class="wcp-columns">
+ <div class="wcp-column full">
      '.s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '').'
     
        </div>

@@ -1,0 +1,338 @@
+.contactform {
+	.wcp-columns {
+		max-width:1200px;
+		
+		@media only screen and (min-width:1000px) {
+			grid-template-columns: 1fr 1.5fr; 
+			grid-template-rows: minmax(10px auto); 
+			gap: 0px 120px; 
+		}
+		
+	}
+	
+	.contactblock {
+		display: grid; 
+		  grid-template-columns: 1fr; 
+		  grid-template-rows:  minmax(10px auto)  minmax(10px auto);  
+		  gap: 0px 0px; 
+		  grid-template-areas:  "ctform" "bullets"; 
+			
+			.bullets { grid-area: bullets; }
+			.ctform { grid-area: ctform; }
+			
+			@media only screen and (min-width:740px) {
+				grid-template-columns: 300px 1fr; 
+				grid-template-rows: minmax(10px auto); 
+				grid-template-areas:  "bullets ctform"; 
+				gap: 0px 20px; 
+			}
+			
+			@media only screen and (min-width:1000px) {
+				grid-template-columns: 360px 1.5fr; 
+				grid-template-rows: minmax(10px auto); 
+				grid-template-areas:  "bullets ctform"; 
+				gap: 0px 90px; 
+			}
+			
+			@media only screen and (min-width:1100px) {
+				grid-template-columns: 400px 1fr; 
+				grid-template-rows: minmax(10px auto); 
+				grid-template-areas:  "bullets ctform"; 
+				gap: 0px 120px; 
+			}
+	}
+	
+	.wpforms-container {
+		width:100%;
+		form {
+			width:100%;
+			.wpforms-field-container {
+				
+				width:100%;
+				
+	
+				input[type="text"], input[type="email"] {
+					border:0;
+					background-color: transparent;
+					color: $hgyb_black !important;
+					border-bottom:1px solid $hgyb_accent;
+	
+				}
+				
+				textarea {
+					border:1px solid $hgyb_accent;
+					background-color:transparent;
+				color: $hgyb_black !important;
+				}
+				
+				
+				input.wpforms-error {
+					border:0px !important;
+					
+					border-bottom:1px solid $hgyb_accent !important;
+				}
+				
+				.wpforms-field-label {
+						color: $hgyb_main;
+						  text-transform:uppercase;
+				}
+				
+				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+					color: $hgyb_main;
+				    text-transform:uppercase;
+				}
+				::-moz-placeholder { /* Firefox 19+ */
+					color: $hgyb_main;
+				    text-transform:uppercase;
+				}
+				:-ms-input-placeholder { /* IE 10+ */
+					color: $hgyb_main;
+				    text-transform:uppercase;
+				}
+				:-moz-placeholder { /* Firefox 18- */
+					color: $hgyb_main;
+				    text-transform:uppercase;
+				}
+				
+				.wpforms-error {
+					color:rgb(241, 36, 36);
+					padding:10px 5px;
+					border:0px;
+				}
+				
+				
+				// Select Field
+				.choices__inner {
+					
+					background: none;
+					border:0px;
+					background-color: #FFF !important;
+					border-bottom:1px solid $hgyb_accent;
+				}
+				.choices, .choices__placeholder{
+				 
+				  opacity:1;
+				}
+				 
+				.choices__list--dropdown .choices__item--selectable, .choices__list--dropdown .choices__item--selectable.is-highlighted {
+					background-color: $hgyb_accent !important;
+					border:0px !important;
+					
+				}
+				
+				.choices__list--dropdown {
+					background-color: $hgyb_black !important;
+					border:0px !important;
+				}
+				button{
+					display:none;
+				}
+				.choices__placeholder {
+					text-transform:uppercase;
+				}
+				
+				input[type="text"], input[type="email"], .choices__placeholder, .choices, .choices__item, .wpforms-field-label, textarea {
+					font-family: 'ITC Avant Garde Gothic Std Book';
+					  font-weight: normal;
+					  font-style: normal;
+					  font-size:16px;
+					  color: $hgyb_main;
+					  
+					  
+					  @media only screen and (min-width:1200px) {
+						  font-size:19px;
+					  }
+				}
+				
+				.wpforms-field-label {
+					padding-left:10px;
+				}
+				
+				input:focus{  border:0; border-bottom:1px solid $hgyb_accent; }
+				
+				textarea:focus{  border:1px solid $hgyb_accent; }
+				
+				li {
+					display:flex;
+					input{}
+					label {font-size:14px;
+						color:$hgyb_main;
+						display:block;
+						
+						clear:right;
+						margin-left:10px;
+					}
+				}
+				
+				.wpforms-disclaimer-description {
+					border:0px !important;
+					color:$hgyb_main !important;
+				}
+				
+			}
+			
+			.wpforms-submit-container {
+				text-align:left;
+				position:relative;
+				height:50px;
+				
+				
+				button.wpforms-submit {
+
+					color: $hgyb_main;
+					 text-align: center;
+					 margin: 20px auto 0 0;
+					 position: absolute;
+					 bottom: 0px;
+					 border: 1px solid $hgyb_accent;
+					 border-radius: 10px;
+					 padding: 15px 95px 12px;
+					 //left: 50%;
+					 //transform: translateX(-50%);
+					 text-decoration: none;
+					 transition: all 0.3s;
+					 overflow: hidden;
+					 z-index: 1;
+					 background-color:transparent;
+					 text-transform:uppercase;
+					
+					 &:hover {
+					   background-color: $hgyb_main;
+					   border: 1px solid $hgyb_main;
+					   bottom: 10px;
+					   color: #FFF;
+					   &:before {
+						 width: 100%;
+					   }
+					}
+
+					
+				}
+			}
+		
+		}
+	}
+	.wpforms-confirmation-container-full {
+		background-color:transparent;
+		border:0;
+		margin:50px 0;
+		padding:0;
+		color:$hgyb_main;
+		h2 {
+			font-family: 'ITC Avant Garde Gothic Std Book';
+			&:after {
+				display:none;
+			}
+		}
+		p {
+			font-family: 'Gabriela';
+			color:$hgyb_main;
+		}
+	} 
+	
+	
+	.bulletboxes {
+		padding:40px 0 0;
+		margin:0 0 0px;
+		li {
+			background-color:$hgyb_accent;
+			width:100%;
+			padding:50px 0px;
+			list-style:none;
+			margin:0 0 30px;
+			
+			
+			div {
+				width:90%;
+				margin:0 auto;
+				color:$hgyb_main;
+				font-size:13px;
+				font-family: 'ITC Avant Garde Gothic Std Demi';
+				
+				span {
+					text-align:right;
+					display:block;
+				}
+				
+				a {color:$hgyb_main;
+					margin-bottom:10px;
+					&:hover {
+						color:#FFF;
+					}
+				}
+			}
+			
+
+		}
+		@media only screen and (min-width:380px) {
+			li {
+				div {
+				width:90%;
+				
+				font-size:15px;
+				}
+			}
+		}
+		@media only screen and (min-width:420px) {
+			li {
+				div {
+				width:328px;
+				
+				font-size:16px;
+				}
+			}
+		}
+		@media only screen and (min-width:460px) {
+			li {
+				div {
+					font-size:16px;
+				}
+			}
+		}
+		@media only screen and (min-width:650px) {
+			li {
+				
+				div {
+					width:360px;
+				font-size:18px;
+				}
+			}
+		}
+		@media only screen and (min-width:740px) {
+			li {
+				div {
+					width:90%;
+				font-size:14px;
+				}
+			}
+		}
+		@media only screen and (min-width:1000px) {
+			
+			li {
+				padding:50px 10px;
+				margin:0 0 30px;
+
+				div {
+					width:95%;
+					margin:0 auto;
+				}
+
+			}
+		}
+		
+		@media only screen and (min-width:1100px) {
+			
+			li {
+				padding:50px 10px;
+				margin:0 0 30px;
+		
+				div {
+					width:330px;
+					margin:0 auto;
+					font-size:18px;
+				}
+		
+			}
+		}
+	}
+}

@@ -71,6 +71,13 @@
                 "operator": "==",
                 "value": "acf\/block-quotation-lists"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-contact-page-form"
+            }
         ]
     ],
     "menu_order": -10,
@@ -82,5 +89,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672935144
+    "modified": 1673010840
 }
