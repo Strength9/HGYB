@@ -183,7 +183,7 @@ h4 {
 
 h1 {
   font-size: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   h1 {
@@ -1040,7 +1040,7 @@ section.npmid {
   grid-template-rows: repeat(minmax(0px, auto), 2);
   gap: 30px 30px;
   grid-auto-flow: auto;
-  grid-template-areas: "textside imageside";
+  grid-template-areas: "textside" "imageside";
 }
 @media only screen and (min-width: 800px) {
   .textimage {
@@ -1063,7 +1063,7 @@ section.npmid {
   grid-template-rows: repeat(minmax(0px, auto), 2);
   gap: 30px 30px;
   grid-auto-flow: auto;
-  grid-template-areas: "textside imageside";
+  grid-template-areas: "textside" "imageside";
 }
 @media only screen and (min-width: 800px) {
   .imagetext {
@@ -1418,12 +1418,12 @@ article.hgyb_iconcardbox .button:hover {
   }
 }
 .servicestable .icon_gridlist {
-  max-width: 100%;
+  margin: auto;
+  max-width: 1050px;
   column-gap: 40px;
   column-count: 1;
 }
 .servicestable .icon_gridlist .icon_arealist {
-  margin-bottom: 40px;
   break-inside: avoid;
   display: grid;
   grid-template-columns: 1fr 0.4fr;
@@ -1431,6 +1431,7 @@ article.hgyb_iconcardbox .button:hover {
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "areatext iconarea";
+  margin-bottom: 40px;
 }
 .servicestable .icon_gridlist .icon_arealist .areatext {
   align-self: start;
@@ -1454,23 +1455,35 @@ article.hgyb_iconcardbox .button:hover {
   grid-area: iconarea;
 }
 .servicestable .icon_gridlist .icon_arealist .iconarea img {
-  width: 100%;
-  max-width: 100px;
+  width: 100px;
   height: auto;
 }
 @media only screen and (min-width: 600px) {
+  .servicestable .icon_gridlist .icon_arealist {
+    grid-template-columns: 1fr 0.6fr;
+    margin-bottom: 40px;
+  }
+  .servicestable .icon_gridlist .icon_arealist .iconarea img {
+    width: 130px;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 800px) {
   .servicestable .icon_gridlist {
     column-count: 2;
-    column-gap: 40px;
+    column-gap: 20px;
   }
   .servicestable .icon_gridlist .icon_arealist {
     margin-bottom: 40px;
   }
+  .servicestable .icon_gridlist .icon_arealist .iconarea img {
+    width: 100px;
+    height: auto;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .servicestable .icon_gridlist {
-    column-count: 3;
-    column-gap: 20px;
+    column-gap: 60px;
   }
   .servicestable .icon_gridlist .icon_arealist {
     margin-bottom: 20px;
@@ -1478,7 +1491,7 @@ article.hgyb_iconcardbox .button:hover {
 }
 @media only screen and (min-width: 1400px) {
   .servicestable .icon_gridlist {
-    column-gap: 60px;
+    column-gap: 120px;
   }
   .servicestable .icon_gridlist .icon_arealist {
     margin-bottom: 60px;
@@ -2179,6 +2192,30 @@ article.hgyb_iconcardbox .button:hover {
 .textblock.hgybblack, .custom_block.hgybblack {
   background-color: #414042;
 }
+.textblock.hgybblack h1, .textblock.hgybblack h2, .textblock.hgybblack h3, .custom_block.hgybblack h1, .custom_block.hgybblack h2, .custom_block.hgybblack h3 {
+  color: #FFF;
+}
+.textblock.hgybblack h1:after, .textblock.hgybblack h2:after, .textblock.hgybblack h3:after, .custom_block.hgybblack h1:after, .custom_block.hgybblack h2:after, .custom_block.hgybblack h3:after {
+  border-top: 1px solid rgb(238, 194, 51);
+}
+.textblock.hgybblack p, .textblock.hgybblack li, .custom_block.hgybblack p, .custom_block.hgybblack li {
+  color: #FFF;
+}
+.textblock.hgybblack p strong, .textblock.hgybblack li strong, .custom_block.hgybblack p strong, .custom_block.hgybblack li strong {
+  color: rgb(238, 194, 51);
+}
+.textblock.hgybblack p a, .textblock.hgybblack li a, .custom_block.hgybblack p a, .custom_block.hgybblack li a {
+  color: rgb(238, 194, 51);
+}
+.textblock.hgybblack p a:hover, .textblock.hgybblack li a:hover, .custom_block.hgybblack p a:hover, .custom_block.hgybblack li a:hover {
+  color: #FFF;
+}
+.textblock.hgybblack blockquote, .custom_block.hgybblack blockquote {
+  background: rgb(238, 194, 51);
+}
+.textblock.hgybblack blockquote p, .custom_block.hgybblack blockquote p {
+  color: #0A426A;
+}
 .textblock.hgybaccent h1:after, .textblock.hgybaccent h2:after, .textblock.hgybaccent h3:after, .custom_block.hgybaccent h1:after, .custom_block.hgybaccent h2:after, .custom_block.hgybaccent h3:after {
   border-top: 1px solid #FFF;
 }
@@ -2225,6 +2262,13 @@ article.hgyb_iconcardbox .button:hover {
 
 .custom_block .wcp-columns {
   margin-top: 60px;
+}
+@media only screen and (min-width: 800px) {
+  .custom_block .wcp-columns {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(10px auto);
+    gap: 0px 30px;
+  }
 }
 .custom_block .wcp-columns:first-child {
   margin-top: 0px;
@@ -2555,4 +2599,29 @@ article.hgyb_iconcardbox .button:hover {
   .contactform .contacttitle {
     font-size: 30px;
   }
+}
+
+div.circles, div.smallcircles {
+  width: 100%;
+}
+div.circles svg, div.smallcircles svg {
+  width: 90%;
+  padding: 10px;
+  margin: auto 5% !important;
+}
+div.circles svg .lineCol, div.smallcircles svg .lineCol {
+  fill: rgb(238, 194, 51);
+}
+div.circles svg .lineCol.line1, div.circles svg .lineCol.line2, div.circles svg .lineCol.line3, div.circles svg .lineCol.line4, div.circles svg .lineCol.line5, div.smallcircles svg .lineCol.line1, div.smallcircles svg .lineCol.line2, div.smallcircles svg .lineCol.line3, div.smallcircles svg .lineCol.line4, div.smallcircles svg .lineCol.line5 {
+  display: none;
+}
+div.circles svg .textCol, div.smallcircles svg .textCol {
+  fill: #0A426A;
+}
+div.circles svg .textCol.textcirc1, div.circles svg .textCol.textcirc2, div.circles svg .textCol.textcirc3, div.circles svg .textCol.textcirc4, div.circles svg .textCol.textcirc5, div.circles svg .textCol.textcirc6, div.smallcircles svg .textCol.textcirc1, div.smallcircles svg .textCol.textcirc2, div.smallcircles svg .textCol.textcirc3, div.smallcircles svg .textCol.textcirc4, div.smallcircles svg .textCol.textcirc5, div.smallcircles svg .textCol.textcirc6 {
+  display: none;
+}
+div.circles svg .circleCol.circ1, div.circles svg .circleCol.circ2, div.circles svg .circleCol.circ3, div.circles svg .circleCol.circ4, div.circles svg .circleCol.circ5, div.circles svg .circleCol.circ6, div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, div.smallcircles svg .circleCol.circ3, div.smallcircles svg .circleCol.circ4, div.smallcircles svg .circleCol.circ5, div.smallcircles svg .circleCol.circ6 {
+  fill: #FFF;
+  display: none;
 }

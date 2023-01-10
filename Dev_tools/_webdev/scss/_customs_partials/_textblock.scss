@@ -3,6 +3,33 @@
 	
 	&.hgybblack {
 		background-color: $hgyb_black;
+		
+		h1, h2, h3 {
+		  color:#FFF;
+			  &:after {
+					border-top: 1px solid $hgyb_accent;
+			  }
+		}
+		
+		p, li {
+			color:#FFF;
+			
+			strong {
+				color:$hgyb_accent;
+			}
+			
+			a { color:$hgyb_accent;
+				&:hover {
+					color:#FFF;
+				}
+			}
+		}
+		
+		blockquote {
+			background: $hgyb_accent;
+			
+			p { color:$hgyb_main;}
+		}
 	}
 	&.hgybaccent{
 		
@@ -72,6 +99,11 @@
 	.wcp-columns {
 		margin-top:60px;
 
+		@media only screen and (min-width:800px) {
+			grid-template-columns: 1fr 1fr; 
+			grid-template-rows: minmax(10px auto); 
+			gap: 0px 30px; 
+		}
 		
 		&:first-child {
 		

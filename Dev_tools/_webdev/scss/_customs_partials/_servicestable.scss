@@ -13,13 +13,14 @@
 	}
 	
 	.icon_gridlist {
-	  max-width: 100%;
+		margin:auto;
+	  max-width: 1050px;
 	  column-gap: 40px;
 	  column-count: 1;
 	  
 	 
 	  .icon_arealist {
-		margin-bottom: 40px; // Needs to match the
+		
 		break-inside: avoid; // Prevents div being put into two columns
 		display: grid;
 		grid-template-columns: 1fr 0.4fr;
@@ -28,12 +29,13 @@
 		grid-auto-flow: row;
 		grid-template-areas: "areatext iconarea";
 		
+		margin-bottom: 40px; // Needs to match the
 	
 		.areatext {
 		  align-self: start;
 		  grid-area: areatext;
-	
-		h3 {
+		  
+		  h3 {
 			font-family: 'ITC Avant Garde Gothic Std Book';
 			font-size:22px;
 			
@@ -54,32 +56,61 @@
 		  justify-self: center;
 		  align-self: start;
 		  grid-area: iconarea;
+		  
 	
 		  img {
-			width: 100%;
-			max-width: 100px;
+			
+			width: 100px;
 			height: auto;
 		  }
 		}
 	  }
+
+ 	 @media only screen and (min-width:600px) {
+		 
+		  .icon_arealist {
+			  grid-template-columns: 1fr 0.6fr;
+			  margin-bottom: 40px; 
+			  
+			
+			.iconarea {
+					img {
+						
+						width: 130px;
+						height: auto;
+					  }
+				}
+		  }
+	  }
 	  
-	  @media only screen and (min-width:600px) {
+	  @media only screen and (min-width:800px) {
 			column-count: 2;
-			column-gap: 40px;
+			column-gap: 20px;
 			.icon_arealist {
 				margin-bottom: 40px; 
+				
+				
+				  .iconarea {  
+					  img {
+						  
+						  width: 100px;
+						  height: auto;
+						}
+				  }
 			}
 		}
 	  @media only screen and (min-width:1200px) {
-		  column-count: 3;
-		  column-gap: 20px;
+		
+		  column-gap: 60px;
 		  .icon_arealist {
 			  margin-bottom: 20px; 
+			  
+			 
 		  }
 	  }
 	  @media only screen and (min-width:1400px) {
 		
-			column-gap: 60px;
+			column-gap: 120px;
 			.icon_arealist {
 				margin-bottom: 60px; 
 			}

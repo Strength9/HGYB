@@ -58,6 +58,13 @@
                 "operator": "==",
                 "value": "acf\/block-quotation-lists"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-services-table"
+            }
         ]
     ],
     "menu_order": 30,
@@ -69,5 +76,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672938023
+    "modified": 1673353943
 }

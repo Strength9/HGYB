@@ -1,0 +1,45 @@
+ div.circles, div.smallcircles {
+	 width:100%;
+	 svg {
+	   width: 90%;
+	   padding: 10px;
+	   margin:auto 5% !important;
+	 
+	   .lineCol { 
+		 fill: $hgyb_accent;
+	 
+		 &.line1,
+		 &.line2, 
+		 &.line3,
+		 &.line4,
+		 &.line5 {
+		   display: none;
+		 }
+	   }
+	   .textCol {
+		 fill: $hgyb_main;
+	 
+		 &.textcirc1,
+		 &.textcirc2,
+		 &.textcirc3,
+		 &.textcirc4,
+		 &.textcirc5,
+		 &.textcirc6 {
+		 display:none;
+		 }
+	   }
+	   .circleCol {
+		 
+		 &.circ1,
+		 &.circ2,
+		 &.circ3,
+		 &.circ4,
+		 &.circ5,  
+		 &.circ6 {
+		   fill: #FFF;
+		   display: none;
+		 }
+		 
+	   }
+	 }
+ } 

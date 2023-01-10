@@ -78,6 +78,13 @@
                 "operator": "==",
                 "value": "acf\/block-contact-page-form"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-services-table"
+            }
         ]
     ],
     "menu_order": -10,
@@ -89,5 +96,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673010840
+    "modified": 1673353575
 }
