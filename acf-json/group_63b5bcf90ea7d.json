@@ -65,6 +65,13 @@
                 "operator": "==",
                 "value": "acf\/block-services-table"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-services-call-to-action"
+            }
         ]
     ],
     "menu_order": 30,
@@ -76,5 +83,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673353943
+    "modified": 1673438683
 }

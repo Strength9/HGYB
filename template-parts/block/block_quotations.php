@@ -41,7 +41,7 @@ endif;
 
 
 /* --------------------------------------------------------------------------- */
-echo '<section '.$anchor.' class="'.$blockclass .'" '.$styleoutput .'>
+echo '<section '.$anchor.' class="'.$blockclass .'" '.$styleoutput .' '.$animation.'>
 	<div class="wcp-columns">
 	 	<div class="wcp-column full">
 		 	'.s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '').'

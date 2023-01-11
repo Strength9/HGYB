@@ -344,17 +344,6 @@ main {
   width: 100%;
 }
 
-.animate {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 1s all ease;
-}
-.animate.active {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 /* Desktop Version */
 /* Mobile Version */
 header {
@@ -953,6 +942,19 @@ section.standard {
 @media screen and (min-width: 1360px) {
   section.standard {
     padding: 140px 0;
+  }
+}
+section.half {
+  padding: 40px 15px;
+}
+@media screen and (min-width: 500px) {
+  section.half {
+    padding: 60px 32px;
+  }
+}
+@media screen and (min-width: 1360px) {
+  section.half {
+    padding: 70px 0;
   }
 }
 section.npmid {
@@ -2643,29 +2645,70 @@ article.hgyb_iconcardbox .button:hover {
   }
 }
 
-div.circles, div.smallcircles {
+div.circles {
   width: 100%;
+  margin: auto;
+  max-width: 1000px;
+  display: none;
 }
-div.circles svg, div.smallcircles svg {
+div.circles svg {
   width: 90%;
   padding: 10px;
   margin: auto 5% !important;
 }
-div.circles svg .lineCol, div.smallcircles svg .lineCol {
+div.circles svg .lineCol {
   fill: rgb(238, 194, 51);
 }
-div.circles svg .lineCol.line1, div.circles svg .lineCol.line2, div.circles svg .lineCol.line3, div.circles svg .lineCol.line4, div.circles svg .lineCol.line5, div.smallcircles svg .lineCol.line1, div.smallcircles svg .lineCol.line2, div.smallcircles svg .lineCol.line3, div.smallcircles svg .lineCol.line4, div.smallcircles svg .lineCol.line5 {
+div.circles svg .lineCol.line1, div.circles svg .lineCol.line2, div.circles svg .lineCol.line3, div.circles svg .lineCol.line4, div.circles svg .lineCol.line5 {
   display: none;
 }
-div.circles svg .textCol, div.smallcircles svg .textCol {
+div.circles svg .textCol {
   fill: #0A426A;
 }
-div.circles svg .textCol.textcirc1, div.circles svg .textCol.textcirc2, div.circles svg .textCol.textcirc3, div.circles svg .textCol.textcirc4, div.circles svg .textCol.textcirc5, div.circles svg .textCol.textcirc6, div.smallcircles svg .textCol.textcirc1, div.smallcircles svg .textCol.textcirc2, div.smallcircles svg .textCol.textcirc3, div.smallcircles svg .textCol.textcirc4, div.smallcircles svg .textCol.textcirc5, div.smallcircles svg .textCol.textcirc6 {
+div.circles svg .textCol.textcirc1, div.circles svg .textCol.textcirc2, div.circles svg .textCol.textcirc3, div.circles svg .textCol.textcirc4, div.circles svg .textCol.textcirc5, div.circles svg .textCol.textcirc6 {
   display: none;
 }
-div.circles svg .circleCol.circ1, div.circles svg .circleCol.circ2, div.circles svg .circleCol.circ3, div.circles svg .circleCol.circ4, div.circles svg .circleCol.circ5, div.circles svg .circleCol.circ6, div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, div.smallcircles svg .circleCol.circ3, div.smallcircles svg .circleCol.circ4, div.smallcircles svg .circleCol.circ5, div.smallcircles svg .circleCol.circ6 {
+div.circles svg .circleCol.circ1, div.circles svg .circleCol.circ2, div.circles svg .circleCol.circ3, div.circles svg .circleCol.circ4, div.circles svg .circleCol.circ5, div.circles svg .circleCol.circ6 {
   fill: #FFF;
   display: none;
+}
+@media only screen and (min-width: 600px) {
+  div.circles {
+    display: block;
+  }
+}
+
+div.smallcircles {
+  display: block;
+  width: 100%;
+  margin: auto;
+  max-width: 400px;
+}
+div.smallcircles svg {
+  width: 90%;
+  padding: 10px;
+  margin: auto 5% !important;
+}
+div.smallcircles svg .lineCol {
+  fill: rgb(238, 194, 51);
+}
+div.smallcircles svg .lineCol.line1, div.smallcircles svg .lineCol.line2, div.smallcircles svg .lineCol.line3, div.smallcircles svg .lineCol.line4, div.smallcircles svg .lineCol.line5 {
+  display: none;
+}
+div.smallcircles svg .textCol {
+  fill: #0A426A;
+}
+div.smallcircles svg .textCol.textcirc1, div.smallcircles svg .textCol.textcirc2, div.smallcircles svg .textCol.textcirc3, div.smallcircles svg .textCol.textcirc4, div.smallcircles svg .textCol.textcirc5, div.smallcircles svg .textCol.textcirc6 {
+  display: none;
+}
+div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, div.smallcircles svg .circleCol.circ3, div.smallcircles svg .circleCol.circ4, div.smallcircles svg .circleCol.circ5, div.smallcircles svg .circleCol.circ6 {
+  fill: #FFF;
+  display: none;
+}
+@media only screen and (min-width: 600px) {
+  div.smallcircles {
+    display: none;
+  }
 }
 
 .fade-in {

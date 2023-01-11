@@ -73,7 +73,7 @@ endif;
 
 $servicesoutput = '<div class="icon_gridlist">'.$services.'</div>';
  
-echo '<section '.$anchor.' class="'.$blockclass .'">
+echo '<section '.$anchor.' class="'.$blockclass .'" '.$animation.'>
 	<div class="wcp-columns">
 	 	<div class="wcp-column full">
 		 '.s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '').$servicesoutput.'

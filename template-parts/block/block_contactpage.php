@@ -17,7 +17,7 @@ $sitecontactemail = s9_emaillink($fieldname = 'email_address', $postid = 'option
 $sitecontactphone = s9_emaillink($fieldname = 'telephone_number', $postid = 'options', $titletext ='Email the team', $extratext = 't: ',$className = '',$emptyText = '');
 include(dirname(__DIR__).'/partials/______partials_global.php');
  
-echo '<section '.$anchor.' class="'.$blockclass .'" '.$styleoutput.'>
+echo '<section '.$anchor.' class="'.$blockclass .'" '.$styleoutput.' '.$animation.'>
 <div class="wcp-columns">
 	 <div class="wcp-column full">
 	 <h1>Let’s Talk</h1>

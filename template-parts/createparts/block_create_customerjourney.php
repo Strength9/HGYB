@@ -17,7 +17,7 @@ $circles = random_str(10);
 echo '<div class="wcp-columns">
  <div class="wcp-column full">
      <div class="circles">
-                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 96 32" id="Marketing">
+                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 96 32" id="marketing">
                  <path class="circleCol circ6" d="M94.889 23.952c0 3.851-3.122 6.973-6.973 6.973s-6.973-3.122-6.973-6.973c0-3.851 3.122-6.973 6.973-6.973s6.973 3.122 6.973 6.973z"></path>
                  <path class="circleCol circ5" d="M78.44 7.874c0 3.851-3.122 6.973-6.973 6.973s-6.973-3.122-6.973-6.973c0-3.851 3.122-6.973 6.973-6.973s6.973 3.122 6.973 6.973z"></path>
                  <path class="circleCol circ4" d="M63.116 23.952c0 3.851-3.122 6.973-6.973 6.973s-6.973-3.122-6.973-6.973c0-3.851 3.122-6.973 6.973-6.973s6.973 3.122 6.973 6.973z"></path>
@@ -178,14 +178,21 @@ echo '<div class="wcp-columns">
  
       async function circles_'.$circles.'(identity) {
              var i = 1;
-             while (i < 7) { jQuery("#"+str+" .circ"+i).fadeIn(1000); await sleep_'.$circles.'(500); jQuery("#"+str+" .textcirc"+i).fadeIn(500); await sleep_'.$circles.'(1000); jQuery("#"+str+" .line"+i).fadeIn(500); await sleep_'.$circles.'(1000); i++; }
+             while (i < 7) { jQuery("#marketing .circ"+i).fadeIn(1000); await sleep_'.$circles.'(500); jQuery("#marketing .textcirc"+i).fadeIn(500); await sleep_'.$circles.'(1000); jQuery("#marketing .line"+i).fadeIn(500); await sleep_'.$circles.'(1000); i++; 
+             console.log(i);
+          }
+      }
+      
+      async function circles_small_'.$circles.'(identity) {
+             var i = 1;
+             while (i < 7) { jQuery("#marketing_small .circ"+i).fadeIn(1000); await sleep_'.$circles.'(500); jQuery("#marketing_small .textcirc"+i).fadeIn(500); await sleep_'.$circles.'(1000); jQuery("#marketing_small .line"+i).fadeIn(500); await sleep_'.$circles.'(1000); i++; 
+             console.log(i);
+          }
       }
   
-   str = "Marketing";
    circles_'.$circles.'();
    
-   str = "marketing_small";
-   circles_'.$circles.'();
+   circles_small_'.$circles.'();
  });
 </script>';
 ?>

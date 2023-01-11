@@ -16,4 +16,4 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 include(dirname(__DIR__).'/partials/______partials_global.php');
 
 blockedit_message('↓ Section Start ↓');
-echo '<section '.$anchor.' class="'.$blockclass .'" '.$styleoutput.'>';
+echo '<section '.$anchor.' class="'.$blockclass .'" '.$styleoutput.' '.$animation.'>';

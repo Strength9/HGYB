@@ -16,7 +16,7 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 include(dirname(__DIR__).'/partials/______partials_global.php');
 
 /* --------------------------------------------------------------------------- */
-echo '<section '.$anchor.' class="'.$blockclass .'">
+echo '<section '.$anchor.' class="'.$blockclass .'" '.$animation.'>
 	<div class="wcp-columns">
 	 	<div class="wcp-column"></div>
 	 	<div class="wcp-column"></div>

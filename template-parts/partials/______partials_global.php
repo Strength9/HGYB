@@ -28,5 +28,9 @@ if ($styleaddition  != '') {
 	$styleoutput = 'style="'.$styleaddition.'"';
 }
 
+$anifile = s9_textfield($fieldname = 'entry_animation', $postid = '', $tag = '', $className = '',$emptyText = 'none');
+
+$animation = ' data-aos="'.$anifile.'"';
+
 ?>
  

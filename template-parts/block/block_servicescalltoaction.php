@@ -15,12 +15,13 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 /* --------------------------------------------------------------------------- */
 include(dirname(__DIR__).'/partials/______partials_global.php');
 
+
 /* --------------------------------------------------------------------------- */
-echo '<section '.$anchor.' class="'.$blockclass .'">
+echo '<section '.$anchor.' class="'.$blockclass .'" '.$animation.'>
 	<div class="wcp-columns">
 		 <div class="wcp-column full">
-		 <p>To speak to one of our advisors about any of our services, just submit your contact details and we’ll be in touch shortly. You can also email us at <a href="info@helpgrowyourbusiness.co.uk" title="Get in touch">info@helpgrowyourbusiness.co.uk</a>.</p>
-		 '.do_shortcode( '[wpforms id="90"]' ).'</div>
+		 '.s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '').
+		 do_shortcode( '[wpforms id="90"]' ).'</div>
 	</div>
 </section>';
 ?>

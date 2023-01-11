@@ -16,5 +16,5 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 include(dirname(__DIR__).'/partials/______partials_global.php');
  include(dirname(__DIR__).'/partials/_textandimage.php');
 /* --------------------------------------------------------------------------- */
-echo '<section '.$anchor.' class="'.$blockclass .'">'.$textandimageoutput.'</section>';
+echo '<section '.$anchor.' class="'.$blockclass .'" '.$animation.'>'.$textandimageoutput.'</section>';
 ?>

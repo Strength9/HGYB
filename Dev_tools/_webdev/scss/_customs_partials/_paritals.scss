@@ -28,6 +28,16 @@ section {
 			padding:140px 0;
 	  	}
 	}
+	&.half {
+		padding: 40px 15px;
+		
+		  @media screen and (min-width: 500px ) {	
+			padding:60px 32px;
+		  }
+		  @media screen and (min-width: 1360px ) {	
+			padding:70px 0;
+		  }
+	}
 	&.npmid {
 		padding: 0px 15px;
 		
