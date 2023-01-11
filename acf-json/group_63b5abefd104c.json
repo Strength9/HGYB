@@ -18,7 +18,8 @@
             },
             "choices": {
                 "standard": "Standard",
-                "npmid": "No Padding Top and Bottom"
+                "npmid": "No Padding Top and Bottom",
+                "half": "Half Normal Padding"
             },
             "default_value": false,
             "return_format": "value",
@@ -96,5 +97,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673353575
+    "modified": 1673449112
 }

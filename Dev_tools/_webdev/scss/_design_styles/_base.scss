@@ -92,6 +92,7 @@ body {
     @media only screen and (min-width:600px) {
       background:url("/wp-content/themes/HGYB/assets/img/left.png") left center repeat-y, url("/wp-content/themes/HGYB/assets/img/right.png") right center repeat-y;
       background-size: 50px;
+      background-attachment: fixed;
     }
     
     @media only screen and (min-width:800px) {
