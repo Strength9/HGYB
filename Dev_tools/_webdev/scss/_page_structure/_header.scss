@@ -13,7 +13,7 @@ $innerULborder : rgba(255,255,255,0.7);
 
 $detailsbarheight : 36px;
 
-
+ 
 
 header {
 	position:relative;
@@ -287,15 +287,23 @@ header {
 					}
 
 					&:hover {
-						background-color:$hgyb_main;
+						&:before {
+							position:absolute;
+							bottom:0px;
+							content:"";
+							width:30px;
+							border-bottom:2px solid $hgyb_main;
+						}
+						
+						
 						
 						a {
 							color:$hgyb_accent;
 						}
 						ul {
 							visibility: visible;
-						  	opacity: 1;
-						  	transition: all 0.3s ease-in;
+							  opacity: 1;
+							  transition: all 0.3s ease-in;
 							  
 							  li {
 								  a {color:#FFF;
@@ -315,7 +323,16 @@ header {
 					}
 					
 					&.current-menu-item, &.current-menu-parent {
-						background-color:$hgyb_main;
+						&:before {
+							position:absolute;
+							bottom:0px;
+							content:"";
+							width:30px;
+							border-bottom:2px solid $hgyb_main;
+						}
+						
+						
+						
 						 > a {
 							 color: $hgyb_accent;
 						 }
@@ -336,7 +353,18 @@ header {
 						 }
 					}
 					
-					
+					&.current-menu-parent, &.menu-item-has-children {
+						&:hover {
+							&:before {
+								position:absolute;
+								bottom:0px;
+								content:"";
+								width:0px;
+								border-bottom:0px solid $hgyb_main;
+								display:none;
+							}
+						}
+					}
 				}
 			}
 			div.calltoaction {

@@ -1,0 +1,42 @@
+.linkgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+  margin:0 auto;
+
+  > * {
+	background: rgba(10, 66, 106, 0.3);
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+
+	a {
+	  position: absolute;
+	  display: block;
+	  bottom: 20px;
+	  left: 20px;
+	  text-transform:uppercase;
+	 
+	  font-family: 'ITC Avant Garde Gothic Std Demi';
+	  font-weight: normal;
+	  font-style: normal;
+	  text-decoration: none;
+	  max-width:30%; 
+	  color:$hgyb_main;
+	  font-size:18px;
+	}
+
+	&::before {
+	  content: "";
+	  display: inline-block;
+	  width: 1px;
+	  height: 0;
+	  padding-top: calc(100% / (1 / 1));
+	}
+  }
+}
+

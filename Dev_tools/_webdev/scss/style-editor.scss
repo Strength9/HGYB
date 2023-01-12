@@ -28,7 +28,7 @@ body.logged-in .wrap.woocomerce .mainform {margin-top: 145px;}
     @import '_customs_partials/map';
     @import '_customs_partials/contactpage';
     @import '_customs_partials/customerjourney';
-     
+     @import '_customs_partials/linkgrid';
 .fade-in {
   opacity: 0;
   transform: translateY(100px);
@@ -40,5 +40,4 @@ body.logged-in .wrap.woocomerce .mainform {margin-top: 145px;}
 #tinymce {
   padding-top:0 !important;
 }
-
 

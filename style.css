@@ -1530,8 +1530,12 @@ header .navigation-menu .main-navigation {
     align-content: flex-start;
     align-items: flex-start;
   }
-  header .navigation-menu .main-navigation li:hover {
-    background-color: #0A426A;
+  header .navigation-menu .main-navigation li:hover:before {
+    position: absolute;
+    bottom: 0px;
+    content: "";
+    width: 30px;
+    border-bottom: 2px solid #0A426A;
   }
   header .navigation-menu .main-navigation li:hover a {
     color: rgb(238, 194, 51);
@@ -1547,8 +1551,12 @@ header .navigation-menu .main-navigation {
   header .navigation-menu .main-navigation li:hover ul li a:hover {
     color: rgb(238, 194, 51);
   }
-  header .navigation-menu .main-navigation li.current-menu-item, header .navigation-menu .main-navigation li.current-menu-parent {
-    background-color: #0A426A;
+  header .navigation-menu .main-navigation li.current-menu-item:before, header .navigation-menu .main-navigation li.current-menu-parent:before {
+    position: absolute;
+    bottom: 0px;
+    content: "";
+    width: 30px;
+    border-bottom: 2px solid #0A426A;
   }
   header .navigation-menu .main-navigation li.current-menu-item > a, header .navigation-menu .main-navigation li.current-menu-parent > a {
     color: rgb(238, 194, 51);
@@ -1561,6 +1569,14 @@ header .navigation-menu .main-navigation {
   }
   header .navigation-menu .main-navigation li.current-menu-item li.current-menu-item a, header .navigation-menu .main-navigation li.current-menu-parent li.current-menu-item a {
     color: rgb(238, 194, 51);
+  }
+  header .navigation-menu .main-navigation li.current-menu-parent:hover:before, header .navigation-menu .main-navigation li.menu-item-has-children:hover:before {
+    position: absolute;
+    bottom: 0px;
+    content: "";
+    width: 0px;
+    border-bottom: 0px solid #0A426A;
+    display: none;
   }
   header .navigation-menu div.calltoaction {
     margin: 0;
@@ -3649,4 +3665,42 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
   div.smallcircles {
     display: none;
   }
+}
+
+.linkgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: start;
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.linkgrid > * {
+  background: rgba(10, 66, 106, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.linkgrid > * a {
+  position: absolute;
+  display: block;
+  bottom: 20px;
+  left: 20px;
+  text-transform: uppercase;
+  font-family: "ITC Avant Garde Gothic Std Demi";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  max-width: 30%;
+  color: #0A426A;
+  font-size: 18px;
+}
+.linkgrid > *::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0;
+  padding-top: 100%;
 }

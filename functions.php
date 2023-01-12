@@ -7,6 +7,7 @@ $settingslink = 'site-settings';
 
 
 require_once(dirname(__FILE__) . '/assets/acf_functions.php');
+require_once(dirname(__FILE__) . '/assets/custom_wordpressfunctions.php');
 /*-----------------------------------------------------------------------------------*/
 /* Remove the auto p tag removal
 /*-----------------------------------------------------------------------------------*/
