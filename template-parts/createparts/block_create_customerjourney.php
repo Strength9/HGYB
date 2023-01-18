@@ -14,6 +14,9 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 } 
 $circles = random_str(10);
 
+//select_circle_svg
+
+
 echo '<div class="wcp-columns">
  <div class="wcp-column full">
      <div class="circles">

@@ -52,6 +52,34 @@
                 "operator": "==",
                 "value": "acf\/createparts-section-start"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-faqs"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-text-and-image-block"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-double-text"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-icon-cards"
+            }
         ]
     ],
     "menu_order": 0,
@@ -63,5 +91,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672925346
+    "modified": 1674041138
 }

@@ -1,11 +1,11 @@
 
-
+.iconcards_grid {
 	.icongrid_3 {
   		
   	  	display: grid;
 			  grid-gap: 60px 10px;
 	  	grid-template-columns: repeat(1, 1fr);
-		  margin:50px auto 0;
+		  margin:20px auto 0;
   	
   		@media only screen and (min-width:670px) {
 	  		grid-template-columns: repeat(2,minmax(50px,410px));
@@ -19,7 +19,7 @@
   	}
 	
 	.icongrid_2 {
-		  margin:50px auto auto;
+		  margin:20px auto auto;
 			display: grid;
 		  grid-gap: 60px 10px;
 		  grid-template-columns: repeat(1, 1fr);
@@ -36,7 +36,7 @@
 	  }
 	  
 	  .icongrid_1 {
-			margin:50px auto auto;
+			margin:20px auto auto;
 			  display: grid;
 			grid-gap: 40px 10px;
 			grid-template-columns: repeat(1, minmax(0, 420px));
@@ -54,9 +54,13 @@
 	   border: 4px solid $hgyb_accent;
 	   border-radius: 30px;
 	   box-sizing: border-box;
-	   padding: 20px 20px 90px;
+	   padding: 20px 20px 20px;
 	   text-align: center;
 	   position: relative;
+	   
+	   &.haslink {
+		   padding: 20px 20px 70px;
+	   }
 	   span {
 		 background-color: #FFF;
 		 display: block;
@@ -70,9 +74,14 @@
 	   img {
 		 position: relative;
 		 z-index: 2;
-		 height: 140px;
+		 height: 110px;
 		 width: auto;
 		 margin: -54px auto 0;
+		 
+		 @media only screen and (min-width:600px) {
+			 height: 120px;
+		 }
+		 
 	   }
 	   h2 {
 		 color: $hgyb_black;
@@ -84,7 +93,7 @@
 	   }
 	   p {
 		 color: $hgyb_main;
-		 margin: 0 auto 10px;
+		
 	   }
 	   .button {
 		   @include  hygb_button(transparent, $hgyb_accent, $hgyb_main, $hgyb_accent, $hgyb_accent, $hgyb_main );
@@ -98,4 +107,95 @@
 	 }
 	  
 	  
+	&.hgybblue {
+	article.hgyb_iconcardbox {
+		color:#FFF;
+		
+		span {
+			background-color:$hgyb_main;
+		}
+		
+		p {
+			color:#FFF;
+		}
+		h2
+		 {
+			color:$hgyb_accent;
+		}
+		
+		.button {
+			color:#FFF;
+		}
+	}
+}
+	&.hgybblack {
+		article.hgyb_iconcardbox {
+			color:#FFF;
+			
+			span {
+				background-color:$hgyb_black;
+			}
+			
+			p {
+				color:#FFF;
+			}
+			h2
+			 {
+				color:$hgyb_accent;
+			}
+			
+			.button {
+				color:#FFF;
+			}
+		}
+	}
+	&.hgybaccent{
+		article.hgyb_iconcardbox {
+			color:#FFF;
+			border: 4px solid #FFF;
+			
+			span {
+				background-color:$hgyb_accent;
+			}
+			
+			p {
+				color:$hgyb_black;
+			}
+			h2
+			 {
+				color:$hgyb_main;
+			}
+			
+			.button {
+				   @include  hygb_button(transparent, $hgyb_main, $hgyb_main, $hgyb_main, $hgyb_main,#FFF );
+				   bottom:30px;
+				 
+					 &:hover {
+						 bottom:38px;
+					 }
+			
+			   }
+		}
+	}
+}
 
+.showborder {
+	border: 4px solid $hgyb_accent;
+	   border-radius: 30px;
+	   padding: 20px 20px 20px;
+}
+
+.hgybblue {
+	.showborder {
+		border: 4px solid $hgyb_accent;
+	}
+}
+.hgybblack {
+	.showborder {
+		border: 4px solid $hgyb_accent;
+	}	
+}
+.hgybaccent{	.showborder {
+		border: 4px solid $hgyb_main;
+	}
+}

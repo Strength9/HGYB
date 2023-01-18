@@ -12,3 +12,12 @@ jQuery(window).scroll(function () {
     }
 });
 
+
+jQuery("article.hgyb_iconcardbox").each(function() {
+  if (jQuery(this).has(".button").length) {
+    // find the parent and add class ONLY if the "IF" is true
+    jQuery(this)
+      .addClass("haslink");
+  }
+});
+

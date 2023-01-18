@@ -132,6 +132,20 @@
                 "operator": "==",
                 "value": "acf\/createparts-section-start"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-faqs"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-double-text"
+            }
         ]
     ],
     "menu_order": -5,
@@ -143,5 +157,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673438014
+    "modified": 1673962478
 }

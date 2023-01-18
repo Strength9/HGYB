@@ -180,6 +180,7 @@ h4 {
   font-weight: normal;
   font-style: normal;
   line-height: 1.1;
+  text-transform: capitalize;
 }
 
 h1 {
@@ -258,6 +259,9 @@ ul li a {
 ul li a:hover {
   color: #0A426A;
 }
+ul li strong {
+  font-family: "ITC Avant Garde Gothic Std Demi";
+}
 
 ol li {
   font-size: 16px;
@@ -265,6 +269,9 @@ ol li {
   margin-bottom: 10px;
   font-weight: 200;
   color: #414042;
+}
+ol li strong {
+  font-family: "ITC Avant Garde Gothic Std Demi";
 }
 ol li a {
   color: rgb(238, 194, 51);
@@ -279,11 +286,17 @@ blockquote {
   color: #FFF;
   padding: 50px;
   width: 80%;
-  margin: auto auto 25px;
+  margin: 0px auto 25px;
+  text-align: center;
 }
 blockquote p {
   color: #FFF;
   margin-bottom: 0;
+}
+blockquote p i {
+  color: rgb(238, 194, 51) !important;
+  font-size: 24px !important;
+  padding-bottom: 15px !important;
 }
 
 .fade-in {
@@ -2067,7 +2080,7 @@ section.npmid {
 }
 @media only screen and (min-width: 800px) {
   .imagetext {
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 1.3fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "imageside textside";
     gap: 0px 80px;
@@ -2267,69 +2280,69 @@ section.npmid {
   color: rgb(238, 194, 51);
 }
 
-.icongrid_3 {
+.iconcards_grid .icongrid_3 {
   display: grid;
   grid-gap: 60px 10px;
   grid-template-columns: repeat(1, 1fr);
-  margin: 50px auto 0;
+  margin: 20px auto 0;
 }
 @media only screen and (min-width: 670px) {
-  .icongrid_3 {
+  .iconcards_grid .icongrid_3 {
     grid-template-columns: repeat(2, minmax(50px, 410px));
     grid-gap: 80px 20px;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .icongrid_3 {
+  .iconcards_grid .icongrid_3 {
     grid-template-columns: repeat(3, minmax(50px, 410px));
     grid-gap: 100px 20px;
   }
 }
-
-.icongrid_2 {
-  margin: 50px auto auto;
+.iconcards_grid .icongrid_2 {
+  margin: 20px auto auto;
   display: grid;
   grid-gap: 60px 10px;
   grid-template-columns: repeat(1, 1fr);
 }
 @media only screen and (min-width: 670px) {
-  .icongrid_2 {
+  .iconcards_grid .icongrid_2 {
     grid-template-columns: repeat(2, minmax(50px, 680px));
     grid-gap: 80px 20px;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .icongrid_2 {
+  .iconcards_grid .icongrid_2 {
     grid-gap: 100px 20px;
   }
 }
-
-.icongrid_1 {
-  margin: 50px auto auto;
+.iconcards_grid .icongrid_1 {
+  margin: 20px auto auto;
   display: grid;
   grid-gap: 40px 10px;
   grid-template-columns: repeat(1, minmax(0, 420px));
 }
 @media only screen and (min-width: 670px) {
-  .icongrid_1 {
+  .iconcards_grid .icongrid_1 {
     grid-gap: 80px 20px;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .icongrid_1 {
+  .iconcards_grid .icongrid_1 {
     grid-gap: 100px 20px;
   }
 }
-
-article.hgyb_iconcardbox {
+.iconcards_grid article.hgyb_iconcardbox {
   border: 4px solid rgb(238, 194, 51);
   border-radius: 30px;
   box-sizing: border-box;
-  padding: 20px 20px 90px;
+  padding: 20px 20px 20px;
   text-align: center;
   position: relative;
 }
-article.hgyb_iconcardbox span {
+.iconcards_grid article.hgyb_iconcardbox.haslink {
+  padding: 20px 20px 70px;
+}
+.iconcards_grid article.hgyb_iconcardbox span {
   background-color: #FFF;
   display: block;
   height: 4px;
@@ -2339,26 +2352,30 @@ article.hgyb_iconcardbox span {
   transform: translateX(-50%);
   z-index: 1;
 }
-article.hgyb_iconcardbox img {
+.iconcards_grid article.hgyb_iconcardbox img {
   position: relative;
   z-index: 2;
-  height: 140px;
+  height: 110px;
   width: auto;
   margin: -54px auto 0;
 }
-article.hgyb_iconcardbox h2 {
+@media only screen and (min-width: 600px) {
+  .iconcards_grid article.hgyb_iconcardbox img {
+    height: 120px;
+  }
+}
+.iconcards_grid article.hgyb_iconcardbox h2 {
   color: #414042;
   font-family: "ITC Avant Garde Gothic Std Demi";
   margin: 25px auto 15px;
 }
-article.hgyb_iconcardbox h2:after {
+.iconcards_grid article.hgyb_iconcardbox h2:after {
   display: none !important;
 }
-article.hgyb_iconcardbox p {
+.iconcards_grid article.hgyb_iconcardbox p {
   color: #0A426A;
-  margin: 0 auto 10px;
 }
-article.hgyb_iconcardbox .button {
+.iconcards_grid article.hgyb_iconcardbox .button {
   color: #0A426A;
   text-align: center;
   margin: 20px auto 0;
@@ -2377,17 +2394,109 @@ article.hgyb_iconcardbox .button {
   text-transform: uppercase;
   bottom: 30px;
 }
-article.hgyb_iconcardbox .button:hover {
+.iconcards_grid article.hgyb_iconcardbox .button:hover {
   background-color: rgb(238, 194, 51);
   border: 1px solid rgb(238, 194, 51);
   bottom: 10px;
   color: #0A426A;
 }
-article.hgyb_iconcardbox .button:hover:before {
+.iconcards_grid article.hgyb_iconcardbox .button:hover:before {
   width: 100%;
 }
-article.hgyb_iconcardbox .button:hover {
+.iconcards_grid article.hgyb_iconcardbox .button:hover {
   bottom: 38px;
+}
+.iconcards_grid.hgybblue article.hgyb_iconcardbox {
+  color: #FFF;
+}
+.iconcards_grid.hgybblue article.hgyb_iconcardbox span {
+  background-color: #0A426A;
+}
+.iconcards_grid.hgybblue article.hgyb_iconcardbox p {
+  color: #FFF;
+}
+.iconcards_grid.hgybblue article.hgyb_iconcardbox h2 {
+  color: rgb(238, 194, 51);
+}
+.iconcards_grid.hgybblue article.hgyb_iconcardbox .button {
+  color: #FFF;
+}
+.iconcards_grid.hgybblack article.hgyb_iconcardbox {
+  color: #FFF;
+}
+.iconcards_grid.hgybblack article.hgyb_iconcardbox span {
+  background-color: #414042;
+}
+.iconcards_grid.hgybblack article.hgyb_iconcardbox p {
+  color: #FFF;
+}
+.iconcards_grid.hgybblack article.hgyb_iconcardbox h2 {
+  color: rgb(238, 194, 51);
+}
+.iconcards_grid.hgybblack article.hgyb_iconcardbox .button {
+  color: #FFF;
+}
+.iconcards_grid.hgybaccent article.hgyb_iconcardbox {
+  color: #FFF;
+  border: 4px solid #FFF;
+}
+.iconcards_grid.hgybaccent article.hgyb_iconcardbox span {
+  background-color: rgb(238, 194, 51);
+}
+.iconcards_grid.hgybaccent article.hgyb_iconcardbox p {
+  color: #414042;
+}
+.iconcards_grid.hgybaccent article.hgyb_iconcardbox h2 {
+  color: #0A426A;
+}
+.iconcards_grid.hgybaccent article.hgyb_iconcardbox .button {
+  color: #0A426A;
+  text-align: center;
+  margin: 20px auto 0;
+  position: absolute;
+  bottom: 0px;
+  border: 1px solid #0A426A;
+  border-radius: 10px;
+  padding: 10px 55px 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  transition: all 0.3s;
+  overflow: hidden;
+  z-index: 1;
+  background-color: transparent;
+  text-transform: uppercase;
+  bottom: 30px;
+}
+.iconcards_grid.hgybaccent article.hgyb_iconcardbox .button:hover {
+  background-color: #0A426A;
+  border: 1px solid #0A426A;
+  bottom: 10px;
+  color: #FFF;
+}
+.iconcards_grid.hgybaccent article.hgyb_iconcardbox .button:hover:before {
+  width: 100%;
+}
+.iconcards_grid.hgybaccent article.hgyb_iconcardbox .button:hover {
+  bottom: 38px;
+}
+
+.showborder {
+  border: 4px solid rgb(238, 194, 51);
+  border-radius: 30px;
+  padding: 20px 20px 20px;
+}
+
+.hgybblue .showborder {
+  border: 4px solid rgb(238, 194, 51);
+}
+
+.hgybblack .showborder {
+  border: 4px solid rgb(238, 194, 51);
+}
+
+.hgybaccent .showborder {
+  border: 4px solid #0A426A;
 }
 
 .servicestable h1 {
@@ -2417,13 +2526,15 @@ article.hgyb_iconcardbox .button:hover {
     margin-bottom: 150px;
   }
 }
-.servicestable .icon_gridlist {
+
+.icon_gridlist {
+  width: 100%;
   margin: auto;
-  max-width: 1050px;
+  max-width: 1150px;
   column-gap: 40px;
   column-count: 1;
 }
-.servicestable .icon_gridlist .icon_arealist {
+.icon_gridlist .icon_arealist {
   break-inside: avoid;
   display: grid;
   grid-template-columns: 1fr 0.4fr;
@@ -2433,67 +2544,67 @@ article.hgyb_iconcardbox .button:hover {
   grid-template-areas: "areatext iconarea";
   margin-bottom: 40px;
 }
-.servicestable .icon_gridlist .icon_arealist .areatext {
+.icon_gridlist .icon_arealist .areatext {
   align-self: start;
   grid-area: areatext;
   color: #0A426A;
 }
-.servicestable .icon_gridlist .icon_arealist .areatext h3 {
+.icon_gridlist .icon_arealist .areatext h3 {
   font-family: "ITC Avant Garde Gothic Std Book";
   font-size: 22px;
 }
-.servicestable .icon_gridlist .icon_arealist .areatext ul {
+.icon_gridlist .icon_arealist .areatext ul {
   padding-left: 0.8em;
 }
-.servicestable .icon_gridlist .icon_arealist .areatext ul li {
+.icon_gridlist .icon_arealist .areatext ul li {
   margin: 10px 0px;
   font-family: "ITC Avant Garde Gothic Std Book";
 }
-.servicestable .icon_gridlist .icon_arealist .iconarea {
+.icon_gridlist .icon_arealist .iconarea {
   justify-self: center;
   align-self: start;
   grid-area: iconarea;
 }
-.servicestable .icon_gridlist .icon_arealist .iconarea img {
+.icon_gridlist .icon_arealist .iconarea img {
   width: 100px;
   height: auto;
 }
 @media only screen and (min-width: 600px) {
-  .servicestable .icon_gridlist .icon_arealist {
+  .icon_gridlist .icon_arealist {
     grid-template-columns: 1fr 0.6fr;
     margin-bottom: 40px;
   }
-  .servicestable .icon_gridlist .icon_arealist .iconarea img {
+  .icon_gridlist .icon_arealist .iconarea img {
     width: 130px;
     height: auto;
   }
 }
 @media only screen and (min-width: 800px) {
-  .servicestable .icon_gridlist {
+  .icon_gridlist {
     column-count: 2;
     column-gap: 20px;
   }
-  .servicestable .icon_gridlist .icon_arealist {
+  .icon_gridlist .icon_arealist {
     margin-bottom: 40px;
   }
-  .servicestable .icon_gridlist .icon_arealist .iconarea img {
+  .icon_gridlist .icon_arealist .iconarea img {
     width: 100px;
     height: auto;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .servicestable .icon_gridlist {
+  .icon_gridlist {
     column-gap: 60px;
   }
-  .servicestable .icon_gridlist .icon_arealist {
+  .icon_gridlist .icon_arealist {
     margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .servicestable .icon_gridlist {
+  .icon_gridlist {
     column-gap: 120px;
   }
-  .servicestable .icon_gridlist .icon_arealist {
+  .icon_gridlist .icon_arealist {
     margin-bottom: 60px;
   }
 }
@@ -2524,7 +2635,29 @@ article.hgyb_iconcardbox .button:hover {
 .headerintro_inner h1:after {
   display: none !important;
 }
+.headerintro_inner ul.breadcrumb {
+  margin: 10px 0;
+  padding: 0px;
+  display: none;
+}
+.headerintro_inner ul.breadcrumb li {
+  list-style: none;
+  margin: 0px 5px 10px 0;
+  padding: 0px;
+  display: inline-block;
+  color: #FFF;
+  font-size: 14px;
+}
+.headerintro_inner ul.breadcrumb li a {
+  color: rgb(238, 194, 51);
+}
+.headerintro_inner ul.breadcrumb li a:hover {
+  color: #FFF;
+}
 @media only screen and (min-width: 600px) {
+  .headerintro_inner ul.breadcrumb {
+    display: block;
+  }
   .headerintro_inner h1 {
     text-align: left;
     font-size: 50px;
@@ -2534,6 +2667,23 @@ article.hgyb_iconcardbox .button:hover {
   .headerintro_inner h1 {
     font-size: 50px;
   }
+}
+.headerintro_inner ul.breadcrumb {
+  margin: 10px 0;
+  padding: 0px;
+}
+.headerintro_inner ul.breadcrumb li {
+  list-style: none;
+  margin: 0px 5px 10px 0;
+  padding: 0px;
+  display: inline-block;
+  color: #FFF;
+}
+.headerintro_inner ul.breadcrumb li a {
+  color: rgb(238, 194, 51);
+}
+.headerintro_inner ul.breadcrumb li a:hover {
+  color: #FFF;
 }
 
 .headerblock {
@@ -3189,75 +3339,80 @@ article.hgyb_iconcardbox .button:hover {
   width: 100%;
 }
 
-.textblock.hgybblack, .custom_block.hgybblack {
+.textblock.hgybblack, .textandimageblock.hgybblack, .custom_block.hgybblack, .iconcards_grid.hgybblack {
   background-color: #414042;
 }
-.textblock.hgybblack h1, .textblock.hgybblack h2, .textblock.hgybblack h3, .custom_block.hgybblack h1, .custom_block.hgybblack h2, .custom_block.hgybblack h3 {
+.textblock.hgybblack h1, .textblock.hgybblack h2, .textblock.hgybblack h3, .textandimageblock.hgybblack h1, .textandimageblock.hgybblack h2, .textandimageblock.hgybblack h3, .custom_block.hgybblack h1, .custom_block.hgybblack h2, .custom_block.hgybblack h3, .iconcards_grid.hgybblack h1, .iconcards_grid.hgybblack h2, .iconcards_grid.hgybblack h3 {
   color: #FFF;
 }
-.textblock.hgybblack h1:after, .textblock.hgybblack h2:after, .textblock.hgybblack h3:after, .custom_block.hgybblack h1:after, .custom_block.hgybblack h2:after, .custom_block.hgybblack h3:after {
+.textblock.hgybblack h1:after, .textblock.hgybblack h2:after, .textblock.hgybblack h3:after, .textandimageblock.hgybblack h1:after, .textandimageblock.hgybblack h2:after, .textandimageblock.hgybblack h3:after, .custom_block.hgybblack h1:after, .custom_block.hgybblack h2:after, .custom_block.hgybblack h3:after, .iconcards_grid.hgybblack h1:after, .iconcards_grid.hgybblack h2:after, .iconcards_grid.hgybblack h3:after {
   border-top: 1px solid rgb(238, 194, 51);
 }
-.textblock.hgybblack p, .textblock.hgybblack li, .custom_block.hgybblack p, .custom_block.hgybblack li {
+.textblock.hgybblack p, .textblock.hgybblack li, .textandimageblock.hgybblack p, .textandimageblock.hgybblack li, .custom_block.hgybblack p, .custom_block.hgybblack li, .iconcards_grid.hgybblack p, .iconcards_grid.hgybblack li {
   color: #FFF;
 }
-.textblock.hgybblack p strong, .textblock.hgybblack li strong, .custom_block.hgybblack p strong, .custom_block.hgybblack li strong {
+.textblock.hgybblack p strong, .textblock.hgybblack li strong, .textandimageblock.hgybblack p strong, .textandimageblock.hgybblack li strong, .custom_block.hgybblack p strong, .custom_block.hgybblack li strong, .iconcards_grid.hgybblack p strong, .iconcards_grid.hgybblack li strong {
   color: rgb(238, 194, 51);
 }
-.textblock.hgybblack p a, .textblock.hgybblack li a, .custom_block.hgybblack p a, .custom_block.hgybblack li a {
+.textblock.hgybblack p a, .textblock.hgybblack li a, .textandimageblock.hgybblack p a, .textandimageblock.hgybblack li a, .custom_block.hgybblack p a, .custom_block.hgybblack li a, .iconcards_grid.hgybblack p a, .iconcards_grid.hgybblack li a {
   color: rgb(238, 194, 51);
 }
-.textblock.hgybblack p a:hover, .textblock.hgybblack li a:hover, .custom_block.hgybblack p a:hover, .custom_block.hgybblack li a:hover {
+.textblock.hgybblack p a:hover, .textblock.hgybblack li a:hover, .textandimageblock.hgybblack p a:hover, .textandimageblock.hgybblack li a:hover, .custom_block.hgybblack p a:hover, .custom_block.hgybblack li a:hover, .iconcards_grid.hgybblack p a:hover, .iconcards_grid.hgybblack li a:hover {
   color: #FFF;
 }
-.textblock.hgybblack blockquote, .custom_block.hgybblack blockquote {
+.textblock.hgybblack blockquote, .textandimageblock.hgybblack blockquote, .custom_block.hgybblack blockquote, .iconcards_grid.hgybblack blockquote {
   background: rgb(238, 194, 51);
 }
-.textblock.hgybblack blockquote p, .custom_block.hgybblack blockquote p {
+.textblock.hgybblack blockquote p, .textandimageblock.hgybblack blockquote p, .custom_block.hgybblack blockquote p, .iconcards_grid.hgybblack blockquote p {
   color: #0A426A;
 }
-.textblock.hgybaccent h1:after, .textblock.hgybaccent h2:after, .textblock.hgybaccent h3:after, .custom_block.hgybaccent h1:after, .custom_block.hgybaccent h2:after, .custom_block.hgybaccent h3:after {
+.textblock.hgybaccent h1:after, .textblock.hgybaccent h2:after, .textblock.hgybaccent h3:after, .textandimageblock.hgybaccent h1:after, .textandimageblock.hgybaccent h2:after, .textandimageblock.hgybaccent h3:after, .custom_block.hgybaccent h1:after, .custom_block.hgybaccent h2:after, .custom_block.hgybaccent h3:after, .iconcards_grid.hgybaccent h1:after, .iconcards_grid.hgybaccent h2:after, .iconcards_grid.hgybaccent h3:after {
   border-top: 1px solid #FFF;
 }
-.textblock.hgybaccent p strong, .textblock.hgybaccent li strong, .custom_block.hgybaccent p strong, .custom_block.hgybaccent li strong {
+.textblock.hgybaccent p strong, .textblock.hgybaccent li strong, .textandimageblock.hgybaccent p strong, .textandimageblock.hgybaccent li strong, .custom_block.hgybaccent p strong, .custom_block.hgybaccent li strong, .iconcards_grid.hgybaccent p strong, .iconcards_grid.hgybaccent li strong {
   color: #0A426A;
 }
-.textblock.hgybaccent p a, .textblock.hgybaccent li a, .custom_block.hgybaccent p a, .custom_block.hgybaccent li a {
+.textblock.hgybaccent p a, .textblock.hgybaccent li a, .textandimageblock.hgybaccent p a, .textandimageblock.hgybaccent li a, .custom_block.hgybaccent p a, .custom_block.hgybaccent li a, .iconcards_grid.hgybaccent p a, .iconcards_grid.hgybaccent li a {
   color: #414042;
   text-decoration: underline;
 }
-.textblock.hgybaccent p a:hover, .textblock.hgybaccent li a:hover, .custom_block.hgybaccent p a:hover, .custom_block.hgybaccent li a:hover {
+.textblock.hgybaccent p a:hover, .textblock.hgybaccent li a:hover, .textandimageblock.hgybaccent p a:hover, .textandimageblock.hgybaccent li a:hover, .custom_block.hgybaccent p a:hover, .custom_block.hgybaccent li a:hover, .iconcards_grid.hgybaccent p a:hover, .iconcards_grid.hgybaccent li a:hover {
   color: #0A426A;
 }
-.textblock.hgybaccent blockquote, .custom_block.hgybaccent blockquote {
+.textblock.hgybaccent blockquote, .textandimageblock.hgybaccent blockquote, .custom_block.hgybaccent blockquote, .iconcards_grid.hgybaccent blockquote {
   background: #0A426A;
 }
-.textblock.hgybaccent blockquote p, .custom_block.hgybaccent blockquote p {
+.textblock.hgybaccent blockquote p, .textandimageblock.hgybaccent blockquote p, .custom_block.hgybaccent blockquote p, .iconcards_grid.hgybaccent blockquote p {
   color: rgb(238, 194, 51);
 }
-.textblock.hgybblue h1, .textblock.hgybblue h2, .textblock.hgybblue h3, .custom_block.hgybblue h1, .custom_block.hgybblue h2, .custom_block.hgybblue h3 {
+.textblock.hgybblue h1, .textblock.hgybblue h2, .textblock.hgybblue h3, .textandimageblock.hgybblue h1, .textandimageblock.hgybblue h2, .textandimageblock.hgybblue h3, .custom_block.hgybblue h1, .custom_block.hgybblue h2, .custom_block.hgybblue h3, .iconcards_grid.hgybblue h1, .iconcards_grid.hgybblue h2, .iconcards_grid.hgybblue h3 {
   color: #FFF;
 }
-.textblock.hgybblue h1:after, .textblock.hgybblue h2:after, .textblock.hgybblue h3:after, .custom_block.hgybblue h1:after, .custom_block.hgybblue h2:after, .custom_block.hgybblue h3:after {
+.textblock.hgybblue h1:after, .textblock.hgybblue h2:after, .textblock.hgybblue h3:after, .textandimageblock.hgybblue h1:after, .textandimageblock.hgybblue h2:after, .textandimageblock.hgybblue h3:after, .custom_block.hgybblue h1:after, .custom_block.hgybblue h2:after, .custom_block.hgybblue h3:after, .iconcards_grid.hgybblue h1:after, .iconcards_grid.hgybblue h2:after, .iconcards_grid.hgybblue h3:after {
   border-top: 1px solid rgb(238, 194, 51);
 }
-.textblock.hgybblue p, .textblock.hgybblue li, .custom_block.hgybblue p, .custom_block.hgybblue li {
+.textblock.hgybblue p, .textblock.hgybblue li, .textandimageblock.hgybblue p, .textandimageblock.hgybblue li, .custom_block.hgybblue p, .custom_block.hgybblue li, .iconcards_grid.hgybblue p, .iconcards_grid.hgybblue li {
   color: #FFF;
 }
-.textblock.hgybblue p strong, .textblock.hgybblue li strong, .custom_block.hgybblue p strong, .custom_block.hgybblue li strong {
+.textblock.hgybblue p strong, .textblock.hgybblue li strong, .textandimageblock.hgybblue p strong, .textandimageblock.hgybblue li strong, .custom_block.hgybblue p strong, .custom_block.hgybblue li strong, .iconcards_grid.hgybblue p strong, .iconcards_grid.hgybblue li strong {
   color: rgb(238, 194, 51);
 }
-.textblock.hgybblue p a, .textblock.hgybblue li a, .custom_block.hgybblue p a, .custom_block.hgybblue li a {
+.textblock.hgybblue p a, .textblock.hgybblue li a, .textandimageblock.hgybblue p a, .textandimageblock.hgybblue li a, .custom_block.hgybblue p a, .custom_block.hgybblue li a, .iconcards_grid.hgybblue p a, .iconcards_grid.hgybblue li a {
   color: rgb(238, 194, 51);
 }
-.textblock.hgybblue p a:hover, .textblock.hgybblue li a:hover, .custom_block.hgybblue p a:hover, .custom_block.hgybblue li a:hover {
+.textblock.hgybblue p a:hover, .textblock.hgybblue li a:hover, .textandimageblock.hgybblue p a:hover, .textandimageblock.hgybblue li a:hover, .custom_block.hgybblue p a:hover, .custom_block.hgybblue li a:hover, .iconcards_grid.hgybblue p a:hover, .iconcards_grid.hgybblue li a:hover {
   color: #FFF;
 }
-.textblock.hgybblue blockquote, .custom_block.hgybblue blockquote {
+.textblock.hgybblue blockquote, .textandimageblock.hgybblue blockquote, .custom_block.hgybblue blockquote, .iconcards_grid.hgybblue blockquote {
   background: rgb(238, 194, 51);
 }
-.textblock.hgybblue blockquote p, .custom_block.hgybblue blockquote p {
-  color: #0A426A;
+.textblock.hgybblue blockquote p, .textandimageblock.hgybblue blockquote p, .custom_block.hgybblue blockquote p, .iconcards_grid.hgybblue blockquote p {
+  color: #FFF;
+  font-size: 18px;
+}
+.textblock.hgybblue blockquote p i, .textandimageblock.hgybblue blockquote p i, .custom_block.hgybblue blockquote p i, .iconcards_grid.hgybblue blockquote p i {
+  color: #0A426A !important;
+  margin-bottom: 10px;
 }
 
 .custom_block .wcp-columns {
@@ -3669,15 +3824,28 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
 
 .linkgrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   place-items: start;
   gap: 40px;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
 }
+@media only screen and (min-width: 500px) {
+  .linkgrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .linkgrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 .linkgrid > * {
   background: rgba(10, 66, 106, 0.3);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   width: 100%;
   box-sizing: border-box;
   position: relative;
@@ -3693,9 +3861,47 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
   font-weight: normal;
   font-style: normal;
   text-decoration: none;
-  max-width: 30%;
-  color: #0A426A;
+  color: #FFF;
   font-size: 18px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: rgba(10, 66, 106, 0.1);
+  left: 0;
+  right: 0;
+}
+.linkgrid > * a div.title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  max-width: 210px;
+  z-index: 100;
+  display: block;
+}
+.linkgrid > * a div.title span {
+  display: block;
+}
+.linkgrid > * a div.title span::before {
+  content: attr(data-text);
+}
+.linkgrid > * a div.overlayexpand {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  background: rgba(10, 66, 106, 0.5);
+  transition: all 0.3s ease 0s;
+}
+.linkgrid > * a:hover div.title {
+  color: rgb(238, 194, 51);
+}
+.linkgrid > * a:hover div.overlayexpand {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .linkgrid > *::before {
   content: "";
@@ -3703,4 +3909,193 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
   width: 1px;
   height: 0;
   padding-top: 100%;
+}
+
+.faqs h3 {
+  scroll-margin-top: 250px;
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+@media (min-width: 360px) {
+  .faqs h3 {
+    font-size: 22px;
+  }
+}
+.faqs ul.jumplist {
+  background-color: #0A426A;
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 60px 0;
+}
+.faqs ul.jumplist li {
+  padding: 20px 20px;
+  margin: 0 10px;
+  list-style: none;
+  background-color: rgb(238, 194, 51);
+}
+.faqs ul.jumplist li a {
+  color: #FFF;
+}
+.faqs ul.jumplist li a:hover {
+  color: #0A426A;
+}
+.faqs ul.jumplist li:hover {
+  background-color: #FFF;
+}
+.faqs ul.jumplist li:hover a {
+  color: #0A426A;
+}
+.faqs .accordion {
+  margin: 10px 0 50px;
+  width: 100%;
+}
+.faqs .accordion .accordion-item {
+  border-bottom: 1px solid #0A426A;
+}
+.faqs .accordion .accordion-item button[aria-expanded=true] {
+  border-bottom: 1px solid #0A426A;
+}
+.faqs .accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 20px 0 20px;
+  color: rgba(65, 64, 66, 0.582);
+  border: none;
+  background: none;
+  outline: none;
+}
+.faqs .accordion button:hover, .faqs .accordion button:focus {
+  cursor: pointer;
+  color: #0A426A;
+}
+.faqs .accordion button:hover::after, .faqs .accordion button:focus::after {
+  cursor: pointer;
+  color: #0A426A;
+  border: 1px solid #0A426A;
+}
+.faqs .accordion button .accordion-title {
+  font-family: "ITC Avant Garde Gothic Std Book";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.1;
+  font-size: 18px;
+}
+.faqs .accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.faqs .accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.faqs .accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.faqs .accordion button[aria-expanded=true] {
+  color: #0A426A;
+}
+.faqs .accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+.faqs .accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 1000px;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.faqs .accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.faqs .accordion .accordion-content p {
+  font-size: 16px;
+  margin: 2em 0;
+}
+
+.faqsjump {
+  background-color: #0A426A;
+  padding: 40px 15px;
+}
+@media screen and (min-width: 500px) {
+  .faqsjump {
+    padding: 60px 32px;
+  }
+}
+@media screen and (min-width: 1360px) {
+  .faqsjump {
+    padding: 70px 0;
+  }
+}
+.faqsjump h2 {
+  font-size: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #FFF;
+}
+@media screen and (min-width: 768px) {
+  .faqsjump h2 {
+    font-size: 35px;
+  }
+}
+.faqsjump h2:after {
+  display: none;
+}
+.faqsjump p {
+  text-align: center;
+  color: #FFF;
+}
+.faqsjump p:after {
+  display: none;
+}
+.faqsjump ul.jumplist {
+  background-color: #0A426A;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.faqsjump ul.jumplist li {
+  margin: 0 10px;
+  list-style: none;
+}
+.faqsjump ul.jumplist li a {
+  border: 1px solid rgb(238, 194, 51);
+  border-radius: 10px;
+  padding: 13px 35px 10px;
+  color: #FFF;
+}
+.faqsjump ul.jumplist li a:hover {
+  color: #0A426A;
+  background-color: rgb(238, 194, 51);
 }

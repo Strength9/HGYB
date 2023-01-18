@@ -126,6 +126,13 @@
                 "operator": "==",
                 "value": "acf\/block-services-table"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/createparts-cb-services-table"
+            }
         ]
     ],
     "menu_order": 40,
@@ -137,5 +144,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673354236
+    "modified": 1674052164
 }

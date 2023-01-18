@@ -22,9 +22,32 @@
 		}
 		&:after {display:none !important;}
 	}
-	
+	ul.breadcrumb {
+		margin:10px 0;
+		padding:0px;
+		display:none;
+		li {
+			list-style:none;
+			margin:0px 5px 10px 0;
+			padding:0px;
+			display:inline-block;
+			color:#FFF;
+			font-size:14px;
+			
+			a {
+				color:$hgyb_accent;
+				
+				&:hover {
+					color:#FFF;
+				}
+			}
+			
+		}
+	}
 	@media only screen and (min-width:600px) {
-	
+	ul.breadcrumb {
+		display:block;
+	}
 		h1 {
 			text-align: left;
 			font-size:50px;
@@ -41,6 +64,28 @@
 			span {}
 		}
 		
+	}
+	
+	ul.breadcrumb {
+		margin:10px 0;
+		padding:0px;
+		
+		li {
+			list-style:none;
+			margin:0px 5px 10px 0;
+			padding:0px;
+			display:inline-block;
+			color:#FFF;
+			
+			a {
+				color:$hgyb_accent;
+				
+				&:hover {
+					color:#FFF;
+				}
+			}
+			
+		}
 	}
 }
 

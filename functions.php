@@ -334,6 +334,8 @@ function xray_block_scripts()  {
 add_action( 'wp_enqueue_scripts', 'xray_block_scripts' ); 
 
 
+
+
 function random_str(
 	int $length = 64,
 	string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'): string {
@@ -362,6 +364,47 @@ function blockedit_message($bemessage){
 }
 
 
+/*=============================================
+=            BREADCRUMBS			            =
+=============================================*/
+
+//  to include in functions.php
+function the_breadcrumb() {
+
+	global $post;
+
+	$trail = '<li><a href="'.get_home_url().'">Home » </a></li>';
+	$page_title = get_the_title($post->ID);
+
+	if($post->post_parent) {
+		$parent_id = $post->post_parent;
+
+		while ($parent_id) {
+			$page = get_page($parent_id);
+			$breadcrumbs[] = '<li><a href="'.get_the_permalink($page->ID).'" title="'.get_the_title($page->ID).'">' . get_the_title($page->ID) . ' » </a></li>';
+			$parent_id = $page->post_parent;
+		}
+
+		$breadcrumbs = array_reverse($breadcrumbs);
+		foreach($breadcrumbs as $crumb) $trail .= $crumb;
+	}
+
+	$trail .= '<li>'.$page_title.'</li>';
+	
+
+	return '<ul class="breadcrumb">'.$trail.'</ul>';
+
+}
+
+function add_categories_to_pages() {
+register_taxonomy_for_object_type( 'category', 'page' );
+}
+add_action( 'init', 'add_categories_to_pages' );
+
+function add_tags_to_pages() {
+register_taxonomy_for_object_type( 'post_tag', 'page' );
+}
+add_action( 'init', 'add_tags_to_pages');
 
 /**
 	 * Font Awesome Kit Setup

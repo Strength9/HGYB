@@ -205,7 +205,7 @@ section {
   	grid-template-areas: "textside" "imageside";
 
 	@media only screen and (min-width:800px) {
-		grid-template-columns: 1fr  1.3fr; 
+		grid-template-columns:  1.3fr 1fr ; 
 		grid-template-rows: 1fr; 
 		grid-template-areas: "imageside textside";
 		gap: 0px 80px; 

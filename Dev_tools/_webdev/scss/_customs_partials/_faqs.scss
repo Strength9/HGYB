@@ -1,0 +1,219 @@
+.faqs {
+	
+	$bg: #fff;
+	$text: rgba(65, 64, 66, 0.582);
+	$blue: $hgyb_main;
+	
+	h3 {
+		scroll-margin-top: 250px;
+		font-size: 24px;
+		  margin-bottom: 0px; 
+			@media(min-width: 360px) {
+				font-size: 22px;
+			}
+	}
+	
+	
+	ul.jumplist {
+		background-color:$hgyb_main;
+		padding:100px 40px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		margin:60px 0;
+		
+		
+		li {
+			padding:20px 20px;
+			margin:0 10px;
+			list-style:none;
+			
+			background-color:$hgyb_accent;
+			a { color:#FFF;
+				&:hover {
+					color:$hgyb_main;
+					
+				}
+			}
+			
+			&:hover {
+				background-color:#FFF;
+				a{
+					color:$hgyb_main;
+				}
+			}
+		}
+	}
+	
+	.accordion {
+		margin:10px 0 50px;
+		width:100%;
+	  .accordion-item {
+		border-bottom: 1px solid $hgyb_main;
+		button[aria-expanded='true'] {
+		  border-bottom: 1px solid $blue;
+		}
+	  }
+	  button {
+		position: relative;
+		display: block;
+		text-align: left;
+		width: 100%;
+		padding: 20px 0 20px;
+		color: $text;
+	
+	
+		border: none;
+		background: none;
+		outline: none;
+		&:hover, &:focus {
+		  cursor: pointer;
+		  color: $blue;
+		  &::after {
+			cursor: pointer;
+			color: $blue;
+			border: 1px solid $blue;
+		  }
+		}
+		.accordion-title {
+		  
+		  font-family: "ITC Avant Garde Gothic Std Book";
+		  font-weight: normal;
+		  font-style: normal;
+		  line-height: 1.1;
+		  font-size:18px;
+		}
+		.icon {
+		  display: inline-block;
+		  position: absolute;
+		  top: 18px;
+		  right: 0;
+		  width: 22px;
+		  height: 22px;
+		  border: 1px solid;
+		  border-radius: 22px;
+		  &::before {
+			display: block;
+			position: absolute;
+			content: '';
+			top: 9px;
+			left: 5px;
+			width: 10px;
+			height: 2px;
+			background: currentColor;
+		  }
+		  &::after {
+			display: block;
+			position: absolute;
+			content: '';
+			top: 5px;
+			left: 9px;
+			width: 2px;
+			height: 10px;
+			background: currentColor;
+		  }
+		}
+	  }
+	  button[aria-expanded='true'] {
+		color: $blue;
+		.icon {
+		  &::after {
+			width: 0;
+		  }
+		}
+		+ .accordion-content {
+			opacity:1;
+		  max-height: 1000px;
+		  transition: all 200ms linear;
+		  will-change: opacity, max-height;
+		}
+	  }
+	  .accordion-content {
+		opacity: 0;
+		max-height: 0;
+		overflow: hidden;
+		transition: opacity 200ms linear, max-height 200ms linear;
+		will-change: opacity, max-height;
+		p {
+		 font-size:16px;
+		  margin: 2em 0;
+		}
+	  }
+	}
+}
+
+.faqsjump {
+	background-color:$hgyb_main;
+	padding: 40px 15px;
+	
+	  @media screen and (min-width: 500px ) {	
+		padding:60px 32px;
+	  }
+	  @media screen and (min-width: 1360px ) {	
+		padding:70px 0;
+	  }
+	
+	h2 {
+	  font-size: 25px;
+	  margin-bottom: 30px;
+	 
+	
+	  @media screen and (min-width: 768px) {
+	   font-size: 35px;
+	  }
+	 
+		text-align: center;
+		color:#FFF;
+		
+		&:after {
+			display:none;
+		}
+	}
+	p {
+		text-align: center;
+		color:#FFF;
+		
+		&:after {
+			display:none;
+		}
+	}
+	
+	
+	ul.jumplist {
+		background-color:$hgyb_main;
+		
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		
+		
+		
+		li {
+			
+			margin:0 10px;
+			list-style:none;
+			
+			
+			a { 
+				border: 1px solid rgb(238, 194, 51);
+				border-radius: 10px;
+				padding: 13px 35px 10px;
+				
+				color:#FFF;
+				&:hover {
+					color:$hgyb_main;
+					background-color: $hgyb_accent;
+					
+				}
+			}
+			
+			
+		}
+	}
+}

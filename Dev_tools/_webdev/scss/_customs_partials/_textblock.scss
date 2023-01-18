@@ -1,4 +1,4 @@
-.textblock, .custom_block {
+.textblock, .textandimageblock, .custom_block, .iconcards_grid  {
 	
 	
 	&.hgybblack {
@@ -28,7 +28,12 @@
 		blockquote {
 			background: $hgyb_accent;
 			
-			p { color:$hgyb_main;}
+			p { color:$hgyb_main;
+				
+				i {
+					
+				}
+			}
 		}
 	}
 	&.hgybaccent{
@@ -86,7 +91,16 @@
 		blockquote {
 			background: $hgyb_accent;
 			
-			p { color:$hgyb_main;}
+			p { color:#FFF;
+				font-size:18px;
+				
+				
+				
+				i {
+					color:$hgyb_main !important;
+					margin-bottom:10px;
+				}
+			}
 		}
 	}
 	

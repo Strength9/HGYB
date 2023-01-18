@@ -12,109 +12,115 @@
 		
 	}
 	
-	.icon_gridlist {
-		margin:auto;
-	  max-width: 1050px;
-	  column-gap: 40px;
-	  column-count: 1;
-	  
-	  
-	  .icon_arealist {
-		
-		break-inside: avoid; // Prevents div being put into two columns
-		display: grid;
-		grid-template-columns: 1fr 0.4fr;
-		grid-template-rows: 1fr;
-		gap: 0px 0px;
-		grid-auto-flow: row;
-		grid-template-areas: "areatext iconarea";
-		
-		margin-bottom: 40px; // Needs to match the
-	
-		.areatext {
-		  align-self: start;
-		  grid-area: areatext;
-		  
-		  h3 {
-			font-family: 'ITC Avant Garde Gothic Std Book';
-			font-size:22px;
-			
-			
-		}
-		  ul {
-			padding-left: 0.8em; // Reset the list icons to align:left;
-	
-			li {
-			  margin: 10px 0px; // Line spacing
-			  font-family: 'ITC Avant Garde Gothic Std Book';
-			}
-		  }
-		  
-		  color:$hgyb_main;
-		}
-		.iconarea {
-		  justify-self: center;
-		  align-self: start;
-		  grid-area: iconarea;
-		  
-	
-		  img {
-			
-			width: 100px;
-			height: auto;
-		  }
-		}
-	  }
 
- 	 @media only screen and (min-width:600px) {
-		 
-		  .icon_arealist {
-			  grid-template-columns: 1fr 0.6fr;
-			  margin-bottom: 40px; 
-			  
-			
-			.iconarea {
-					img {
-						
-						width: 130px;
-						height: auto;
-					  }
-				}
-		  }
-	  }
-	  
-	  @media only screen and (min-width:800px) {
-			column-count: 2;
-			column-gap: 20px;
-			.icon_arealist {
-				margin-bottom: 40px; 
-				
-				
-				  .iconarea {  
-					  img {
-						  
-						  width: 100px;
-						  height: auto;
-						}
-				  }
-			}
-		}
-	  @media only screen and (min-width:1200px) {
-		
-		  column-gap: 60px;
-		  .icon_arealist {
-			  margin-bottom: 20px; 
-			  
-			 
-		  }
-	  }
-	  @media only screen and (min-width:1400px) {
-		
-			column-gap: 120px;
-			.icon_arealist {
-				margin-bottom: 60px; 
-			}
-		}
-	}
 
 }
+
+
+.icon_gridlist {
+	
+	width:100%;
+	margin:auto;
+  max-width: 1150px;
+  column-gap: 40px;
+  column-count: 1;
+  
+  
+  .icon_arealist {
+	
+	break-inside: avoid; // Prevents div being put into two columns
+	display: grid;
+	grid-template-columns: 1fr 0.4fr;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: "areatext iconarea";
+	
+	margin-bottom: 40px; // Needs to match the
+
+	.areatext {
+	  align-self: start;
+	  grid-area: areatext;
+	  
+	  h3 {
+		font-family: 'ITC Avant Garde Gothic Std Book';
+		font-size:22px;
+		
+		
+	}
+	  ul {
+		padding-left: 0.8em; // Reset the list icons to align:left;
+
+		li {
+		  margin: 10px 0px; // Line spacing
+		  font-family: 'ITC Avant Garde Gothic Std Book';
+		}
+	  }
+	  
+	  color:$hgyb_main;
+	}
+	.iconarea {
+	  justify-self: center;
+	  align-self: start;
+	  grid-area: iconarea;
+	  
+
+	  img {
+		
+		width: 100px;
+		height: auto;
+	  }
+	}
+  }
+
+  @media only screen and (min-width:600px) {
+	 
+	  .icon_arealist {
+		  grid-template-columns: 1fr 0.6fr;
+		  margin-bottom: 40px; 
+		  
+		
+		.iconarea {
+				img {
+					
+					width: 130px;
+					height: auto;
+				  }
+			}
+	  }
+  }
+  
+  @media only screen and (min-width:800px) {
+		column-count: 2;
+		column-gap: 20px;
+		.icon_arealist {
+			margin-bottom: 40px; 
+			
+			
+			  .iconarea {  
+				  img {
+					  
+					  width: 100px;
+					  height: auto;
+					}
+			  }
+		}
+	}
+  @media only screen and (min-width:1200px) {
+	
+	  column-gap: 60px;
+	  .icon_arealist {
+		  margin-bottom: 20px; 
+		  
+		 
+	  }
+  }
+  @media only screen and (min-width:1400px) {
+	
+		column-gap: 120px;
+		.icon_arealist {
+			margin-bottom: 60px; 
+		}
+	}
+}
+

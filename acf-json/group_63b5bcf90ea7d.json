@@ -72,6 +72,27 @@
                 "operator": "==",
                 "value": "acf\/block-services-call-to-action"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-text-and-image-block"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-double-text"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/createparts-cb-double-text"
+            }
         ]
     ],
     "menu_order": 30,
@@ -83,5 +104,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673438683
+    "modified": 1673960581
 }

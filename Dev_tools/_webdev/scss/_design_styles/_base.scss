@@ -111,6 +111,7 @@ h4 {
   font-weight: normal;
   font-style: normal;
   line-height: 1.1;
+  text-transform:capitalize;
 }
 h1 {
   font-size: 25px;
@@ -198,6 +199,10 @@ ul {
          color:$hgyb_main;
        }
      }
+     
+     strong {
+        font-family: 'ITC Avant Garde Gothic Std Demi';
+      }
     
   }
 }
@@ -210,6 +215,10 @@ ol {
     font-weight: 200;
     color:$hgyb_black;
     
+    strong {
+       font-family: 'ITC Avant Garde Gothic Std Demi';
+     }
+     
     a {
        color:$hgyb_accent;
        text-decoration:none;
@@ -226,13 +235,25 @@ blockquote {
   color:#FFF;
   padding:50px;
   width:80%;
-  margin:auto auto 25px;;
+  margin:0px auto 25px;
+  
+  text-align: center;
+  
+  
   
   p {
-    color:#FFF;
+  color:#FFF;
     margin-bottom:0;
+    i {
+      color:$hgyb_accent !important;
+      font-size:24px !important;
+      padding-bottom:15px !important;
+      
+    }
   }
 }
+
+
 
 
 .fade-in {

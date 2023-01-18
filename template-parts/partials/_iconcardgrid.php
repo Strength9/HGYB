@@ -10,9 +10,9 @@ if( have_rows('icon_cards') ):
 		// Load sub field value.
 		$title = ! empty( get_sub_field('card_header') ) ? '<h2>'.get_sub_field('card_header').'</h2>' : '';
 		$text = ! empty( get_sub_field('card_text') ) ? '<p>'.get_sub_field('card_text').'</p>' : '';
-		
-		$icon = ! empty( get_sub_field('card_icon') ) ? get_sub_field('card_icon') : '';
 		$iconwidth = ! empty( get_sub_field('card_image_icon_bg_width') ) ? get_sub_field('card_image_icon_bg_width') : '400';
+		$icon = ! empty( get_sub_field('card_icon') ) ? '<span class="imgblocker" style="width:'.$iconwidth.'px;"></span><img src="'.get_sub_field('card_icon').'" alt="" />' : '';
+		
 		
 		
 		$link = get_sub_field('card_link');
@@ -22,8 +22,7 @@ if( have_rows('icon_cards') ):
 		else : $linkoutput = ''; endif; 
 
 		$iconcards .= '<article class="hgyb_iconcardbox">
-		<span class="imgblocker" style="width:'.$iconwidth.'px;"></span>
-		  <img src="'.$icon.'" alt="" />
+		'.$icon.'
 		  '.$title.$text.$linkoutput.'
 		</article>';
 

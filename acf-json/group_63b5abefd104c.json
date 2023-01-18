@@ -86,6 +86,27 @@
                 "operator": "==",
                 "value": "acf\/block-services-table"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-faqs"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-text-and-image-block"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-double-text"
+            }
         ]
     ],
     "menu_order": -10,
@@ -97,5 +118,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673449112
+    "modified": 1673962450
 }
