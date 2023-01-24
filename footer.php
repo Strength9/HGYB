@@ -16,7 +16,7 @@ $foot_sitecontactphone = s9_emaillink($fieldname = 'telephone_number', $postid =
 	
 	<section class="maincontent">
 		  		<div class="bussdetails">
-			  		<?php echo $footerlogo; ?>
+			  		<a href="<?php echo get_home_url();?>"><?php echo $footerlogo; ?></a>
 					  <p>Helping small to medium size
 						<span>businesses step up to the next level</span></p>
 		  		</div>

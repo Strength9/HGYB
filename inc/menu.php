@@ -31,7 +31,7 @@ if ($topbutt === 'yes') {
 	  	
 	  	<?php wp_nav_menu( array(  'menu' => 'MainMenu','container'  => '', 'container_class' => '', 'container_id'    => '',   'depth' => 3 , 'items_wrap' => '
 			
-			<div class="logo"><a href="#">'.$headermain_logo.$headmobmenu_logo.'</a></div>
+			<div class="logo"><a href="'.get_home_url().'">'.$headermain_logo.$headmobmenu_logo.'</a></div>
 			'.$topctoa.'
 			<label class="menuaction" aria-label="Open navigation menu" for="menu-toggle">
 			 	<div class="hamburger" tabindex="1" onClick="showDialog()">
