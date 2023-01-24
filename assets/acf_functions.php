@@ -113,4 +113,23 @@ function s9_weblink($webaddress, $titletext ='',$className = '') {
 		return '';
 	};
 }
+
+// Return text field / date etc
+function s9_socialicon($fieldname, $postid = '', $fontawesome = '', $titletext = '',$emptyText = '', $tagtext) {
+	$sttag = $edtag = $class = '';
+	
+
+	
+	if ($tagtext != '') { $sttag = '<'.$tagtext.'>'; $edtag = '</'.$tagtext.'>'; }
+	
+	$textdata = ! empty( get_field($fieldname, $postid) ) ? get_field($fieldname, $postid) : $emptyText;
+	
+	if ($textdata != $emptyText) {
+		$out = $sttag.'<a href="'.$textdata.'" title="'.$titletext.'"><i class="'.$fontawesome.'"></i></a>'.$edtag;	
+	} else { 
+		$out = '';
+	}
+	
+	return $out;
+};
 ?>

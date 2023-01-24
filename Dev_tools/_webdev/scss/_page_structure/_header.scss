@@ -25,15 +25,19 @@ header {
 	-o-transition: background-color 2s ease-out;
 	transition: background-color 2s ease-out;
 	background-color:#FFF;
+	z-index:10000;
+	position:fixed;
 	
 	
 		&.fixed {
-			position:fixed;
+			
 			z-index:10000;
 			top:0;
 			left:0;
 			right:0;
 			border:0px;
+			
+			transition:display 2s;
 			
 			.detailbar {display:none !important;}
 		}
