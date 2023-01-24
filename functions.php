@@ -178,8 +178,128 @@ if( function_exists('acf_add_options_page') ) {
 		));	
 };
 
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_sub_page(array(
+		'page_title'     => 'Courses Page Content',
+		'menu_title'    => 'Page Content',
+		'parent_slug'    => 'edit.php?post_type=courses',
+	));
+
+}
+
+// Register Custom Post Type
+function custom_post_type_testimonial() {
+
+	$labels = array(
+		'name'                  => _x( 'Testimonials', 'Post Type General Name', 'xray_testimonial' ),
+		'singular_name'         => _x( 'Testimonial', 'Post Type Singular Name', 'xray_testimonial' ),
+		'menu_name'             => __( 'Testimonials', 'xray_testimonial' ),
+		'name_admin_bar'        => __( 'Testimonials', 'xray_testimonial' ),
+		'archives'              => __( 'Item Archives', 'xray_testimonial' ),
+		'attributes'            => __( 'Item Attributes', 'xray_testimonial' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'xray_testimonial' ),
+		'all_items'             => __( 'All Testimonials', 'xray_testimonial' ),
+		'add_new_item'          => __( 'Add New Testimonial', 'xray_testimonial' ),
+		'add_new'               => __( 'Add New', 'xray_testimonial' ),
+		'new_item'              => __( 'New Testimonial', 'xray_testimonial' ),
+		'edit_item'             => __( 'Edit Testimonial', 'xray_testimonial' ),
+		'update_item'           => __( 'Update Testimonial', 'xray_testimonial' ),
+		'view_item'             => __( 'View Testimonial', 'xray_testimonial' ),
+		'view_items'            => __( 'View Testimonials', 'xray_testimonial' ),
+		'search_items'          => __( 'Search Testimonials', 'xray_testimonial' ),
+		'not_found'             => __( 'Not found', 'xray_testimonial' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'xray_testimonial' ),
+		'featured_image'        => __( 'Featured Image', 'xray_testimonial' ),
+		'set_featured_image'    => __( 'Set featured image', 'xray_testimonial' ),
+		'remove_featured_image' => __( 'Remove featured image', 'xray_testimonial' ),
+		'use_featured_image'    => __( 'Use as featured image', 'xray_testimonial' ),
+		'insert_into_item'      => __( 'Insert into item', 'xray_testimonial' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'xray_testimonial' ),
+		'items_list'            => __( 'Items list', 'xray_testimonial' ),
+		'items_list_navigation' => __( 'Items list navigation', 'xray_testimonial' ),
+		'filter_items_list'     => __( 'Filter items list', 'xray_testimonial' ),
+	);
+	$args = array(
+		'label'                 => __( 'Testimonial', 'xray_testimonial' ),
+		'description'           => __( 'Testimonial Entries', 'xray_testimonial' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'post_testimonial', $args );
+
+}
+add_action( 'init', 'custom_post_type_testimonial', 0 );
 
 
+// Register Custom Post Type
+function custom_courses() {
+
+	$labels = array(
+		'name'                  => _x( 'Courses', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Course', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Courses', 'text_domain' ),
+		'name_admin_bar'        => __( 'Courses', 'text_domain' ),
+		'archives'              => __( 'Course Archives', 'text_domain' ),
+		'attributes'            => __( 'Course Attributes', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent Course:', 'text_domain' ),
+		'all_items'             => __( 'All Courses', 'text_domain' ),
+		'add_new_item'          => __( 'Add New Course', 'text_domain' ),
+		'add_new'               => __( 'Add Course', 'text_domain' ),
+		'new_item'              => __( 'New Course', 'text_domain' ),
+		'edit_item'             => __( 'Edit Course', 'text_domain' ),
+		'update_item'           => __( 'Update Course', 'text_domain' ),
+		'view_item'             => __( 'View Course', 'text_domain' ),
+		'view_items'            => __( 'View Course', 'text_domain' ),
+		'search_items'          => __( 'Search Course', 'text_domain' ),
+		'not_found'             => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+		'featured_image'        => __( 'Featured Image', 'text_domain' ),
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Course', 'text_domain' ),
+		'items_list'            => __( 'Items Course', 'text_domain' ),
+		'items_list_navigation' => __( 'Items Course', 'text_domain' ),
+		'filter_items_list'     => __( 'Filter Course list', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Courses', 'text_domain' ),
+		'description'           => __( 'Course Description', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'thumbnail' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'courses', $args );
+
+}
+add_action( 'init', 'custom_courses', 0 );
 
 /*-----------------------------------------------------------------------------------*/
 /* Woocom Extra Categories
@@ -437,19 +557,17 @@ function wpb_add_google_fonts() {
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 */
 
-/**
-	 * Favicons
+
+
 	 
 add_action( 'wp_head', 'ilc_favicon');
 function ilc_favicon(){
-	echo '<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/favicon-16x16.png">
-	<link rel="manifest" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/site.webmanifest">
-	<link rel="mask-icon" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/favicon.ico">
+	echo '<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/HGYB/assets/img/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/HGYB/assets/img/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/HGYB/assets/img/fav/favicon-16x16.png">
+	<link rel="manifest" href="/wp-content/themes/HGYB/assets/img/fav/site.webmanifest">
+	<link rel="mask-icon" href="/wp-content/themes/HGYB/assets/img/fav/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config" content="/wp-content/themes/PurleyMortgageSolutions/assets/img/fav/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">';
 }
-*/
+

@@ -21,22 +21,10 @@ $foot_sitecontactphone = s9_emaillink($fieldname = 'telephone_number', $postid =
 						<span>businesses step up to the next level</span></p>
 		  		</div>
 		  		<div class="menu1">
-			  			<ul>
-				  			<li class="title"><span>About Us</span></li>
-				  			<li><a href="#" title="">Experience</a></li>
-							<li><a href="#" title="">Services</a></li>
-							<li><a href="#" title=""> Courses</a></li>
-							<li><a href="#" title="">Blog</a></li>
-							<li><a href="#" title=""> Download Brochure</a></li>
-							<li><a href="#" title="">Contact Us</a></li>
-			  		</ul>
-		  		</div>
+					  <?php wp_nav_menu( array(  'menu' => 'FooterQuickLinks','container'  => 'li', 'container_class' => '', 'container_id'    => '',   'depth' => 1, 'items_wrap' => '<ul ><li class="title"><span>Quick Links</span></li>%3$s</ul>' ) );?>
+					</div>
 		  		<div class="menu2">
-			  			<ul>
-							<li class="title"><span>Privacy</span></li>
-							<li><a href="#" title="">Experience</a></li>
-							<li><a href="#" title="">Services</a></li>
-						</ul>
+					<?php wp_nav_menu( array(  'menu' => 'FooterLegal','container'  => 'li', 'container_class' => '', 'container_id'    => '',   'depth' => 1, 'items_wrap' => '<ul ><li class="title"><span>Legal</span></li>%3$s</ul>' ) );?>
 		  		</div>
 		  		<div class="contactdetails">
 			  		<ul>

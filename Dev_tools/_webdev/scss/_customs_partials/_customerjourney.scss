@@ -3,6 +3,10 @@
 	 margin:auto;
 	  max-width:1000px;
 	 display:none;
+	 
+	 &.four {
+		 max-width:760px;
+	 }
 	 svg {
 	   width: 90%;
 	   padding: 10px;

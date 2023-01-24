@@ -18,7 +18,8 @@
             },
             "choices": {
                 "mk": "Marketing",
-                "sg": "Sales Growth"
+                "sg": "Sales Growth",
+                "fn": "Financial Planning"
             },
             "default_value": false,
             "return_format": "value",
@@ -47,5 +48,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674067174
+    "modified": 1674556728
 }

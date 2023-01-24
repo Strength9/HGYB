@@ -15,5 +15,5 @@ if( !empty( $block['data']['_is_preview'] ) ) {
 
 include(dirname(__DIR__).'/partials/_iconcardgrid.php');
 
-echo '<div class="wcp-columns"><div class="wcp-column full">'.s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '').$icongridoutput.'</div> </div>';
+echo '<div class="wcp-columns"><div class="wcp-column iconcards_grid full">'.s9_textfield('text_detail', $postid = '', $tag = '', $className = '',$emptyText = '').$icongridoutput.'</div> </div>';
 ?>

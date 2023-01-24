@@ -25,6 +25,32 @@
             "append": ""
         },
         {
+            "key": "field_63ce66779eb82",
+            "label": "Manual Entry",
+            "name": "manual_entry",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Yes": "Yes",
+                "No": "No"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_63b6f7ba79088",
             "label": "Quote Cards",
             "name": "quote_cards",
@@ -32,7 +58,15 @@
             "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63ce66779eb82",
+                        "operator": "==",
+                        "value": "Yes"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -130,5 +164,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672935654
+    "modified": 1674471368
 }

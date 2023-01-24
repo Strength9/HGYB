@@ -57,7 +57,7 @@
 	   padding: 20px 20px 20px;
 	   text-align: center;
 	   position: relative;
-	   
+	   color: $hgyb_main;
 	   &.haslink {
 		   padding: 20px 20px 70px;
 	   }
@@ -91,9 +91,15 @@
 			 display:none !important;
 		 }
 	   }
-	   p {
+	   p, li {
 		 color: $hgyb_main;
 		
+	   }
+	   
+	   ul {
+		   li {
+			   text-align:left;
+		   }
 	   }
 	   .button {
 		   @include  hygb_button(transparent, $hgyb_accent, $hgyb_main, $hgyb_accent, $hgyb_accent, $hgyb_main );
@@ -107,15 +113,42 @@
 	 }
 	  
 	  
-	&.hgybblue {
-	article.hgyb_iconcardbox {
+
+}
+
+.showborder {
+	border: 4px solid $hgyb_accent;
+	   border-radius: 30px;
+	   padding: 20px 20px 20px;
+}
+
+.hgybblue {
+	.showborder {
+		border: 4px solid $hgyb_accent;
+	}
+}
+.hgybblack {
+	.showborder {
+		border: 4px solid $hgyb_accent;
+	}	
+}
+.hgybaccent{	.showborder {
+		border: 4px solid $hgyb_main;
+	}
+}
+
+
+	.hgybblue {
+		article.hgyb_iconcardbox {
 		color:#FFF;
 		
 		span {
 			background-color:$hgyb_main;
 		}
-		
-		p {
+		li {
+			color:#FFF;
+		}
+		p{
 			color:#FFF;
 		}
 		h2
@@ -128,7 +161,7 @@
 		}
 	}
 }
-	&.hgybblack {
+	.hgybblack {
 		article.hgyb_iconcardbox {
 			color:#FFF;
 			
@@ -136,7 +169,7 @@
 				background-color:$hgyb_black;
 			}
 			
-			p {
+			p,li {
 				color:#FFF;
 			}
 			h2
@@ -149,7 +182,7 @@
 			}
 		}
 	}
-	&.hgybaccent{
+	.hgybaccent{
 		article.hgyb_iconcardbox {
 			color:#FFF;
 			border: 4px solid #FFF;
@@ -177,25 +210,3 @@
 			   }
 		}
 	}
-}
-
-.showborder {
-	border: 4px solid $hgyb_accent;
-	   border-radius: 30px;
-	   padding: 20px 20px 20px;
-}
-
-.hgybblue {
-	.showborder {
-		border: 4px solid $hgyb_accent;
-	}
-}
-.hgybblack {
-	.showborder {
-		border: 4px solid $hgyb_accent;
-	}	
-}
-.hgybaccent{	.showborder {
-		border: 4px solid $hgyb_main;
-	}
-}

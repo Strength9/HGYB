@@ -17,7 +17,7 @@ include(dirname(__DIR__).'/partials/______partials_global.php');
 
 $ctoa = random_str(10);
 
-echo '<section '.$anchor.' class="'.$blockclass .'" style="background-image:url(/wp-content/themes/HGYB/assets/test/header_test.gif);" '.$animation.'>
+echo '<section '.$anchor.' class="'.$blockclass .'" style="background-image:url(/wp-content/uploads/2023/01/Call-to-action-scaled.webp);" '.$animation.'>
 	<div class="wcp-columns">
 		 <div class="wcp-column full">
 		 '.s9_textfield('textmessage', $postid = '', $tag = 'p', $className = '',$emptyText = '').'

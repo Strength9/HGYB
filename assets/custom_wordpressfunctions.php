@@ -10,7 +10,9 @@ function get_child_pages_by_parent_title($pageId,$limit = -1)
 	$args = array(
 		'post_type' => 'page',
 		'post_parent' => $pageId,
-		'posts_per_page' => $limit
+		'posts_per_page' => $limit,
+		'orderby' => 'menu_order',
+		'order' => 'ASC',
 	);
 	$the_query = new WP_Query( $args );
 

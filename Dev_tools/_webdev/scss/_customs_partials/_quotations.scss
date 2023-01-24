@@ -2,57 +2,8 @@
 	h1 {
 		color:#FFF;
 	}
-.quotation_3{
-  margin:50px auto 0;
-  display:grid;
-  grid-gap:60px 30px;
-  background-color:green;
-  
-  grid-template-columns: repeat(1, 1fr);
-  
-	@media only screen and (min-width:670px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-  @media only screen and (min-width:1280px) {
-	  grid-template-columns: repeat(3, 1fr);
-  }
-	@media only screen and (min-width:1400px) {
-		grid-template-columns: repeat(3, 420px);
-	}
-  
-}
 	
 
-	
-	.quotation_2 {
-		  margin:50px auto auto;
-			display: grid;
-		  grid-gap: 80px 10px;
-		  grid-template-columns: repeat(1, 1fr);
-	  
-			  @media only screen and (min-width:670px) {
-				  grid-template-columns: repeat(2, 1fr);
-				  grid-gap: 40px 60px;
-			  }
-			@media only screen and (min-width:1280px) {
-				grid-template-columns: repeat(2,420px);
-				grid-gap: 40px 120px;
-			}
-		 
-	  }
-	  
-	  .quotation_1 {
-			margin:50px auto auto;
-			  display: grid;
-			grid-gap: 40px 10px;
-			grid-template-columns: repeat(1, minmax(0, 420px));
-	
-		}
-	
-	
-	
-	
-	
 	 
 
 	   article.quotesblock {
@@ -62,7 +13,8 @@
 		   padding: 16px 0px 0;
 		   text-align: center;
 		   position: relative;
-		   margin: auto;
+		   margin: auto 20px;
+		  
 	 
 		   hr {
 			 border-color: $hgyb_accent;
@@ -81,10 +33,11 @@
 			   display: block;
 			 }
 			 &.top {
-			   margin: 0px auto 30px;
+				 
+			   margin: 30px auto 30px;
 	 
 			   &:before {
-				 top: -32px;
+				 top: -30px;
 				 background: $hgyb_black url("https://assets.codepen.io/320472/qt-top.svg")
 				   no-repeat center center;
 			   }
@@ -100,17 +53,37 @@
 			   }
 			 }
 		   }
-	 
+	 	  
+		   .content {
+			   height:250px;
+			   display:flex;
+			   flex-direction: column;
+			   justify-content: center;
+			   height:330px;
+
+			   @media only screen and (min-width:1300px) {
+				   height:300px;
+			   }
+			   @media only screen and (min-width:1400px) {
+					  height:250px;
+				  }
+		   }
+		   
 		   h3 {
 			 margin: 0;
 		   }
 		   p {
 			 margin: 0;
-	 color:#FFF;
+	 		color:#FFF;
+			
 			 &.qtby {
 			   margin: 0;
 			   font-size:15px;
 			   color:$hgyb_accent;
+			   
+			   span {
+				   display:block;
+			   }
 			 }
 		   }
 

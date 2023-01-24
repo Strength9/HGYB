@@ -1244,52 +1244,6 @@ section.npmid {
 .quotes_grid h1 {
   color: #FFF;
 }
-.quotes_grid .quotation_3 {
-  margin: 50px auto 0;
-  display: grid;
-  grid-gap: 60px 30px;
-  background-color: green;
-  grid-template-columns: repeat(1, 1fr);
-}
-@media only screen and (min-width: 670px) {
-  .quotes_grid .quotation_3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .quotes_grid .quotation_3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .quotes_grid .quotation_3 {
-    grid-template-columns: repeat(3, 420px);
-  }
-}
-.quotes_grid .quotation_2 {
-  margin: 50px auto auto;
-  display: grid;
-  grid-gap: 80px 10px;
-  grid-template-columns: repeat(1, 1fr);
-}
-@media only screen and (min-width: 670px) {
-  .quotes_grid .quotation_2 {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px 60px;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .quotes_grid .quotation_2 {
-    grid-template-columns: repeat(2, 420px);
-    grid-gap: 40px 120px;
-  }
-}
-.quotes_grid .quotation_1 {
-  margin: 50px auto auto;
-  display: grid;
-  grid-gap: 40px 10px;
-  grid-template-columns: repeat(1, minmax(0, 420px));
-}
 .quotes_grid article.quotesblock {
   box-sizing: border-box;
   background-color: #414042;
@@ -1297,7 +1251,7 @@ section.npmid {
   padding: 16px 0px 0;
   text-align: center;
   position: relative;
-  margin: auto;
+  margin: auto 20px;
 }
 .quotes_grid article.quotesblock hr {
   border-color: rgb(238, 194, 51);
@@ -1315,10 +1269,10 @@ section.npmid {
   display: block;
 }
 .quotes_grid article.quotesblock hr.top {
-  margin: 0px auto 30px;
+  margin: 30px auto 30px;
 }
 .quotes_grid article.quotesblock hr.top:before {
-  top: -32px;
+  top: -30px;
   background: #414042 url("https://assets.codepen.io/320472/qt-top.svg") no-repeat center center;
 }
 .quotes_grid article.quotesblock hr.bottom {
@@ -1327,6 +1281,23 @@ section.npmid {
 .quotes_grid article.quotesblock hr.bottom:before {
   top: -1px;
   background: #414042 url("https://assets.codepen.io/320472/qt-bottom.svg") no-repeat center center;
+}
+.quotes_grid article.quotesblock .content {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 330px;
+}
+@media only screen and (min-width: 1300px) {
+  .quotes_grid article.quotesblock .content {
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .quotes_grid article.quotesblock .content {
+    height: 250px;
+  }
 }
 .quotes_grid article.quotesblock h3 {
   margin: 0;
@@ -1339,6 +1310,9 @@ section.npmid {
   margin: 0;
   font-size: 15px;
   color: rgb(238, 194, 51);
+}
+.quotes_grid article.quotesblock p.qtby span {
+  display: block;
 }
 
 .iconcards_grid .icongrid_3 {
@@ -1399,6 +1373,7 @@ section.npmid {
   padding: 20px 20px 20px;
   text-align: center;
   position: relative;
+  color: #0A426A;
 }
 .iconcards_grid article.hgyb_iconcardbox.haslink {
   padding: 20px 20px 70px;
@@ -1433,8 +1408,11 @@ section.npmid {
 .iconcards_grid article.hgyb_iconcardbox h2:after {
   display: none !important;
 }
-.iconcards_grid article.hgyb_iconcardbox p {
+.iconcards_grid article.hgyb_iconcardbox p, .iconcards_grid article.hgyb_iconcardbox li {
   color: #0A426A;
+}
+.iconcards_grid article.hgyb_iconcardbox ul li {
+  text-align: left;
 }
 .iconcards_grid article.hgyb_iconcardbox .button {
   color: #0A426A;
@@ -1467,50 +1445,74 @@ section.npmid {
 .iconcards_grid article.hgyb_iconcardbox .button:hover {
   bottom: 38px;
 }
-.iconcards_grid.hgybblue article.hgyb_iconcardbox {
+
+.showborder {
+  border: 4px solid rgb(238, 194, 51);
+  border-radius: 30px;
+  padding: 20px 20px 20px;
+}
+
+.hgybblue .showborder {
+  border: 4px solid rgb(238, 194, 51);
+}
+
+.hgybblack .showborder {
+  border: 4px solid rgb(238, 194, 51);
+}
+
+.hgybaccent .showborder {
+  border: 4px solid #0A426A;
+}
+
+.hgybblue article.hgyb_iconcardbox {
   color: #FFF;
 }
-.iconcards_grid.hgybblue article.hgyb_iconcardbox span {
+.hgybblue article.hgyb_iconcardbox span {
   background-color: #0A426A;
 }
-.iconcards_grid.hgybblue article.hgyb_iconcardbox p {
+.hgybblue article.hgyb_iconcardbox li {
   color: #FFF;
 }
-.iconcards_grid.hgybblue article.hgyb_iconcardbox h2 {
+.hgybblue article.hgyb_iconcardbox p {
+  color: #FFF;
+}
+.hgybblue article.hgyb_iconcardbox h2 {
   color: rgb(238, 194, 51);
 }
-.iconcards_grid.hgybblue article.hgyb_iconcardbox .button {
+.hgybblue article.hgyb_iconcardbox .button {
   color: #FFF;
 }
-.iconcards_grid.hgybblack article.hgyb_iconcardbox {
+
+.hgybblack article.hgyb_iconcardbox {
   color: #FFF;
 }
-.iconcards_grid.hgybblack article.hgyb_iconcardbox span {
+.hgybblack article.hgyb_iconcardbox span {
   background-color: #414042;
 }
-.iconcards_grid.hgybblack article.hgyb_iconcardbox p {
+.hgybblack article.hgyb_iconcardbox p, .hgybblack article.hgyb_iconcardbox li {
   color: #FFF;
 }
-.iconcards_grid.hgybblack article.hgyb_iconcardbox h2 {
+.hgybblack article.hgyb_iconcardbox h2 {
   color: rgb(238, 194, 51);
 }
-.iconcards_grid.hgybblack article.hgyb_iconcardbox .button {
+.hgybblack article.hgyb_iconcardbox .button {
   color: #FFF;
 }
-.iconcards_grid.hgybaccent article.hgyb_iconcardbox {
+
+.hgybaccent article.hgyb_iconcardbox {
   color: #FFF;
   border: 4px solid #FFF;
 }
-.iconcards_grid.hgybaccent article.hgyb_iconcardbox span {
+.hgybaccent article.hgyb_iconcardbox span {
   background-color: rgb(238, 194, 51);
 }
-.iconcards_grid.hgybaccent article.hgyb_iconcardbox p {
+.hgybaccent article.hgyb_iconcardbox p {
   color: #414042;
 }
-.iconcards_grid.hgybaccent article.hgyb_iconcardbox h2 {
+.hgybaccent article.hgyb_iconcardbox h2 {
   color: #0A426A;
 }
-.iconcards_grid.hgybaccent article.hgyb_iconcardbox .button {
+.hgybaccent article.hgyb_iconcardbox .button {
   color: #0A426A;
   text-align: center;
   margin: 20px auto 0;
@@ -1529,35 +1531,17 @@ section.npmid {
   text-transform: uppercase;
   bottom: 30px;
 }
-.iconcards_grid.hgybaccent article.hgyb_iconcardbox .button:hover {
+.hgybaccent article.hgyb_iconcardbox .button:hover {
   background-color: #0A426A;
   border: 1px solid #0A426A;
   bottom: 10px;
   color: #FFF;
 }
-.iconcards_grid.hgybaccent article.hgyb_iconcardbox .button:hover:before {
+.hgybaccent article.hgyb_iconcardbox .button:hover:before {
   width: 100%;
 }
-.iconcards_grid.hgybaccent article.hgyb_iconcardbox .button:hover {
+.hgybaccent article.hgyb_iconcardbox .button:hover {
   bottom: 38px;
-}
-
-.showborder {
-  border: 4px solid rgb(238, 194, 51);
-  border-radius: 30px;
-  padding: 20px 20px 20px;
-}
-
-.hgybblue .showborder {
-  border: 4px solid rgb(238, 194, 51);
-}
-
-.hgybblack .showborder {
-  border: 4px solid rgb(238, 194, 51);
-}
-
-.hgybaccent .showborder {
-  border: 4px solid #0A426A;
 }
 
 .servicestable h1 {
@@ -2823,6 +2807,9 @@ div.circles {
   max-width: 1000px;
   display: none;
 }
+div.circles.four {
+  max-width: 760px;
+}
 div.circles svg {
   width: 90%;
   padding: 10px;
@@ -2891,6 +2878,9 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+}
+.linkgrid.extraspace {
+  margin: 50px auto;
 }
 @media only screen and (min-width: 500px) {
   .linkgrid {
