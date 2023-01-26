@@ -11,7 +11,7 @@
 		   background-color: $hgyb_black;
 		   color: #fff;
 		   padding: 16px 0px 0;
-		   text-align: center;
+		   
 		   position: relative;
 		   margin: auto 20px;
 		  
@@ -58,7 +58,7 @@
 			   height:250px;
 			   display:flex;
 			   flex-direction: column;
-			   justify-content: center;
+			   justify-content: flex-start;
 			   height:330px;
 
 			   @media only screen and (min-width:1300px) {
@@ -80,7 +80,7 @@
 			   margin: 0;
 			   font-size:15px;
 			   color:$hgyb_accent;
-			   
+			   text-align:center;
 			   span {
 				   display:block;
 			   }

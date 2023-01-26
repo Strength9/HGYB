@@ -3,7 +3,7 @@ $headermain_logo = s9_imagefield($fieldname='logos', $id = 'options', $classname
 $headmobmenu_logo = s9_imagefield($fieldname='logo_footer', $id = 'options', $classname = 'mob_logo');
 $head_sitecontactemail = s9_emaillink($fieldname = 'email_address', $postid = 'options', $titletext ='Email the team', $extratext = '',$className = '',$emptyText = '');
 
-$head_sitecontactphone = s9_emaillink($fieldname = 'telephone_number', $postid = 'options', $titletext ='Email the team', $extratext = '',$className = '',$emptyText = '');
+$head_sitecontactphone = s9_telink($fieldname = 'telephone_number', $postid = 'options', $titletext ='Email the team', $extratext = '',$className = '',$emptyText = '');
 
 
 

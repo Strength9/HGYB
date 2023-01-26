@@ -32,7 +32,7 @@ echo '<section '.$anchor.' class="'.$blockclass .'" style="background-image:url(
 		  		<a class="btn-close trigger_'.$ctoa.'" href="javascript:;"></a>
 				</div>
 				<div class="content">
-				'.s9_textfield('pop_up_text', $postid = '', $tag = 'p', $className = '',$emptyText = '').do_shortcode( '[wpforms id="99"]' ).'
+				'.do_shortcode( '[wpforms id="99"]' ).'
 				</div>
 	  	</div>
 		  

@@ -454,6 +454,96 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_63d25bd59e45e",
+            "label": "Newsletter Global",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_63d25f4b9e45f",
+            "label": "Activate Popup",
+            "name": "activate_popup",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_63d25f919e460",
+            "label": "Pop Up Wait Time (Milliseconds)",
+            "name": "pop_up_wait_time",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1000,
+            "max": 60000,
+            "placeholder": "",
+            "step": 1000,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63d260509e461",
+            "label": "Global Newsletter Strip Image",
+            "name": "global_newsletter_strip_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -474,5 +564,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1672934139
+    "modified": 1674731738
 }

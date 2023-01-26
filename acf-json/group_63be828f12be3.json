@@ -146,6 +146,13 @@
                 "operator": "==",
                 "value": "acf\/block-double-text"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/block-newsletter"
+            }
         ]
     ],
     "menu_order": -5,
@@ -157,5 +164,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673962478
+    "modified": 1674725212
 }

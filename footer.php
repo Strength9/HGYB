@@ -6,7 +6,7 @@ $footerlogo = s9_imagefield($fieldname='logo_footer', $id = 'options', $classnam
 
 $foot_sitecontactemail = s9_emaillink($fieldname = 'email_address', $postid = 'options', $titletext ='Email the team', $extratext = 'e: ',$className = '',$emptyText = '');
 
-$foot_sitecontactphone = s9_emaillink($fieldname = 'telephone_number', $postid = 'options', $titletext ='Email the team', $extratext = 't: ',$className = '',$emptyText = '');
+$foot_sitecontactphone = s9_telink($fieldname = 'telephone_number', $postid = 'options', $titletext ='Email the team', $extratext = 't: ',$className = '',$emptyText = '');
 
 
 $footfacebook = s9_socialicon('facebook_link', $postid = 'options', $fontawesome = 'fa-brands fa-square-facebook', $titletext = 'Find Us On Facebook',$emptyText = '', '');
@@ -48,6 +48,7 @@ if (strlen($footfacebook.$twitter_link.$instagram_link.$inkedin_link) > 0) {
 				  		<li><?php echo $foot_sitecontactemail;?></li>
 				  		<li><?php echo $foot_sitecontactphone;?></li>
 						  <?php echo $socialmedialinks;?>
+						  <li class="barklogo"><a href="https://www.bark.com/en/gb/company/hsmb/L4kR9/" title="Find us on Bark"><img src="/wp-content/uploads/2023/01/bark-verified-large.png" /></a></li>
 			  		</ul>
 		  		</div>
 
@@ -57,7 +58,10 @@ if (strlen($footfacebook.$twitter_link.$instagram_link.$inkedin_link) > 0) {
 	</div>
 </footer>
 
+<?php include_once("inc/newsletter_popup.php");?>
 <?php wp_footer(); ?>
+
+
 
 </body>
 </html>

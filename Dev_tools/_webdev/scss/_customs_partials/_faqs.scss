@@ -4,47 +4,69 @@
 	$text: rgba(65, 64, 66, 0.582);
 	$blue: $hgyb_main;
 	
-	h3 {
-		scroll-margin-top: 250px;
-		font-size: 24px;
-		  margin-bottom: 0px; 
-			@media(min-width: 360px) {
-				font-size: 22px;
-			}
+h2 {
+	  font-size: 25px;
+	  margin: 0 auto 30px !important;
+	  color:$hgyb_main;
+		text-align:center !important;
+		
+		&:after {
+			display:none;
+		}
+	
+	  @media screen and (min-width: 768px) {
+		   font-size: 35px;
+	  }
+	 
+		text-align: center;
+	
+		
+		
+	}
+	p {
+		text-align: center;
+		color:$hgyb_main;
+		
+		&:after {
+			display:none;
+		}
 	}
 	
 	
 	ul.jumplist {
-		background-color:$hgyb_main;
-		padding:100px 40px;
+		padding:0;
+		margin:30px auto 60px;
 		display: flex;
 		flex-direction: row;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-content: center;
 		align-items: center;
-		margin:60px 0;
 		
+		width:100%;
 		
 		li {
-			padding:20px 20px;
-			margin:0 10px;
+			padding:0;
+			margin:0 10px 20px;
 			list-style:none;
 			
-			background-color:$hgyb_accent;
-			a { color:#FFF;
+			
+			a { 
+				border: 1px solid $hgyb_main;
+				background-color:$hgyb_main;
+				border-radius: 10px;
+				padding: 13px 35px 10px;
+				
+				color:#FFF;
 				&:hover {
 					color:$hgyb_main;
+					background-color: $hgyb_accent;
+					border-color:$hgyb_accent;
 					
 				}
 			}
 			
-			&:hover {
-				background-color:#FFF;
-				a{
-					color:$hgyb_main;
-				}
-			}
+			
 		}
 	}
 	
@@ -146,7 +168,7 @@
 }
 
 .faqsjump {
-	background-color:$hgyb_main;
+	//background-color:$hgyb_main;
 	padding: 40px 15px;
 	
 	  @media screen and (min-width: 500px ) {	
@@ -156,64 +178,5 @@
 		padding:70px 0;
 	  }
 	
-	h2 {
-	  font-size: 25px;
-	  margin-bottom: 30px;
-	 
 	
-	  @media screen and (min-width: 768px) {
-	   font-size: 35px;
-	  }
-	 
-		text-align: center;
-		color:#FFF;
-		
-		&:after {
-			display:none;
-		}
-	}
-	p {
-		text-align: center;
-		color:#FFF;
-		
-		&:after {
-			display:none;
-		}
-	}
-	
-	
-	ul.jumplist {
-		background-color:$hgyb_main;
-		
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-content: center;
-		align-items: center;
-		
-		
-		
-		li {
-			
-			margin:0 10px;
-			list-style:none;
-			
-			
-			a { 
-				border: 1px solid rgb(238, 194, 51);
-				border-radius: 10px;
-				padding: 13px 35px 10px;
-				
-				color:#FFF;
-				&:hover {
-					color:$hgyb_main;
-					background-color: $hgyb_accent;
-					
-				}
-			}
-			
-			
-		}
-	}
 }

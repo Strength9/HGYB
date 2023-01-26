@@ -75,18 +75,15 @@ if( have_rows('faq_block') ):
 
 include(dirname(__DIR__).'/partials/______partials_global.php');
  echo '	
-<section '.$anchor.' class="faqsjump" '.$animation.'>
-	<div class="wcp-columns">
-	 	<div class="wcp-column full">
-		'.s9_textfield('intro_title', $postid = '', $tag = 'h2', $className = '',$emptyText = '').
-		s9_textfield('intro_text', $postid = '', $tag = '', $className = '',$emptyText = '').'
-			  <ul class="jumplist">'.$blocklinks.'</ul>
-		</div>
-	</div>
-</section>			  
+		  
 			 
 <section '.$anchor.' class="'.$blockclass .'" '.$styleoutput.' '.$animation.'>
 	<div class="wcp-columns">
+	<div class="wcp-column full">
+	'.s9_textfield('intro_title', $postid = '', $tag = 'h2', $className = '',$emptyText = '').
+	s9_textfield('intro_text', $postid = '', $tag = '', $className = '',$emptyText = '').'
+		  <ul class="jumplist">'.$blocklinks.'</ul>
+	</div>
 	 	<div class="wcp-column full">		
 			  '.$faqcards.'
 		</div>

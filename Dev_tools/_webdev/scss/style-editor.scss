@@ -11,8 +11,7 @@ body.logged-in .wrap.woocomerce .mainform {margin-top: 145px;}
 @import '_global';
 
     @import '_design_styles/fonts';  
-    @import '_design_styles/base';     
-  //  @import '_design_styles/animated';     
+    @import '_design_styles/base';         
     @import '_page_structure/header';      
     @import '_page_structure/footer';  
    @import '_customs_partials/paritals'; 
@@ -30,6 +29,7 @@ body.logged-in .wrap.woocomerce .mainform {margin-top: 145px;}
     @import '_customs_partials/customerjourney';
      @import '_customs_partials/linkgrid';
      @import '_customs_partials/faqs';
+     @import '_customs_partials/newsletterpopup';
 .fade-in {
   opacity: 0;
   transform: translateY(100px);

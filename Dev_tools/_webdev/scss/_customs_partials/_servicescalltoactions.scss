@@ -80,10 +80,10 @@
 					#wpforms-90-field_4-container { grid-area: yel; }
 
 					input[type="text"], input[type="email"] {
-						border:0;
-						background-color: transparent;
+						border:0 !important;
+						background-color: transparent !important;
 						color: $hgyb_accent !important;
-						border-bottom:1px solid #FFF;
+						border-bottom:1px solid #FFF !important;
 						
 						
 					}
@@ -172,5 +172,18 @@
 		}
 		
 		
+	}
+	
+	.wpforms-confirmation-container-full {
+		background:$hgyb_main;
+		border:0;
+		text-align: center;
+		color:$hgyb_accent;
+		
+		 p {
+			 text-align: center !important;
+			 color:$hgyb_accent;
+			 margin:auto !important;
+		 }
 	}
 }

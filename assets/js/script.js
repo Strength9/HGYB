@@ -7,7 +7,7 @@ jQuery(window).scroll(function () {
     var scroll_top =     jQuery(this).scrollTop();
     if (scroll_top >= 48) {
         jQuery("header").addClass("fixed");
-        console.log('Snapped');
+       
     } else {
         jQuery("header").removeClass("fixed");
     }

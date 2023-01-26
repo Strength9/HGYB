@@ -287,6 +287,9 @@ p a:hover {
   color: #0A426A;
 }
 
+ul {
+  margin-top: 0;
+}
 ul li {
   font-size: 16px;
   line-height: 1.5;
@@ -305,6 +308,9 @@ ul li strong {
   font-family: "ITC Avant Garde Gothic Std Demi";
 }
 
+ol {
+  margin-top: 0;
+}
 ol li {
   font-size: 16px;
   line-height: 1.5;
@@ -858,9 +864,29 @@ footer .maincontent ul li.socials i {
   font-size: 40px;
   margin: 5px;
 }
+footer .maincontent ul li.barklogo {
+  margin-top: 40px;
+}
+footer .maincontent ul li.barklogo img {
+  border: 4px solid #FFF;
+  margin: auto;
+  max-width: 250px;
+}
+@media only screen and (min-width: 800px) {
+  footer .maincontent ul li.barklogo img {
+    max-width: 200px;
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  footer .maincontent ul li.barklogo img {
+    max-width: 230px;
+    margin-left: 0;
+  }
+}
 @media only screen and (min-width: 800px) {
   footer .maincontent {
-    grid-template-columns: 1.3fr 0.7fr 0.7fr 1.3fr;
+    grid-template-columns: 1.3fr 0.7fr 0.6fr 1.3fr;
     grid-template-rows: 1fr;
     grid-template-areas: "bussdetails menu1 menu2 contactdetails";
     gap: 0px 20px;
@@ -874,7 +900,7 @@ footer .maincontent ul li.socials i {
 }
 @media only screen and (min-width: 1100px) {
   footer .maincontent {
-    grid-template-columns: 1.4fr 0.8fr 0.9fr 0.9fr;
+    grid-template-columns: 1.4fr 0.8fr 0.6fr 0.9fr;
     gap: 0px 40px;
   }
 }
@@ -1255,7 +1281,6 @@ section.npmid {
   background-color: #414042;
   color: #fff;
   padding: 16px 0px 0;
-  text-align: center;
   position: relative;
   margin: auto 20px;
 }
@@ -1292,7 +1317,7 @@ section.npmid {
   height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   height: 330px;
 }
 @media only screen and (min-width: 1300px) {
@@ -1316,6 +1341,7 @@ section.npmid {
   margin: 0;
   font-size: 15px;
   color: rgb(238, 194, 51);
+  text-align: center;
 }
 .quotes_grid article.quotesblock p.qtby span {
   display: block;
@@ -2024,13 +2050,13 @@ section.npmid {
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=email] {
   border: 0;
-  background-color: transparent;
+  background-color: transparent !important;
   color: #FFF !important;
   border-bottom: 1px solid rgb(238, 194, 51);
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container textarea {
-  border: 1px solid rgb(238, 194, 51);
-  background-color: transparent;
+  border: 1px solid rgb(238, 194, 51) !important;
+  background-color: transparent !important;
   color: #FFF !important;
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label {
@@ -2139,16 +2165,25 @@ section.npmid {
   margin: 50px 0;
   padding: 0;
   color: #FFF;
+  margin-top: 10px;
+  font-family: "ITC Avant Garde Gothic Std Book";
+  color: rgb(238, 194, 51);
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 .modal-wrapper.open .modal .wpforms-confirmation-container-full h2 {
-  font-family: "ITC Avant Garde Gothic Std Book";
+  font-family: "Gabriela";
+  line-height: 1.3;
+  font-size: 28px !important;
+  color: #FFF;
+}
+@media only screen and (min-width: 600px) {
+  .modal-wrapper.open .modal .wpforms-confirmation-container-full h2 {
+    font-size: 40px !important;
+  }
 }
 .modal-wrapper.open .modal .wpforms-confirmation-container-full h2:after {
   display: none;
-}
-.modal-wrapper.open .modal .wpforms-confirmation-container-full p {
-  font-family: "Gabriela";
-  color: #FFF;
 }
 .modal-wrapper .head {
   margin: 0 0 0 auto;
@@ -2195,11 +2230,28 @@ section.npmid {
     padding: 5% 50px;
   }
 }
+.modal-wrapper .content h2 {
+  line-height: 1.3;
+  margin: 0 0 20px !important;
+  display: block;
+  font-family: "Gabriela";
+  font-size: 28px !important;
+  color: #FFF;
+}
+@media only screen and (min-width: 600px) {
+  .modal-wrapper .content h2 {
+    font-size: 40px !important;
+  }
+}
+.modal-wrapper .content h2:after {
+  display: none;
+}
 .modal-wrapper .content p {
-  margin: 0;
-  max-width: 80%;
+  margin-top: 10px;
+  font-family: "ITC Avant Garde Gothic Std Book";
   color: rgb(238, 194, 51);
   font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .servicesctoa {
@@ -2300,10 +2352,10 @@ section.npmid {
   grid-area: yel;
 }
 .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=text], .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=email] {
-  border: 0;
-  background-color: transparent;
+  border: 0 !important;
+  background-color: transparent !important;
   color: rgb(238, 194, 51) !important;
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid #FFF !important;
 }
 .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #FFF;
@@ -2390,6 +2442,17 @@ section.npmid {
 }
 .servicesctoa .wcp-column .wpforms-container form .wpforms-submit-container button:hover:before {
   width: 100%;
+}
+.servicesctoa .wpforms-confirmation-container-full {
+  background: #0A426A;
+  border: 0;
+  text-align: center;
+  color: rgb(238, 194, 51);
+}
+.servicesctoa .wpforms-confirmation-container-full p {
+  text-align: center !important;
+  color: rgb(238, 194, 51);
+  margin: auto !important;
 }
 
 .textblock.hgybblack, .textandimageblock.hgybblack, .custom_block.hgybblack, .iconcards_grid.hgybblack {
@@ -2970,44 +3033,55 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
   padding-top: 100%;
 }
 
-.faqs h3 {
-  scroll-margin-top: 250px;
-  font-size: 24px;
-  margin-bottom: 0px;
+.faqs h2 {
+  font-size: 25px;
+  margin: 0 auto 30px !important;
+  color: #0A426A;
+  text-align: center !important;
+  text-align: center;
 }
-@media (min-width: 360px) {
-  .faqs h3 {
-    font-size: 22px;
+.faqs h2:after {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .faqs h2 {
+    font-size: 35px;
   }
 }
+.faqs p {
+  text-align: center;
+  color: #0A426A;
+}
+.faqs p:after {
+  display: none;
+}
 .faqs ul.jumplist {
-  background-color: #0A426A;
-  padding: 100px 40px;
+  padding: 0;
+  margin: 30px auto 60px;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin: 60px 0;
+  width: 100%;
 }
 .faqs ul.jumplist li {
-  padding: 20px 20px;
-  margin: 0 10px;
+  padding: 0;
+  margin: 0 10px 20px;
   list-style: none;
-  background-color: rgb(238, 194, 51);
 }
 .faqs ul.jumplist li a {
+  border: 1px solid #0A426A;
+  background-color: #0A426A;
+  border-radius: 10px;
+  padding: 13px 35px 10px;
   color: #FFF;
 }
 .faqs ul.jumplist li a:hover {
   color: #0A426A;
-}
-.faqs ul.jumplist li:hover {
-  background-color: #FFF;
-}
-.faqs ul.jumplist li:hover a {
-  color: #0A426A;
+  background-color: rgb(238, 194, 51);
+  border-color: rgb(238, 194, 51);
 }
 .faqs .accordion {
   margin: 10px 0 50px;
@@ -3101,7 +3175,6 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
 }
 
 .faqsjump {
-  background-color: #0A426A;
   padding: 40px 15px;
 }
 @media screen and (min-width: 500px) {
@@ -3114,49 +3187,490 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
     padding: 70px 0;
   }
 }
-.faqsjump h2 {
-  font-size: 25px;
-  margin-bottom: 30px;
-  text-align: center;
-  color: #FFF;
-}
-@media screen and (min-width: 768px) {
-  .faqsjump h2 {
-    font-size: 35px;
-  }
-}
-.faqsjump h2:after {
-  display: none;
-}
-.faqsjump p {
-  text-align: center;
-  color: #FFF;
-}
-.faqsjump p:after {
-  display: none;
-}
-.faqsjump ul.jumplist {
-  background-color: #0A426A;
+
+.modal-wrapper-newsletter {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.75);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  z-index: 21000;
+  backdrop-filter: blur(10px);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: center;
   align-items: center;
 }
-.faqsjump ul.jumplist li {
-  margin: 0 10px;
-  list-style: none;
+.modal-wrapper-newsletter .modal {
+  max-width: 450px;
+  width: 90%;
+  display: block;
+  margin: 0 auto -100%;
+  position: relative;
+  background: #414042;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.faqsjump ul.jumplist li a {
-  border: 1px solid rgb(238, 194, 51);
-  border-radius: 10px;
-  padding: 13px 35px 10px;
+.modal-wrapper-newsletter.open {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-wrapper-newsletter.open .modal {
+  opacity: 1;
+  margin: 0;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container {
+  width: 100%;
+  margin-top: 0;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form {
+  width: 100%;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container {
+  width: 100%;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container input[type=email] {
+  border: 0;
+  background-color: transparent !important;
+  color: #FFF !important;
+  border-bottom: 1px solid rgb(238, 194, 51);
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container textarea {
+  border: 1px solid rgb(238, 194, 51) !important;
+  background-color: transparent !important;
+  color: #FFF !important;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label {
+  color: #FFF;
+  text-transform: uppercase;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #FFF;
+  text-transform: uppercase;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container ::-moz-placeholder { /* Firefox 19+ */
+  color: #FFF;
+  text-transform: uppercase;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container :-ms-input-placeholder { /* IE 10+ */
+  color: #FFF;
+  text-transform: uppercase;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container :-moz-placeholder { /* Firefox 18- */
+  color: #FFF;
+  text-transform: uppercase;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .wpforms-error {
+  color: rgb(241, 36, 36);
+  padding: 10px 5px;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices__inner {
+  background: none;
+  border: 0px;
+  background-color: #414042 !important;
+  border-bottom: 1px solid rgb(238, 194, 51);
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices, .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder {
+  opacity: 1;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices__list--dropdown .choices__item--selectable, .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: #414042 !important;
+  border-color: #414042 !important;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices__list--dropdown {
+  background-color: #414042 !important;
+  border-color: #414042 !important;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container button {
+  display: none;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder {
+  text-transform: uppercase;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container input[type=email], .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder, .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices, .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices__item, .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label, .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container textarea {
+  font-family: "ITC Avant Garde Gothic Std Book";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
   color: #FFF;
 }
-.faqsjump ul.jumplist li a:hover {
-  color: #0A426A;
+@media only screen and (min-width: 1200px) {
+  .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container input[type=email], .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder, .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices, .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .choices__item, .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label, .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container textarea {
+    font-size: 19px;
+  }
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label {
+  padding-left: 10px;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-submit-container {
+  text-align: center;
+  position: relative;
+  height: 90px;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-submit-container button {
+  font-family: "ITC Avant Garde Gothic Std Book";
+  font-weight: normal;
+  font-style: normal;
+  color: #FFF;
+  text-align: center;
+  margin: 20px auto 0;
+  position: absolute;
+  bottom: 0px;
+  border: 1px solid rgb(238, 194, 51);
+  border-radius: 10px;
+  padding: 10px 55px 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  transition: all 0.3s;
+  overflow: hidden;
+  z-index: 1;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 18px;
+  height: 45px;
+  width: 210px;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-submit-container button:hover {
   background-color: rgb(238, 194, 51);
+  border: 1px solid rgb(238, 194, 51);
+  bottom: 10px;
+  color: #0A426A;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-submit-container button:hover:before {
+  width: 100%;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-confirmation-container-full {
+  background-color: transparent;
+  border: 0;
+  margin: 0px 0;
+  padding: 0;
+  color: #FFF;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-confirmation-container-full h2 {
+  font-family: "Gabriela";
+  line-height: 1.3;
+  font-size: 28px !important;
+  color: #FFF;
+}
+@media only screen and (min-width: 600px) {
+  .modal-wrapper-newsletter.open .modal .wpforms-confirmation-container-full h2 {
+    font-size: 40px !important;
+  }
+}
+.modal-wrapper-newsletter.open .modal .wpforms-confirmation-container-full h2:after {
+  display: none;
+}
+.modal-wrapper-newsletter.open .modal .wpforms-confirmation-container-full p {
+  font-family: "ITC Avant Garde Gothic Std Book";
+  color: #FFF;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.modal-wrapper-newsletter .head {
+  margin: 0 0 0 auto;
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  overflow: hidden;
+}
+.modal-wrapper-newsletter .btn-close {
+  width: 32px;
+  height: 32px;
+  display: block;
+  float: right;
+}
+.modal-wrapper-newsletter .btn-close::before, .modal-wrapper-newsletter .btn-close::after {
+  content: "";
+  width: 32px;
+  height: 3px;
+  display: block;
+  background: rgb(238, 194, 51);
+}
+.modal-wrapper-newsletter .btn-close::before {
+  margin-top: 12px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.modal-wrapper-newsletter .btn-close::after {
+  margin-top: -3px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.modal-wrapper-newsletter .btn-close:hover {
+  color: #FFF;
+}
+.modal-wrapper-newsletter .content {
+  padding: 5% 20px;
+}
+@media only screen and (min-width: 600px) {
+  .modal-wrapper-newsletter .content {
+    padding: 5% 50px;
+  }
+}
+.modal-wrapper-newsletter .content h2 {
+  line-height: 1.3;
+  margin: 0 0 20px !important;
+  display: block;
+  font-family: "Gabriela";
+  font-size: 28px !important;
+  color: #FFF;
+}
+@media only screen and (min-width: 600px) {
+  .modal-wrapper-newsletter .content h2 {
+    font-size: 40px !important;
+  }
+}
+.modal-wrapper-newsletter .content h2:after {
+  display: none;
+}
+.modal-wrapper-newsletter .content p {
+  margin: 0 0 10px !important;
+  max-width: 80%;
+  color: rgb(238, 194, 51);
+  font-size: 18px;
+}
+
+.newsletterctoa {
+  background-color: #414042;
+}
+.newsletterctoa .wcp-column p {
+  text-align: center;
+  color: #FFF;
+  font-family: "Gabriela";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.4;
+  font-size: 16px;
+  max-width: 800px;
+  margin: auto auto 40px;
+  word-break: break-word;
+}
+.newsletterctoa .wcp-column p a {
+  color: #FFF;
+  text-decoration: none;
+}
+.newsletterctoa .wcp-column p a:hover, .newsletterctoa .wcp-column p a:focus {
+  color: rgb(238, 194, 51);
+}
+@media only screen and (min-width: 400px) {
+  .newsletterctoa .wcp-column p {
+    font-size: 18px;
+    word-break: normal;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .newsletterctoa .wcp-column p {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .newsletterctoa .wcp-column p {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .newsletterctoa .wcp-column p {
+    font-size: 26px;
+  }
+}
+.newsletterctoa .wcp-column .wpforms-container {
+  width: 100%;
+}
+.newsletterctoa .wcp-column .wpforms-container form {
+  width: 100%;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container {
+  margin: auto;
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, minmax(0px, auto));
+  gap: 0px 20px;
+  grid-auto-flow: row;
+  grid-template-areas: "intro" "yname" "yemail";
+}
+@media only screen and (min-width: 700px) {
+  .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container {
+    grid-template-columns: repeat(2, minmax(0px, auto));
+    grid-template-rows: repeat(2, minmax(0px, auto));
+    gap: 0px 20px;
+    grid-template-areas: "intro intro" "yname yemail";
+  }
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container #wpforms-988-field_7-container {
+  grid-area: intro;
+  width: 100%;
+  text-align: center;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container #wpforms-988-field_7-container h2 {
+  font-family: "Gabriela";
+  line-height: 1.3;
+  font-size: 28px !important;
+  color: rgb(238, 194, 51);
+  margin-bottom: 25px;
+}
+@media only screen and (min-width: 600px) {
+  .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container #wpforms-988-field_7-container h2 {
+    font-size: 40px !important;
+  }
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container #wpforms-988-field_7-container h2:after {
+  display: none;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container #wpforms-988-field_7-container p {
+  font-family: "ITC Avant Garde Gothic Std Book";
+  color: #FFF;
+  font-size: 18px;
+  margin: auto !important;
+  width: 100%;
+  margin-bottom: 25px !important;
+  text-align: center !important;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container #wpforms-988-field_3-container {
+  grid-area: yname;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container #wpforms-988-field_1-container {
+  grid-area: yemail;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=text], .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=email] {
+  border: 0 !important;
+  background-color: transparent !important;
+  color: rgb(238, 194, 51) !important;
+  border-bottom: 1px solid #FFF !important;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #FFF;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container ::-moz-placeholder { /* Firefox 19+ */
+  color: #FFF;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container :-ms-input-placeholder { /* IE 10+ */
+  color: #FFF;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container :-moz-placeholder { /* Firefox 18- */
+  color: #FFF;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .wpforms-error {
+  color: rgb(241, 36, 36);
+  padding: 10px 5px;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__inner {
+  background: none;
+  border: 0px;
+  background-color: #0A426A !important;
+  border-bottom: 1px solid #FFF;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices, .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__placeholder {
+  opacity: 1;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__list--dropdown .choices__item--selectable, .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: #0A426A !important;
+  border-color: #0A426A !important;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__list--dropdown {
+  background-color: #0A426A !important;
+  border-color: #0A426A !important;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container button {
+  display: none;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=text], .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=email], .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__placeholder, .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices, .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__item {
+  font-family: "ITC Avant Garde Gothic Std Book";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  color: #FFF;
+}
+@media only screen and (min-width: 1200px) {
+  .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=text], .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=email], .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__placeholder, .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices, .newsletterctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__item {
+    font-size: 19px;
+  }
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-submit-container {
+  text-align: center;
+  position: relative;
+  height: 90px;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-submit-container button {
+  font-family: "ITC Avant Garde Gothic Std Book";
+  font-weight: normal;
+  font-style: normal;
+  color: #FFF;
+  text-align: center;
+  margin: 20px auto 0;
+  position: absolute;
+  bottom: 0px;
+  border: 1px solid rgb(238, 194, 51);
+  border-radius: 10px;
+  padding: 10px 55px 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  transition: all 0.3s;
+  overflow: hidden;
+  z-index: 1;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 18px;
+  height: 45px;
+  width: 210px;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-submit-container button:hover {
+  background-color: rgb(238, 194, 51);
+  border: 1px solid rgb(238, 194, 51);
+  bottom: 10px;
+  color: #0A426A;
+}
+.newsletterctoa .wcp-column .wpforms-container form .wpforms-submit-container button:hover:before {
+  width: 100%;
+}
+.newsletterctoa .wpforms-confirmation-container-full {
+  background: #414042;
+  border: 0;
+  text-align: center;
+  color: rgb(238, 194, 51);
+}
+.newsletterctoa .wpforms-confirmation-container-full h2 {
+  font-family: "Gabriela";
+  line-height: 1.3;
+  font-size: 28px !important;
+  color: rgb(238, 194, 51);
+  margin-bottom: 45px;
+}
+@media only screen and (min-width: 600px) {
+  .newsletterctoa .wpforms-confirmation-container-full h2 {
+    font-size: 40px !important;
+  }
+}
+.newsletterctoa .wpforms-confirmation-container-full h2:after {
+  display: none;
+}
+.newsletterctoa .wpforms-confirmation-container-full p {
+  font-family: "ITC Avant Garde Gothic Std Book";
+  color: #FFF;
+  font-size: 18px;
+  margin: auto !important;
+  width: 100%;
+  margin-bottom: 10px !important;
+  text-align: center !important;
 }
 
 .fade-in {
