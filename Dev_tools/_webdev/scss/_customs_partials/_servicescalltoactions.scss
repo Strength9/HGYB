@@ -115,13 +115,13 @@
 						border-bottom:1px solid #FFF;
 					}
 					.choices, .choices__placeholder{
-					 
 					  opacity:1;
 					}
 					 
 					.choices__list--dropdown .choices__item--selectable, .choices__list--dropdown .choices__item--selectable.is-highlighted {
 						background-color: $hgyb_main !important;
 						border-color:$hgyb_main !important;
+						color:red;
 					}
 					
 					.choices__list--dropdown {
@@ -140,8 +140,8 @@
 						  font-size:16px;
 						  color: #FFF;
 						  
-						  @media only screen and (min-width:1200px) {
-							  font-size:19px;
+					 @media only screen and (min-width:1200px) {
+						  font-size:19px;
 						  }
 					}
 					
@@ -187,3 +187,83 @@
 		 }
 	}
 }
+
+
+
+/* ---- */
+
+.wpforms-container-full .wpforms-form {
+
+.select {
+ 
+  
+  font-family: 'ITC Avant Garde Gothic Std Book' !important;
+  font-weight: normal;
+  font-style: normal;
+ 
+  color: #FFF;
+  width:100% !important;
+  height:37px !important;
+  width:100% !important;
+  position:relative !important;
+  
+	  
+  
+	.select-hidden {
+		display: none !important;
+		visibility: hidden !important;
+		padding-right: 10px;
+  	}
+
+	.select-styled {
+		position:absolute !important;
+		top:0;
+		z-index:1;
+		color:#FFF;
+		border-bottom:1px solid #FFF !important;
+		height:37px !important;
+		width:100% !important;
+		font-size:16px !important;
+		  line-height:37px;
+		  @media only screen and (min-width:1200px) {
+			  font-size:19px !important;
+		  }
+	}
+	
+	.select-options {
+		display:none;
+		position:absolute !important;
+		top:0;
+		left:0;
+		width:100%;
+		
+		z-index:5000;
+		background-color:$hgyb_main !important;
+		padding:10px!important;
+		
+		&.active {
+			display:block;
+		}
+		
+		li {
+			white-space: nowrap;
+			background-color:$hgyb_main !important;
+			font-size:16px !important;
+			  line-height:24px;
+			  color:#FFF;
+			  @media only screen and (min-width:1200px) {
+				  font-size:19px !important;
+			  }
+			  
+			  &:hover {
+				  color: $hgyb_accent;
+			  }
+			  &:first-child { Display:none;}
+		}
+	}
+  	
+
+
+}
+}
+/*--*/
