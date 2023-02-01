@@ -1338,6 +1338,7 @@ section.npmid {
 .quotes_grid article.quotesblock p {
   margin: 0;
   color: #FFF;
+  text-align: justify;
 }
 .quotes_grid article.quotesblock p.qtby {
   margin: 0;
