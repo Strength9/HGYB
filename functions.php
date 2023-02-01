@@ -452,7 +452,7 @@ function xray_block_scripts()  {
 	wp_enqueue_script( 'xray-2', get_template_directory_uri() . '/assets/js/slider.js');
 }
 add_action( 'wp_enqueue_scripts', 'xray_block_scripts' ); 
-
+add_action( 'admin_enqueue_scripts', 'xray_block_scripts');
 
 
 
