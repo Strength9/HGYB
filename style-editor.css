@@ -1158,6 +1158,7 @@ section.npmid {
 }
 .textimage .textside {
   grid-area: textside;
+  text-align: justify;
 }
 .textimage .imageside {
   grid-area: imageside;
