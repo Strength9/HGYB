@@ -9,7 +9,14 @@ if( have_rows('icon_cards') ):
 		
 		// Load sub field value.
 		$title = ! empty( get_sub_field('card_header') ) ? '<h2>'.get_sub_field('card_header').'</h2>' : '';
-		$text = ! empty( get_sub_field('card_text') ) ? '<p>'.get_sub_field('card_text').'</p>' : '';
+		
+		if ($title != '') {
+			$textalignment = 'empty';
+		} else {
+			$textalignment = 'class="sqblock"';
+		};
+		
+		$text = ! empty( get_sub_field('card_text') ) ? '<p '.$textalignment.'>'.get_sub_field('card_text').'</p>' : '';
 		$iconwidth = ! empty( get_sub_field('card_image_icon_bg_width') ) ? get_sub_field('card_image_icon_bg_width') : '400';
 		$icon = ! empty( get_sub_field('card_icon') ) ? '<span class="imgblocker" style="width:'.$iconwidth.'px;"></span><img src="'.get_sub_field('card_icon').'" alt="" />' : '';
 		
@@ -31,5 +38,6 @@ if( have_rows('icon_cards') ):
 
 endif;
 
-$icongridoutput = '<div class="icongrid_'.s9_textfield('number_of_columns', $postid = '', $tag = '', $className = '',$emptyText = 3).'">	'.$iconcards.'</div>';
+$icongridoutput = '<div class="icongrid_'.s9_textfield('number_of_columns', $postid = '', $tag = '', $className = '',$emptyText = 3).'">
+'.$iconcards.'</div>';
 ?>

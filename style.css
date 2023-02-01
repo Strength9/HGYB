@@ -2641,6 +2641,9 @@ section.npmid {
 .iconcards_grid article.hgyb_iconcardbox p, .iconcards_grid article.hgyb_iconcardbox li {
   color: #0A426A;
 }
+.iconcards_grid article.hgyb_iconcardbox p.sqblock {
+  text-align: justify !important;
+}
 .iconcards_grid article.hgyb_iconcardbox ul li {
   text-align: left;
 }

@@ -96,6 +96,12 @@
 		
 	   }
 	   
+	   p {
+		   &.sqblock {
+			   text-align: justify !important;
+		   }
+	   }
+	   
 	   ul {
 		   li {
 			   text-align:left;
