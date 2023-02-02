@@ -261,15 +261,24 @@
 		border:0;
 		margin:50px 0;
 		padding:0;
+		height:100%;
 		color:$hgyb_main;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
 		h2 {
-			font-family: 'ITC Avant Garde Gothic Std Book';
+			font-family: 'Gabriela';
+			color:$hgyb_accent;
+			font-size:28px;
 			&:after {
 				display:none;
 			}
 		}
 		p {
-			font-family: 'Gabriela';
+			font-family: 'ITC Avant Garde Gothic Std Book';
 			color:$hgyb_main;
 		}
 	} 

@@ -41,7 +41,7 @@ if( have_rows('faq_block') ):
 			
 			$blocklinks .= '<li><a href="#'.$block_anch.'" title="'.$block_title .'">'.$block_title .'</a></li>';
 			
-			$faqcards .= '<h3 id="'.$block_anch.'">'.$block_title.'</h3> <div class="accordion" >';
+			$faqcards .= '<a class="anchor" id="'.$block_anch.'"></a><h3 >'.$block_title.'</h3> <div class="accordion" >';
 			
 			$faqs = '';
 			$SF = ! empty( get_sub_field('faq_list') ) ? get_sub_field('faq_list') : '';

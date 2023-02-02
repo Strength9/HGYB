@@ -23,6 +23,39 @@ if (strlen($footfacebook.$twitter_link.$instagram_link.$inkedin_link) > 0) {
 } else { $socialmedialinks = '';};
 
 
+
+$businessdevlogo = s9_imagefield($fieldname='business_details_logo', $id = 'options', $classname = '');
+if (strlen($businessdevlogo) > 0) {
+$bdlink = get_field('business_details_link', 'options');
+if( $bdlink ): 
+	$buttonclass = 'bark';
+	$link_url = $bdlink['url'];
+	$link_title = $bdlink['title'];
+	$link_target = $bdlink['target'] ? $bdlink['target'] : '_self';
+
+	$business_details_link = '<li class="barklogo"><a class="'.$buttonclass.'" href="'.esc_url( $link_url ).'" target="'.esc_attr( $link_target ).'">'.$businessdevlogo.'</a></li>';
+else :
+	$business_details_link = '';
+endif; 
+} else {
+	$business_details_link = '';
+};
+
+
+
+$bdtext = get_field('download_brochure_text', 'options');
+if( $bdtext): 
+	$buttonclass = 'bark';
+	$link_url = $bdtext['url'];
+	$link_title = $bdtext['title'];
+	$link_target = $bdtext['target'] ? $bdtext['target'] : '_self';
+
+	$business_brochure = '<div class="brochure"><a href="'.esc_url( $link_url ).'" target="'.esc_attr( $link_target ).'" download>'.$link_title.'</a></div>';
+else :
+	$business_brochure = '';
+endif; 
+
+
 ?>
 
 
@@ -35,6 +68,8 @@ if (strlen($footfacebook.$twitter_link.$instagram_link.$inkedin_link) > 0) {
 			  		<a href="<?php echo get_home_url();?>"><?php echo $footerlogo; ?></a>
 					  <p>Helping small to medium size
 						<span>businesses step up to the next level</span></p>
+						<?php echo $business_brochure;?>
+						
 		  		</div>
 		  		<div class="menu1">
 					  <?php wp_nav_menu( array(  'menu' => 'FooterQuickLinks','container'  => 'li', 'container_class' => '', 'container_id'    => '',   'depth' => 1, 'items_wrap' => '<ul ><li class="title"><span>Quick Links</span></li>%3$s</ul>' ) );?>
@@ -48,7 +83,7 @@ if (strlen($footfacebook.$twitter_link.$instagram_link.$inkedin_link) > 0) {
 				  		<li><?php echo $foot_sitecontactemail;?></li>
 				  		<li><?php echo $foot_sitecontactphone;?></li>
 						  <?php echo $socialmedialinks;?>
-						  <li class="barklogo"><a href="https://www.bark.com/en/gb/company/hsmb/L4kR9/" title="Find us on Bark"><img src="/wp-content/uploads/2023/01/bark-verified-large.png" /></a></li>
+						  <?php echo $business_details_link;?>
 			  		</ul>
 		  		</div>
 

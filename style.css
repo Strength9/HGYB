@@ -97,6 +97,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -2104,12 +2108,38 @@ footer .maincontent ul li.barklogo img {
 }
 footer .maincontent .bussdetails {
   grid-area: bussdetails;
+  text-align: center;
 }
 footer .maincontent .bussdetails img {
   width: 90%;
   height: auto;
   margin: 0 auto;
   max-width: 350px;
+}
+footer .maincontent .bussdetails .brochure a {
+  font-family: "ITC Avant Garde Gothic Std Book";
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  border: 1px solid rgb(238, 194, 51);
+  border-radius: 10px;
+  padding: 10px 25px 6px;
+  display: inline-block;
+  margin-top: 20px;
+  color: rgb(238, 194, 51);
+  text-decoration: none;
+}
+footer .maincontent .bussdetails .brochure a:hover {
+  background-color: rgb(238, 194, 51);
+  color: #0A426A;
+}
+footer .maincontent .bussdetails a.bark {
+  margin: auto;
+  display: inline-block;
+  padding-top: 20px;
+}
+footer .maincontent .bussdetails a.bark img {
+  max-width: 250px;
 }
 footer .maincontent .bussdetails p {
   font-family: "Gabriela";
@@ -2404,77 +2434,11 @@ section.npmid {
   height: 100%;
 }
 
-.select-hidden {
-  display: none;
-  visibility: hidden;
-  padding-right: 10px;
-}
-
-.select {
-  cursor: pointer;
-  display: inline-block;
+a.anchor {
+  display: block;
   position: relative;
-  font-size: 16px;
-  color: #fff;
-  width: 220px;
-  height: 40px;
-}
-
-.select-styled {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: blue;
-  padding: 8px 15px;
-  /* @include transition(all 0.2s ease-in);
-     &:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border: 7px solid transparent;
-  border-color: $select-color transparent transparent transparent;
-  position: absolute;
-  top: 16px;
-  right: 10px;
-   }*/
-}
-.select-styled:hover {
-  background-color: #0000f5;
-}
-.select-styled:active, .select-styled.active {
-  background-color: #0000e6;
-  /* &:after {
-    top: 9px;
-    border-color: transparent transparent $select-color transparent;
-  } */
-}
-
-.select-options {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: 0;
-  z-index: 999;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background-color: #0000e6;
-}
-.select-options li {
-  margin: 0;
-  padding: 12px 0;
-  text-indent: 15px;
-  border-top: 1px solid #0000cc;
-}
-.select-options li:hover, .select-options li.is-selected {
-  color: #000;
-  background: red;
-}
-.select-options li[rel=hide] {
-  display: none;
+  top: -250px;
+  visibility: hidden;
 }
 
 .quotes_grid h1 {
@@ -4121,16 +4085,25 @@ section.newsletterctoa .wpforms-confirmation-container-full {
   border: 0;
   margin: 50px 0;
   padding: 0;
+  height: 100%;
   color: #0A426A;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 .contactform .wpforms-confirmation-container-full h2 {
-  font-family: "ITC Avant Garde Gothic Std Book";
+  font-family: "Gabriela";
+  color: rgb(238, 194, 51);
+  font-size: 28px;
 }
 .contactform .wpforms-confirmation-container-full h2:after {
   display: none;
 }
 .contactform .wpforms-confirmation-container-full p {
-  font-family: "Gabriela";
+  font-family: "ITC Avant Garde Gothic Std Book";
   color: #0A426A;
 }
 .contactform .bulletboxes {

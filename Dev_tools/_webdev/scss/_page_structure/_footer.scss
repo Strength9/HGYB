@@ -89,6 +89,8 @@ footer {
 						}
 					}
 					
+					
+					
 				}
 			}
 			
@@ -119,11 +121,41 @@ footer {
 			}
 			
 			.bussdetails { grid-area: bussdetails; 
+				text-align: center;
 				img {
 					width:90%;
 					height:auto;
 					margin:0 auto;
 					max-width:350px;
+				}
+				
+				.brochure {
+					a {
+						font-family: 'ITC Avant Garde Gothic Std Book';
+						font-size:16px;
+						font-weight: normal;
+						font-style: normal;
+						border: 1px solid $hgyb_accent;
+						 border-radius: 10px;
+						 padding: 10px 25px 6px;
+						 display:inline-block;
+						 margin-top:20px;
+						 color:$hgyb_accent;
+						 text-decoration:none;
+						
+						&:hover {
+							background-color:$hgyb_accent;
+							color:$hgyb_main;
+						}
+					}
+				}
+				a.bark {
+					margin:auto;
+					display:inline-block;
+					padding-top:20px;
+					img {
+						max-width:250px;
+					}
 				}
 				
 				p {

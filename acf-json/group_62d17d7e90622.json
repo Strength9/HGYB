@@ -604,56 +604,11 @@
             "return_format": "array"
         },
         {
-            "key": "field_63dbb9c7ec91f",
-            "label": "Download Brochure Image",
-            "name": "download_brochure_image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_63dbb9e5ec920",
-            "label": "Download Brochure Link",
-            "name": "download_brochure_link",
-            "aria-label": "",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_63dbba08ec921",
             "label": "Download Brochure Text",
             "name": "download_brochure_text",
             "aria-label": "",
-            "type": "text",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -662,11 +617,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array"
         }
     ],
     "location": [
@@ -687,5 +638,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675345347
+    "modified": 1675348915
 }
