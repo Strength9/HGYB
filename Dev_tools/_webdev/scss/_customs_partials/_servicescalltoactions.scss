@@ -82,7 +82,7 @@
 					input[type="text"], input[type="email"] {
 						border:0 !important;
 						background-color: transparent !important;
-						color: $hgyb_accent !important;
+						color: #FFF !important;
 						border-bottom:1px solid #FFF !important;
 						
 						
@@ -101,39 +101,104 @@
 					  color: #FFF;
 					}
 					
+					#wpforms-90-field_6-container {
+						display:none;
+					}
+					
+					/* -- WP Forms Select Fields -- */
+					.select {
+					 
+					  
+					  font-family: 'ITC Avant Garde Gothic Std Book' !important;
+					  font-weight: normal;
+					  font-style: normal;
+					 
+					  color: #FFF;
+					  width:100% !important;
+					  height:37px !important;
+					  width:100% !important;
+					  position:relative !important;
+					  
+						  
+					  
+						.select-hidden {
+							display: none !important;
+							visibility: hidden !important;
+							padding-right: 10px;
+						  }
+					
+						.select-styled {
+							position:absolute !important;
+							top:0;
+							z-index:1;
+							color:#FFF;
+							border-bottom:1px solid #FFF !important;
+							height:37px !important;
+							width:100% !important;
+							font-size:16px !important;
+							  line-height:37px;
+							  @media only screen and (min-width:1200px) {
+								  font-size:19px !important;
+							  }
+						}
+						
+						.select-options {
+							display:none;
+							position:absolute !important;
+							top:0;
+							left:0;
+							width:100%;
+							
+							z-index:5000;
+							background-color:$hgyb_main !important;
+							padding:10px!important;
+							
+							&.active {
+								display:block;
+							}
+							
+							li {
+								white-space: nowrap;
+								background-color:$hgyb_main !important;
+								font-size:16px !important;
+								  line-height:24px;
+								  color:#FFF;
+								  @media only screen and (min-width:1200px) {
+									  font-size:19px !important;
+								  }
+								  
+								  &:hover {
+									  color: $hgyb_accent;
+								  }
+								  &:first-child { Display:none;}
+							}
+						}
+						  
+					
+					
+					}
+					/* -- WP Forms Select Fields -- */
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 					.wpforms-error {
 						color:rgb(241, 36, 36);
 						padding:10px 5px;
 					}
 					
-					// Select Field
-					.choices__inner {
-						
-						background: none;
-						border:0px;
-						background-color:$hgyb_main !important;
-						border-bottom:1px solid #FFF;
-					}
-					.choices, .choices__placeholder{
-					  opacity:1;
-					}
-					 
-					.choices__list--dropdown .choices__item--selectable, .choices__list--dropdown .choices__item--selectable.is-highlighted {
-						background-color: $hgyb_main !important;
-						border-color:$hgyb_main !important;
-						color:red;
-					}
-					
-					.choices__list--dropdown {
-						background-color: $hgyb_main !important;
-						border-color:$hgyb_main !important;
-					}
-					button{
-						display:none;
-					}
+	
 					
 					
-					input[type="text"], input[type="email"], .choices__placeholder, .choices, .choices__item {
+					input[type="text"], input[type="email"] {
 						font-family: 'ITC Avant Garde Gothic Std Book';
 						  font-weight: normal;
 						  font-style: normal;
@@ -190,80 +255,5 @@
 
 
 
-/* ---- */
-
-.wpforms-container-full .wpforms-form {
-
-.select {
- 
-  
-  font-family: 'ITC Avant Garde Gothic Std Book' !important;
-  font-weight: normal;
-  font-style: normal;
- 
-  color: #FFF;
-  width:100% !important;
-  height:37px !important;
-  width:100% !important;
-  position:relative !important;
-  
-	  
-  
-	.select-hidden {
-		display: none !important;
-		visibility: hidden !important;
-		padding-right: 10px;
-  	}
-
-	.select-styled {
-		position:absolute !important;
-		top:0;
-		z-index:1;
-		color:#FFF;
-		border-bottom:1px solid #FFF !important;
-		height:37px !important;
-		width:100% !important;
-		font-size:16px !important;
-		  line-height:37px;
-		  @media only screen and (min-width:1200px) {
-			  font-size:19px !important;
-		  }
-	}
-	
-	.select-options {
-		display:none;
-		position:absolute !important;
-		top:0;
-		left:0;
-		width:100%;
-		
-		z-index:5000;
-		background-color:$hgyb_main !important;
-		padding:10px!important;
-		
-		&.active {
-			display:block;
-		}
-		
-		li {
-			white-space: nowrap;
-			background-color:$hgyb_main !important;
-			font-size:16px !important;
-			  line-height:24px;
-			  color:#FFF;
-			  @media only screen and (min-width:1200px) {
-				  font-size:19px !important;
-			  }
-			  
-			  &:hover {
-				  color: $hgyb_accent;
-			  }
-			  &:first-child { Display:none;}
-		}
-	}
-  	
 
 
-}
-}
-/*--*/

@@ -1,17 +1,17 @@
 
 
 .modal-wrapper-newsletter{
-  width:100%;
-  height:100%;
+  width:0;
+  height:0;
   position:fixed;
   top:0; left:0;
   background:rgba(255,255,255,0.75);
   visibility:hidden;
   opacity:0;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: visibility 0.25s ease-in-out;
+  -moz-transition: visibility 0.25s ease-in-out;
+  -o-transition: visibility 0.25s ease-in-out;
+  transition: visibility 0.25s ease-in-out;
   z-index:21000;
   
   backdrop-filter: blur(10px);
@@ -27,6 +27,7 @@
 
 
 .modal{
+	
   max-width:450px;
   width:90%;
   display:block;
@@ -43,6 +44,8 @@
 }
 
 &.open{
+	width:100%;
+	height:100%;
   opacity:1;
   visibility:visible;
   
@@ -79,24 +82,24 @@
 				
 				.wpforms-field-label {
 						color: #FFF;
-						  text-transform:uppercase;
+						
 				}
 				
 				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 				  color: #FFF;
-				  text-transform:uppercase;
+				
 				}
 				::-moz-placeholder { /* Firefox 19+ */
 				  color: #FFF;
-				  text-transform:uppercase;
+				
 				}
 				:-ms-input-placeholder { /* IE 10+ */
 				  color: #FFF;
-				  text-transform:uppercase;
+				
 				}
 				:-moz-placeholder { /* Firefox 18- */
 				  color: #FFF;
-				  text-transform:uppercase;
+				
 				}
 				
 				.wpforms-error {
@@ -213,9 +216,9 @@
 
 	.head{
 		margin:0 0 0 auto;
-	  width:42px;
-	  height:42px;
-	  padding:10px;
+	  width:62px;
+	  height:62px;
+	  padding:20px;
 	  overflow:hidden;
 	  
 	}
@@ -256,10 +259,10 @@
 		}
 	}
 	.content{
-	  padding:5% 20px;
+	  padding:0 20px;
 	  
 	  @media only screen and (min-width:600px) {
-		  padding:5% 50px;
+		  padding:0 50px;
 	  }
 	  h2 {
 		  line-height:1.3;
@@ -279,9 +282,10 @@
   	}
 	  p {
 		  margin:0 0 10px !important;
-		  max-width:80%;
+		  max-width:100%;
 		  color:$hgyb_accent;
 		  font-size:18px;
+		  text-align:justify;
 	  }
 	}
 }

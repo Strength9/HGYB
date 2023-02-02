@@ -22,3 +22,57 @@ jQuery("article.hgyb_iconcardbox").each(function() {
   }
 });
 
+jQuery('select').each(function(){
+  var jQuerythis = jQuery(this), numberOfOptions = jQuery(this).children('option').length;
+  
+  jQuery(this).addClass('select-hidden'); 
+  jQuery(this).wrap('<div class="select"></div>');
+  jQuery(this).after('<div class="select-styled"></div>');
+
+  var $styledSelect = jQuery(this).next('div.select-styled');
+  $styledSelect.text(jQuery(this).children('option').eq(0).text());
+  
+  var $list = jQuery('<ul />', {
+    'class': 'select-options'
+  }).insertAfter($styledSelect);
+  
+  for (var i = 0; i < numberOfOptions; i++) {
+    jQuery('<li />', {
+      text: jQuery(this).children('option').eq(i).text(),
+      rel: jQuery(this).children('option').eq(i).val()
+    }).appendTo($list);
+    if (jQuery(this).children('option').eq(i).is(':selected')){
+     jQuery('li[rel="' + jQuery(this).children('option').eq(i).val() + '"]').addClass('is-selected')
+    }
+  }
+  
+  var $listItems = $list.children('li');
+  
+  $styledSelect.click(function(e) {
+    e.stopPropagation();
+    jQuery('div.select-styled.active').not(this).each(function(){
+      jQuery(this).removeClass('active').next('ul.select-options').hide();
+    });
+    jQuery(this).toggleClass('active').next('ul.select-options').toggle();
+  });
+  
+  $listItems.click(function(e) {
+    e.stopPropagation();
+    $styledSelect.text(jQuery(this).text()).removeClass('active');
+    jQuery(this).val(jQuery(this).attr('rel'));
+    $list.hide();
+
+    $formID = jQuery(this).closest("form").attr('id');
+    $helpID = jQuery('#'+ $formID +' .helpid' ).val();
+    console.log( $helpID);
+ 
+    jQuery($helpID).val(jQuery(this).attr('rel'));
+  });
+  
+  jQuery(document).click(function() {
+    $styledSelect.removeClass('active');
+    $list.hide();
+  });
+
+});
+

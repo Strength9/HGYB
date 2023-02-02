@@ -45,7 +45,19 @@
 	  h3 {
 		font-family: 'ITC Avant Garde Gothic Std Book';
 		font-size:22px;
-		
+		line-height:1.1;
+		 
+		 &:after {
+			 content: "";
+			 display: inline-block;
+			 height: 100%;
+			vertical-align: bottom;
+			 width: 50px;
+			 margin-right: -90px;
+			 margin-left: 10px;
+			 margin-bottom:15px;
+			 border-top: 1px solid $hgyb_accent;
+		   }
 		
 	}
 

@@ -61,10 +61,10 @@
   background:rgba(255,255,255,0.75);
   visibility:hidden;
   opacity:0;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: visibility 0.25s ease-in-out;
+  -moz-transition: visibility 0.25s ease-in-out;
+  -o-transition: visibility 0.25s ease-in-out;
+  transition: visibility 0.25s ease-in-out;
  
   
   backdrop-filter: blur(10px);
@@ -111,6 +111,7 @@
 	
 	.wpforms-container {
 		width:100%;
+		margin:0 0 20px;
 		form {
 			width:100%;
 			.wpforms-field-container {
@@ -129,29 +130,25 @@
 				textarea {
 					border:1px solid $hgyb_accent !important;
 					background-color:transparent !important;
-				color: #FFF !important;
+					color: #FFF !important;
+					height:150px;
 				}
 				
 				.wpforms-field-label {
 						color: #FFF;
-						  text-transform:uppercase;
 				}
 				
 				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 				  color: #FFF;
-				  text-transform:uppercase;
 				}
 				::-moz-placeholder { /* Firefox 19+ */
 				  color: #FFF;
-				  text-transform:uppercase;
 				}
 				:-ms-input-placeholder { /* IE 10+ */
 				  color: #FFF;
-				  text-transform:uppercase;
 				}
 				:-moz-placeholder { /* Firefox 18- */
 				  color: #FFF;
-				  text-transform:uppercase;
 				}
 				
 				.wpforms-error {
@@ -159,38 +156,86 @@
 					padding:10px 5px;
 				}
 				
-				// Select Field
-				.choices__inner {
-					
-					background: none;
-					border:0px;
-					background-color:$hgyb_black !important;
-					border-bottom:1px solid $hgyb_accent;
-				}
-				.choices, .choices__placeholder{
+				/* -- WP Forms Select Fields -- */
+				.select {
 				 
-				  opacity:1;
-				}
+				  
+				  font-family: 'ITC Avant Garde Gothic Std Book' !important;
+				  font-weight: normal;
+				  font-style: normal;
 				 
-				.choices__list--dropdown .choices__item--selectable, .choices__list--dropdown .choices__item--selectable.is-highlighted {
-					background-color: $hgyb_black !important;
-					border-color:$hgyb_black !important;
-					font-size:12px !important;
+				  color: #FFF;
+				  width:100% !important;
+				  height:37px !important;
+				  width:100% !important;
+				  position:relative !important;
+				  
+					  
+				  
+					.select-hidden {
+						display: none !important;
+						visibility: hidden !important;
+						padding-right: 10px;
+					  }
+				
+					.select-styled {
+						position:absolute !important;
+						top:0;
+						z-index:1;
+						color:#FFF;
+						border-bottom:1px solid $hgyb_accent !important;
+						height:37px !important;
+						width:100% !important;
+						font-size:16px !important;
+						  line-height:37px;
+						  padding-left:10px;
+						  @media only screen and (min-width:1200px) {
+							  font-size:19px !important;
+						  }
+					}
 					
-				}
+					.select-options {
+						display:none;
+						position:absolute !important;
+						top:0;
+						left:0;
+						width:100%;
+						
+						z-index:5000;
+						background-color:rgba(65, 64, 66, 0.9)
+						 !important;
+						
+						padding:20px 25px!important;
+						
+						&.active {
+							display:block;
+						}
+						
+						li {
+							white-space: nowrap;
+							background-color:$hgyb_black !important;
+							font-size:16px !important;
+							  line-height:24px;
+							  color:#FFF;
+							  @media only screen and (min-width:1200px) {
+								  font-size:19px !important;
+							  }
+							  
+							  &:hover {
+								  color: $hgyb_accent;
+							  }
+							  &:first-child { Display:none;}
+						}
+					}
+					  
 				
-				.choices__list--dropdown {
-					background-color: $hgyb_black !important;
-					border-color:$hgyb_black !important;
-				}
-				button{
-					display:none;
-				}
-				.choices__placeholder {
-					text-transform:uppercase;
-				}
 				
-				input[type="text"], input[type="email"], .choices__placeholder, .choices, .choices__item, .wpforms-field-label, textarea {
+				}
+				/* -- WP Forms Select Fields -- */
+
+
+				
+				input[type="text"], input[type="email"], .wpforms-field-label, textarea {
 					font-family: 'ITC Avant Garde Gothic Std Book';
 					  font-weight: normal;
 					  font-style: normal;
@@ -233,7 +278,7 @@
 	.wpforms-confirmation-container-full {
 		background-color:transparent;
 		border:0;
-		margin:50px 0;
+		margin:50px 0 50px;
 		padding:0;
 		color:#FFF;
 		h2 {
@@ -250,11 +295,10 @@
 				display:none;
 			}
 		}
-		margin-top:10px;
 		 font-family: 'ITC Avant Garde Gothic Std Book';
 		 color:$hgyb_accent;
 		 font-size:18px;
-		 margin-bottom:10px;
+		 
 	} 
 	
 	// ------------------------------- //
@@ -270,7 +314,7 @@
 	margin:0 0 0 auto;
   	width:42px;
   	height:42px;
-  	padding:10px;
+  	padding:10px 10px 0;
   	overflow:hidden;
 	  
 	}
@@ -307,18 +351,19 @@
 		}
 		
 		&:hover {
-			color:#FFF;
+			color:#FFF !important;
 		}
 	}
 	.content{
   	padding:5% 20px;
 	  
 	  @media only screen and (min-width:600px) {
-		  padding:5% 50px;
+		  padding:0 50px;
 	  }
 	  
 	 h2 {
-		 line-height:1.3;
+		 padding:0 !important;
+		 line-height:1;
 			   margin:0 0 20px !important;
 			   display:block;
 		   font-family: 'Gabriela';
@@ -343,3 +388,9 @@
 }
 
 
+section.newsletterctoa {
+	
+	.wpforms-confirmation-container-full {
+		background-color:transparent !important;
+	}
+}

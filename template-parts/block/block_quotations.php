@@ -97,8 +97,7 @@ jQuery(".'.$blocktitle.'").slick({
   slidesToScroll: 1,
 	  dots: false,
 arrows: false,
-	autoplaySpeed: 6500,
-		speed: 6500,
+		speed: 5000,
 	  responsive: [
 	
 		{

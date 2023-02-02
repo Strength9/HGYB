@@ -1158,6 +1158,8 @@ section.npmid {
 }
 .textimage .textside {
   grid-area: textside;
+}
+.textimage .textside p {
   text-align: justify;
 }
 .textimage .imageside {
@@ -1182,6 +1184,8 @@ section.npmid {
 }
 .imagetext .textside {
   grid-area: textside;
+}
+.imagetext .textside p {
   text-align: justify;
 }
 .imagetext .imageside {
@@ -1635,6 +1639,18 @@ section.npmid {
 .icon_gridlist .icon_arealist .areatext h3 {
   font-family: "ITC Avant Garde Gothic Std Book";
   font-size: 22px;
+  line-height: 1.1;
+}
+.icon_gridlist .icon_arealist .areatext h3:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: bottom;
+  width: 50px;
+  margin-right: -90px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  border-top: 1px solid rgb(238, 194, 51);
 }
 .icon_gridlist .icon_arealist .areatext ul {
   padding-left: 0.8em;
@@ -2011,10 +2027,10 @@ section.npmid {
   background: rgba(255, 255, 255, 0.75);
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: visibility 0.25s ease-in-out;
+  -moz-transition: visibility 0.25s ease-in-out;
+  -o-transition: visibility 0.25s ease-in-out;
+  transition: visibility 0.25s ease-in-out;
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
@@ -2048,12 +2064,15 @@ section.npmid {
 }
 .modal-wrapper.open .modal .wpforms-container {
   width: 100%;
+  margin: 0 0 20px;
 }
 .modal-wrapper.open .modal .wpforms-container form {
   width: 100%;
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container {
   width: 100%;
+  /* -- WP Forms Select Fields -- */
+  /* -- WP Forms Select Fields -- */
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=email] {
   border: 0;
@@ -2065,56 +2084,91 @@ section.npmid {
   border: 1px solid rgb(238, 194, 51) !important;
   background-color: transparent !important;
   color: #FFF !important;
+  height: 150px;
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label {
   color: #FFF;
-  text-transform: uppercase;
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #FFF;
-  text-transform: uppercase;
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container ::-moz-placeholder { /* Firefox 19+ */
   color: #FFF;
-  text-transform: uppercase;
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container :-ms-input-placeholder { /* IE 10+ */
   color: #FFF;
-  text-transform: uppercase;
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container :-moz-placeholder { /* Firefox 18- */
   color: #FFF;
-  text-transform: uppercase;
 }
 .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-error {
   color: rgb(241, 36, 36);
   padding: 10px 5px;
 }
-.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__inner {
-  background: none;
-  border: 0px;
-  background-color: #414042 !important;
-  border-bottom: 1px solid rgb(238, 194, 51);
+.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .select {
+  font-family: "ITC Avant Garde Gothic Std Book" !important;
+  font-weight: normal;
+  font-style: normal;
+  color: #FFF;
+  width: 100% !important;
+  height: 37px !important;
+  width: 100% !important;
+  position: relative !important;
 }
-.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder {
-  opacity: 1;
+.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .select .select-hidden {
+  display: none !important;
+  visibility: hidden !important;
+  padding-right: 10px;
 }
-.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__list--dropdown .choices__item--selectable, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  background-color: #414042 !important;
-  border-color: #414042 !important;
-  font-size: 12px !important;
+.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .select .select-styled {
+  position: absolute !important;
+  top: 0;
+  z-index: 1;
+  color: #FFF;
+  border-bottom: 1px solid rgb(238, 194, 51) !important;
+  height: 37px !important;
+  width: 100% !important;
+  font-size: 16px !important;
+  line-height: 37px;
+  padding-left: 10px;
 }
-.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__list--dropdown {
-  background-color: #414042 !important;
-  border-color: #414042 !important;
+@media only screen and (min-width: 1200px) {
+  .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .select .select-styled {
+    font-size: 19px !important;
+  }
 }
-.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container button {
+.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .select .select-options {
   display: none;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+  background-color: rgba(65, 64, 66, 0.9) !important;
+  padding: 20px 25px !important;
 }
-.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder {
-  text-transform: uppercase;
+.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .select .select-options.active {
+  display: block;
 }
-.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=email], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__item, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container textarea {
+.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .select .select-options li {
+  white-space: nowrap;
+  background-color: #414042 !important;
+  font-size: 16px !important;
+  line-height: 24px;
+  color: #FFF;
+}
+@media only screen and (min-width: 1200px) {
+  .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .select .select-options li {
+    font-size: 19px !important;
+  }
+}
+.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .select .select-options li:hover {
+  color: rgb(238, 194, 51);
+}
+.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .select .select-options li:first-child {
+  Display: none;
+}
+.modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=email], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container textarea {
   font-family: "ITC Avant Garde Gothic Std Book";
   font-weight: normal;
   font-style: normal;
@@ -2122,7 +2176,7 @@ section.npmid {
   color: #FFF;
 }
 @media only screen and (min-width: 1200px) {
-  .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=email], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__placeholder, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .choices__item, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container textarea {
+  .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=text], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container input[type=email], .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label, .modal-wrapper.open .modal .wpforms-container form .wpforms-field-container textarea {
     font-size: 19px;
   }
 }
@@ -2170,14 +2224,12 @@ section.npmid {
 .modal-wrapper.open .modal .wpforms-confirmation-container-full {
   background-color: transparent;
   border: 0;
-  margin: 50px 0;
+  margin: 50px 0 50px;
   padding: 0;
   color: #FFF;
-  margin-top: 10px;
   font-family: "ITC Avant Garde Gothic Std Book";
   color: rgb(238, 194, 51);
   font-size: 18px;
-  margin-bottom: 10px;
 }
 .modal-wrapper.open .modal .wpforms-confirmation-container-full h2 {
   font-family: "Gabriela";
@@ -2197,7 +2249,7 @@ section.npmid {
   margin: 0 0 0 auto;
   width: 42px;
   height: 42px;
-  padding: 10px;
+  padding: 10px 10px 0;
   overflow: hidden;
 }
 .modal-wrapper .btn-close {
@@ -2228,18 +2280,19 @@ section.npmid {
   transform: rotate(-45deg);
 }
 .modal-wrapper .btn-close:hover {
-  color: #FFF;
+  color: #FFF !important;
 }
 .modal-wrapper .content {
   padding: 5% 20px;
 }
 @media only screen and (min-width: 600px) {
   .modal-wrapper .content {
-    padding: 5% 50px;
+    padding: 0 50px;
   }
 }
 .modal-wrapper .content h2 {
-  line-height: 1.3;
+  padding: 0 !important;
+  line-height: 1;
   margin: 0 0 20px !important;
   display: block;
   font-family: "Gabriela";
@@ -2260,6 +2313,10 @@ section.npmid {
   color: rgb(238, 194, 51);
   font-size: 18px;
   margin-bottom: 10px;
+}
+
+section.newsletterctoa .wpforms-confirmation-container-full {
+  background-color: transparent !important;
 }
 
 .servicesctoa {
@@ -2322,6 +2379,8 @@ section.npmid {
   gap: 0px 20px;
   grid-auto-flow: row;
   grid-template-areas: "how" "yname" "yemail" "yel";
+  /* -- WP Forms Select Fields -- */
+  /* -- WP Forms Select Fields -- */
 }
 @media only screen and (min-width: 500px) {
   .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container {
@@ -2362,7 +2421,7 @@ section.npmid {
 .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=text], .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=email] {
   border: 0 !important;
   background-color: transparent !important;
-  color: rgb(238, 194, 51) !important;
+  color: #FFF !important;
   border-bottom: 1px solid #FFF !important;
 }
 .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -2377,32 +2436,76 @@ section.npmid {
 .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container :-moz-placeholder { /* Firefox 18- */
   color: #FFF;
 }
+.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container #wpforms-90-field_6-container {
+  display: none;
+}
+.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .select {
+  font-family: "ITC Avant Garde Gothic Std Book" !important;
+  font-weight: normal;
+  font-style: normal;
+  color: #FFF;
+  width: 100% !important;
+  height: 37px !important;
+  width: 100% !important;
+  position: relative !important;
+}
+.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .select .select-hidden {
+  display: none !important;
+  visibility: hidden !important;
+  padding-right: 10px;
+}
+.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .select .select-styled {
+  position: absolute !important;
+  top: 0;
+  z-index: 1;
+  color: #FFF;
+  border-bottom: 1px solid #FFF !important;
+  height: 37px !important;
+  width: 100% !important;
+  font-size: 16px !important;
+  line-height: 37px;
+}
+@media only screen and (min-width: 1200px) {
+  .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .select .select-styled {
+    font-size: 19px !important;
+  }
+}
+.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .select .select-options {
+  display: none;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+  background-color: #0A426A !important;
+  padding: 10px !important;
+}
+.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .select .select-options.active {
+  display: block;
+}
+.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .select .select-options li {
+  white-space: nowrap;
+  background-color: #0A426A !important;
+  font-size: 16px !important;
+  line-height: 24px;
+  color: #FFF;
+}
+@media only screen and (min-width: 1200px) {
+  .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .select .select-options li {
+    font-size: 19px !important;
+  }
+}
+.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .select .select-options li:hover {
+  color: rgb(238, 194, 51);
+}
+.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .select .select-options li:first-child {
+  Display: none;
+}
 .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .wpforms-error {
   color: rgb(241, 36, 36);
   padding: 10px 5px;
 }
-.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__inner {
-  background: none;
-  border: 0px;
-  background-color: #0A426A !important;
-  border-bottom: 1px solid #FFF;
-}
-.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices, .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__placeholder {
-  opacity: 1;
-}
-.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__list--dropdown .choices__item--selectable, .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  background-color: #0A426A !important;
-  border-color: #0A426A !important;
-  color: red;
-}
-.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__list--dropdown {
-  background-color: #0A426A !important;
-  border-color: #0A426A !important;
-}
-.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container button {
-  display: none;
-}
-.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=text], .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=email], .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__placeholder, .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices, .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__item {
+.servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=text], .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=email] {
   font-family: "ITC Avant Garde Gothic Std Book";
   font-weight: normal;
   font-style: normal;
@@ -2410,7 +2513,7 @@ section.npmid {
   color: #FFF;
 }
 @media only screen and (min-width: 1200px) {
-  .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=text], .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=email], .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__placeholder, .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices, .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container .choices__item {
+  .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=text], .servicesctoa .wcp-column .wpforms-container form .wpforms-field-container input[type=email] {
     font-size: 19px;
   }
 }
@@ -2464,71 +2567,6 @@ section.npmid {
   margin: auto !important;
 }
 
-/* ---- */
-.wpforms-container-full .wpforms-form .select {
-  font-family: "ITC Avant Garde Gothic Std Book" !important;
-  font-weight: normal;
-  font-style: normal;
-  color: #FFF;
-  width: 100% !important;
-  height: 37px !important;
-  width: 100% !important;
-  position: relative !important;
-}
-.wpforms-container-full .wpforms-form .select .select-hidden {
-  display: none !important;
-  visibility: hidden !important;
-  padding-right: 10px;
-}
-.wpforms-container-full .wpforms-form .select .select-styled {
-  position: absolute !important;
-  top: 0;
-  z-index: 1;
-  color: #FFF;
-  border-bottom: 1px solid #FFF !important;
-  height: 37px !important;
-  width: 100% !important;
-  font-size: 16px !important;
-  line-height: 37px;
-}
-@media only screen and (min-width: 1200px) {
-  .wpforms-container-full .wpforms-form .select .select-styled {
-    font-size: 19px !important;
-  }
-}
-.wpforms-container-full .wpforms-form .select .select-options {
-  display: none;
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 5000;
-  background-color: #0A426A !important;
-  padding: 10px !important;
-}
-.wpforms-container-full .wpforms-form .select .select-options.active {
-  display: block;
-}
-.wpforms-container-full .wpforms-form .select .select-options li {
-  white-space: nowrap;
-  background-color: #0A426A !important;
-  font-size: 16px !important;
-  line-height: 24px;
-  color: #FFF;
-}
-@media only screen and (min-width: 1200px) {
-  .wpforms-container-full .wpforms-form .select .select-options li {
-    font-size: 19px !important;
-  }
-}
-.wpforms-container-full .wpforms-form .select .select-options li:hover {
-  color: rgb(238, 194, 51);
-}
-.wpforms-container-full .wpforms-form .select .select-options li:first-child {
-  Display: none;
-}
-
-/*--*/
 .textblock.hgybblack, .textandimageblock.hgybblack, .custom_block.hgybblack, .iconcards_grid.hgybblack {
   background-color: #414042;
 }
@@ -2708,6 +2746,8 @@ section.npmid {
 }
 .contactform .wpforms-container form .wpforms-field-container {
   width: 100%;
+  /* -- WP Forms Select Fields -- */
+  /* -- WP Forms Select Fields -- */
 }
 .contactform .wpforms-container form .wpforms-field-container input[type=text], .contactform .wpforms-container form .wpforms-field-container input[type=email] {
   border: 0;
@@ -2726,53 +2766,25 @@ section.npmid {
 }
 .contactform .wpforms-container form .wpforms-field-container .wpforms-field-label {
   color: #0A426A;
-  text-transform: uppercase;
 }
 .contactform .wpforms-container form .wpforms-field-container ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #0A426A;
-  text-transform: uppercase;
 }
 .contactform .wpforms-container form .wpforms-field-container ::-moz-placeholder { /* Firefox 19+ */
   color: #0A426A;
-  text-transform: uppercase;
 }
 .contactform .wpforms-container form .wpforms-field-container :-ms-input-placeholder { /* IE 10+ */
   color: #0A426A;
-  text-transform: uppercase;
 }
 .contactform .wpforms-container form .wpforms-field-container :-moz-placeholder { /* Firefox 18- */
   color: #0A426A;
-  text-transform: uppercase;
 }
 .contactform .wpforms-container form .wpforms-field-container .wpforms-error {
   color: rgb(241, 36, 36);
   padding: 10px 5px;
   border: 0px;
 }
-.contactform .wpforms-container form .wpforms-field-container .choices__inner {
-  background: none;
-  border: 0px;
-  background-color: #FFF !important;
-  border-bottom: 1px solid rgb(238, 194, 51);
-}
-.contactform .wpforms-container form .wpforms-field-container .choices, .contactform .wpforms-container form .wpforms-field-container .choices__placeholder {
-  opacity: 1;
-}
-.contactform .wpforms-container form .wpforms-field-container .choices__list--dropdown .choices__item--selectable, .contactform .wpforms-container form .wpforms-field-container .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  background-color: rgb(238, 194, 51) !important;
-  border: 0px !important;
-}
-.contactform .wpforms-container form .wpforms-field-container .choices__list--dropdown {
-  background-color: #414042 !important;
-  border: 0px !important;
-}
-.contactform .wpforms-container form .wpforms-field-container button {
-  display: none;
-}
-.contactform .wpforms-container form .wpforms-field-container .choices__placeholder {
-  text-transform: uppercase;
-}
-.contactform .wpforms-container form .wpforms-field-container input[type=text], .contactform .wpforms-container form .wpforms-field-container input[type=email], .contactform .wpforms-container form .wpforms-field-container .choices__placeholder, .contactform .wpforms-container form .wpforms-field-container .choices, .contactform .wpforms-container form .wpforms-field-container .choices__item, .contactform .wpforms-container form .wpforms-field-container .wpforms-field-label, .contactform .wpforms-container form .wpforms-field-container textarea {
+.contactform .wpforms-container form .wpforms-field-container input[type=text], .contactform .wpforms-container form .wpforms-field-container input[type=email], .contactform .wpforms-container form .wpforms-field-container .wpforms-field-label, .contactform .wpforms-container form .wpforms-field-container textarea {
   font-family: "ITC Avant Garde Gothic Std Book";
   font-weight: normal;
   font-style: normal;
@@ -2780,9 +2792,75 @@ section.npmid {
   color: #0A426A;
 }
 @media only screen and (min-width: 1200px) {
-  .contactform .wpforms-container form .wpforms-field-container input[type=text], .contactform .wpforms-container form .wpforms-field-container input[type=email], .contactform .wpforms-container form .wpforms-field-container .choices__placeholder, .contactform .wpforms-container form .wpforms-field-container .choices, .contactform .wpforms-container form .wpforms-field-container .choices__item, .contactform .wpforms-container form .wpforms-field-container .wpforms-field-label, .contactform .wpforms-container form .wpforms-field-container textarea {
+  .contactform .wpforms-container form .wpforms-field-container input[type=text], .contactform .wpforms-container form .wpforms-field-container input[type=email], .contactform .wpforms-container form .wpforms-field-container .wpforms-field-label, .contactform .wpforms-container form .wpforms-field-container textarea {
     font-size: 19px;
   }
+}
+.contactform .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-html {
+  display: none;
+}
+.contactform .wpforms-container form .wpforms-field-container .select {
+  font-family: "ITC Avant Garde Gothic Std Book" !important;
+  font-weight: normal;
+  font-style: normal;
+  color: #FFF;
+  width: 100% !important;
+  height: 37px !important;
+  width: 100% !important;
+  position: relative !important;
+}
+.contactform .wpforms-container form .wpforms-field-container .select .select-hidden {
+  display: none !important;
+  visibility: hidden !important;
+  padding-right: 10px;
+}
+.contactform .wpforms-container form .wpforms-field-container .select .select-styled {
+  position: absolute !important;
+  top: 0;
+  z-index: 1;
+  color: #0A426A;
+  padding-left: 10px;
+  border-bottom: 1px solid rgb(238, 194, 51) !important;
+  height: 37px !important;
+  width: 100% !important;
+  font-size: 16px !important;
+  line-height: 37px;
+}
+@media only screen and (min-width: 1200px) {
+  .contactform .wpforms-container form .wpforms-field-container .select .select-styled {
+    font-size: 19px !important;
+  }
+}
+.contactform .wpforms-container form .wpforms-field-container .select .select-options {
+  display: none;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+  background-color: #0A426A !important;
+  padding: 10px !important;
+}
+.contactform .wpforms-container form .wpforms-field-container .select .select-options.active {
+  display: block;
+}
+.contactform .wpforms-container form .wpforms-field-container .select .select-options li {
+  white-space: nowrap;
+  background-color: #0A426A !important;
+  font-size: 16px !important;
+  line-height: 24px;
+  color: #FFF;
+}
+@media only screen and (min-width: 1200px) {
+  .contactform .wpforms-container form .wpforms-field-container .select .select-options li {
+    font-size: 19px !important;
+  }
+}
+.contactform .wpforms-container form .wpforms-field-container .select .select-options li:hover {
+  color: rgb(238, 194, 51);
+}
+.contactform .wpforms-container form .wpforms-field-container .select .select-options li:first-child {
+  Display: none;
 }
 .contactform .wpforms-container form .wpforms-field-container .wpforms-field-label {
   padding-left: 10px;
@@ -2872,10 +2950,7 @@ section.npmid {
   color: #0A426A;
   font-size: 13px;
   font-family: "ITC Avant Garde Gothic Std Demi";
-}
-.contactform .bulletboxes li div span {
-  text-align: right;
-  display: block;
+  text-align: center;
 }
 .contactform .bulletboxes li div a {
   color: #0A426A;
@@ -2898,7 +2973,7 @@ section.npmid {
 }
 @media only screen and (min-width: 460px) {
   .contactform .bulletboxes li div {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media only screen and (min-width: 650px) {
@@ -2921,6 +2996,7 @@ section.npmid {
   .contactform .bulletboxes li div {
     width: 95%;
     margin: 0 auto;
+    font-size: 18px;
   }
 }
 @media only screen and (min-width: 1100px) {
@@ -2930,8 +3006,6 @@ section.npmid {
   }
   .contactform .bulletboxes li div {
     width: 330px;
-    margin: 0 auto;
-    font-size: 18px;
   }
 }
 .contactform .contacttitle {
@@ -3242,10 +3316,20 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
   overflow: hidden;
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
+  text-align: left !important;
 }
 .faqs .accordion .accordion-content p {
+  text-align: left !important;
   font-size: 16px;
   margin: 2em 0;
+}
+.faqs .accordion .accordion-content ul li, .faqs .accordion .accordion-content ol li {
+  font-size: 16px;
+  color: #0A426A;
+}
+.faqs .accordion .accordion-content h4 {
+  color: #0A426A;
+  text-align: left;
 }
 
 .faqsjump {
@@ -3263,18 +3347,18 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
 }
 
 .modal-wrapper-newsletter {
-  width: 100%;
-  height: 100%;
+  width: 0;
+  height: 0;
   position: fixed;
   top: 0;
   left: 0;
   background: rgba(255, 255, 255, 0.75);
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: visibility 0.25s ease-in-out;
+  -moz-transition: visibility 0.25s ease-in-out;
+  -o-transition: visibility 0.25s ease-in-out;
+  transition: visibility 0.25s ease-in-out;
   z-index: 21000;
   backdrop-filter: blur(10px);
   display: flex;
@@ -3298,6 +3382,8 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
   transition: all 0.5s ease-in-out;
 }
 .modal-wrapper-newsletter.open {
+  width: 100%;
+  height: 100%;
   opacity: 1;
   visibility: visible;
 }
@@ -3328,23 +3414,18 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
 }
 .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .wpforms-field-label {
   color: #FFF;
-  text-transform: uppercase;
 }
 .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #FFF;
-  text-transform: uppercase;
 }
 .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container ::-moz-placeholder { /* Firefox 19+ */
   color: #FFF;
-  text-transform: uppercase;
 }
 .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container :-ms-input-placeholder { /* IE 10+ */
   color: #FFF;
-  text-transform: uppercase;
 }
 .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container :-moz-placeholder { /* Firefox 18- */
   color: #FFF;
-  text-transform: uppercase;
 }
 .modal-wrapper-newsletter.open .modal .wpforms-container form .wpforms-field-container .wpforms-error {
   color: rgb(241, 36, 36);
@@ -3455,9 +3536,9 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
 }
 .modal-wrapper-newsletter .head {
   margin: 0 0 0 auto;
-  width: 42px;
-  height: 42px;
-  padding: 10px;
+  width: 62px;
+  height: 62px;
+  padding: 20px;
   overflow: hidden;
 }
 .modal-wrapper-newsletter .btn-close {
@@ -3491,11 +3572,11 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
   color: #FFF;
 }
 .modal-wrapper-newsletter .content {
-  padding: 5% 20px;
+  padding: 0 20px;
 }
 @media only screen and (min-width: 600px) {
   .modal-wrapper-newsletter .content {
-    padding: 5% 50px;
+    padding: 0 50px;
   }
 }
 .modal-wrapper-newsletter .content h2 {
@@ -3516,9 +3597,10 @@ div.smallcircles svg .circleCol.circ1, div.smallcircles svg .circleCol.circ2, di
 }
 .modal-wrapper-newsletter .content p {
   margin: 0 0 10px !important;
-  max-width: 80%;
+  max-width: 100%;
   color: rgb(238, 194, 51);
   font-size: 18px;
+  text-align: justify;
 }
 
 .newsletterctoa {

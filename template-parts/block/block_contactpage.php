@@ -29,9 +29,10 @@ echo '<section '.$anchor.' class="'.$blockclass .'" '.$styleoutput.' '.$animatio
 		 <div class="wcp-column bullets">
 			<ul class="bulletboxes">
 				<li>
-					<div>“Are you looking to setup <span>a new Business?”</span></div>
+					<div>"Are you looking for help in your<br>
+					existing business?"</div>
 				</li>
-				<li><div>“Are you looking to setup <span>a new Business?”</span></div></li>
+				<li><div>"Are you looking to setup<br> a new business?"</div></li>
 				<li><div>'.$sitecontactemail.'<br>'.$sitecontactphone.'</span></div></li>
 			</ul>	
 		 </div>

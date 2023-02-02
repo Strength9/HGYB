@@ -191,7 +191,7 @@ section {
 		gap: 0px 80px; 
 	}
 	
-	.textside { grid-area: textside; text-align:justify;}
+	.textside { grid-area: textside; p {text-align:justify;}}
 	.imageside { grid-area: imageside; }
 
 }
@@ -213,7 +213,7 @@ section {
 	
 	
 
-	.textside { grid-area: textside; text-align:justify;}
+	.textside { grid-area: textside; p {text-align:justify;}}
 	.imageside { grid-area: imageside; }
 
 }
