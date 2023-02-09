@@ -2024,7 +2024,7 @@ a.anchor {
   z-index: 21000;
   opacity: 1;
   visibility: visible;
-  height: 100%;
+  height: auto;
 }
 .modal-wrapper.open .modal {
   height: 100%;
